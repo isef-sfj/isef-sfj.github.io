@@ -20,7 +20,7 @@
     --appBackground: #2a37be;
     --fontColor: white;
     --mainButtonWidth: 350px;
-    --mainButtonHeight: 75px;
+    --mainButtonHeight: 60px;
     --mainButtonFont: 'Sigmar';
     --testBorder: 0px;
   }
@@ -72,7 +72,7 @@ body {
     flex-direction: column;
     align-items: center;
     color: var(--fontColor);
-    width: 80%;
+    width: 100%;
     margin: 30px;
 }
 
@@ -110,6 +110,29 @@ body {
     width: 100px;
 }
 
+#previewField {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#previewFieldEntry {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--mainButtonFont);
+    border-radius: 5px;
+    height: 175px;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background: rgb(255,130,8);
+    background: linear-gradient(90deg, rgb(255, 189, 8) 0%, rgba(255,117,0,1) 64%, rgba(243,255,0,1) 100%);
+    border-radius: 50px;
+
+}
+
 #buttonField {
+    margin-top: 50px;
     border:  var(--testBorder) solid rgb(233, 16, 186);
 }
