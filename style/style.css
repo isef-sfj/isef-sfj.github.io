@@ -1,0 +1,115 @@
+/* Schriftarten */
+
+/* sigmar-regular - latin_latin-ext_vietnamese */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Sigmar';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/sigmar-v2-latin_latin-ext_vietnamese-regular.eot'); /* IE9 Compat Modes */
+    src: url('/fonts/sigmar-v2-latin_latin-ext_vietnamese-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/sigmar-v2-latin_latin-ext_vietnamese-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/sigmar-v2-latin_latin-ext_vietnamese-regular.woff') format('woff'), /* Modern Browsers */
+         url('/fonts/sigmar-v2-latin_latin-ext_vietnamese-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('/fonts/sigmar-v2-latin_latin-ext_vietnamese-regular.svg#Sigmar') format('svg'); /* Legacy iOS */
+  }
+  
+
+:root {
+    --bodyBackground: rgb(137, 241, 255);
+    --appBackground: #2a37be;
+    --fontColor: white;
+    --mainButtonWidth: 350px;
+    --mainButtonHeight: 75px;
+    --mainButtonFont: 'Sigmar';
+    --testBorder: 0px;
+  }
+
+  .mainButton{
+  font-weight: 100;
+  font-size: 20px;
+  font-family: var(--mainButtonFont);
+  color: #fff;
+  background: linear-gradient(0deg, #0dcca1 3%, #40e641 80%);
+  width: var(--mainButtonWidth);
+  height: var(--mainButtonHeight);
+  border: none;
+  margin: 30px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  border-radius: 50px;
+  transition : 554ms;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-transform: lowercase;
+  
+  }
+  
+  .mainButton:hover{
+  color: #0022ff;
+  }
+  
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-family: var(--mainButtonFont);
+}
+
+body {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--bodyBackground);
+    
+}
+
+#app {
+    /* background: var(--appBackground); */
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(42,55,190,1) 64%, rgba(0,174,255,1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--fontColor);
+    width: 80%;
+    margin: 30px;
+}
+
+#header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 20px;
+    border: var(--testBorder) solid rgb(2, 149, 160);
+   
+}
+
+#headerIconGear {
+    height: 30px;
+    width: 30px;
+}
+
+#headerIconMail {
+    height: 30px;
+    width: 30px;
+}
+
+#player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border: var(--testBorder) solid rgb(2, 160, 49);
+    margin: 30px;
+}
+
+#playerIconFace {
+    height: 100px;
+    width: 100px;
+}
+
+#buttonField {
+    border:  var(--testBorder) solid rgb(233, 16, 186);
+}
