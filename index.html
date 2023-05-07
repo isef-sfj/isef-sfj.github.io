@@ -4,67 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISEF-Quiz</title>
     <link rel="stylesheet" href="style/style.css">
+    <title>ISEF-Quiz</title>
 </head>
 <body>
 
-    <div id="app">
+    
 
         <!-- ich würde später die index.html als index.php speichern
         und den Header, den Player und evtl. den Footer in Dateien auslagern.
         Dann muss man nicht jede Seite bei Änderungen anfassen. JFL -->
-        <div id="header">
-
-            <div id="headerIcon">
-                <img id="headerIconGear" src="/pics/gear.png" alt="">
-            </div>
+        <header id="header">
+          
                 <h1>ISEF-Duell</h1>
-            <div id="headerIcon">
-                <img id="headerIconMail" src="/pics/mail.png" alt="">
-            </div>
+            
+        </header>
 
 
-        </div>
-
-
-        <div id="player">
+        <section id="player">
 
             <div id="playerIcon">
-                <img id="playerIconFace" src="/pics/playerFace.png" alt="">
+                <img id="playerIconFace" src="/img/playerFace.png" alt="">
             </div>
 
             <div id="playerName">
                 Spielername
             </div>
 
-        </div>
+        </section>
+        
+         <!-- In der Quiz-Duell App stehen hier irgendwelche neuen Levels oder sowas.
+            Die Seite hat so leer ausgesehen, deswegen habe ich die Vorschau-Elemente
+            rein gemacht. War aber nicht so abgesprochen, kann gerne wieder weg. JFL -->
 
-        <div id="previewField">
+        <section id="previewHeadline">
+            Das sind die neuesten Fragen
+        </section>
 
-            <div id="previewFieldEntry">
-                Hier könnten die letzten 3 (+/-) Fragen stehen, die eingegeben wurden.
-            </div>
+        <section id="previewField">
 
-            <div id="previewFieldEntry">
-                In welchem Monat wird das Oktoberfest gefeiert?
-            </div>
+            <ul id="previewField">
+                <li class="previewFieldEntry">
+                    Hier könnten die letzten 3 (+/-) Fragen stehen, die eingegeben wurden.
+                </li>
 
-            <div id="previewFieldEntry">
-                Wie vermehren sich kernlose Trauben?
-            </div>
+                <li class="previewFieldEntry">
+                    In welchem Monat wird das Oktoberfest gefeiert?
+                </li>
 
+                <li class="previewFieldEntry">
+                    Wie vermehren sich kernlose Trauben?
+                </li>
+            </ul>
+            
+        </section>
 
-        </div>
+        <section id="buttonField">
 
-
-        <div id="buttonField">
-            <button class="mainButton">Neues Spiel</button>
-            <button class="mainButton">Neue Frage eingeben</button>
-            <button class="mainButton">Fragen bearbeiten</button>
-        </div>
-
-    </div>
+        <ul>
+            <li class="mainButton">
+                Neues Spiel
+            </li>
+            
+            <li class="mainButton">
+                Neue Frage eingeben
+            </li>
+            
+            <li class="mainButton">
+                Fragen bearbeiten
+            </li>
+        </ul>
+            
+        </section>
 
 </body>
 </html>
