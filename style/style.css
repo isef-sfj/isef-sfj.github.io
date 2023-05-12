@@ -49,10 +49,11 @@ ul {
     margin: 0;
     padding: 0;
 }
-
+html {
+    height: 100%;
+}
 body {
     display: flex;
-    height: 100%;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
