@@ -50,7 +50,8 @@ ul {
     padding: 0;
 }
 html {
-    height: 100%;
+    background: var(--bodyBackground);
+    min-height: 100%;
 }
 body {
     display: flex;
@@ -58,12 +59,11 @@ body {
     flex-direction: column;
     align-items: center;
     color: var(--fontColor);
-    background: var(--bodyBackground);
     min-width: var(--siteMinWidth);
     
 }
 
-.dropdown {
+.selectDropdown {
     font-size: 1.7em;
     font-family: var(--mainButtonFont);
     color: #fff;
@@ -80,7 +80,7 @@ body {
     border: none;
 }
 
-.dropdown:hover{
+.selectDropdown:hover{
     color: #0022ff;
     }
 
@@ -208,6 +208,7 @@ body {
     flex-wrap: wrap;
     width: 100%;
     min-width: var(--siteMinWidth);
+  }
 
   .lektionChoiceContainer {
     display: flex;
