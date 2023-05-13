@@ -230,3 +230,36 @@ body {
     text-overflow: ellipsis;
     
   }
+
+  .flexContainerEQChoice {
+    display: flex;
+  }
+
+  .flexContainerEQChoiceItem {
+    margin: 0 1em 0 1em;
+  }
+
+  .flexContainerEQQuestion {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flexContainerEQQuestionItemQuestion {
+    margin: 2em 3em 2em 3em;
+    height: 10em;
+    resize: horizontal;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .flexContainerEQQuestionItemAnswer {
+    margin: 1em 0 1em 6em;
+    height: 8em;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .flexContainerEQQuestionItemButton {
+    display: flex;
+    justify-content: end;    
+  }
+
+  

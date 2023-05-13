@@ -35,4 +35,4 @@ $stmt->execute(['modul' => $modul,
                 'antwort3' => $antwort3,
                 'antwort4' => $antwort4]);
 
-header("Location:indexWrite.php");
+header("Location:index.php");
