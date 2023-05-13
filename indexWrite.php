@@ -12,7 +12,7 @@
 
 <?php
 
-include ('dataCRUD/dbConnection.php');
+include ('dbConnection.php');
 
 
 $query = "select * from quizfragen";

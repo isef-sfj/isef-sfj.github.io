@@ -26,7 +26,7 @@
 
         
     
-    <form action="dataCRUD/dbWrite.php" method="post">
+    <form action="dbWrite.php" method="post">
         
         <div class="flexContainerEQChoice">
 

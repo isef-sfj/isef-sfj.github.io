@@ -19,8 +19,8 @@
     --bodyBackground: linear-gradient(0deg, rgba(42,55,190,1) 20%, rgba(0,174,255,1)80%);
     --mainFont: "Sigmar";
     --fontColor: white;
-    --siteMinWidth: 450px;
-    --mainButtonWidth: 15em;
+    --siteMinWidth: 400px;
+    --mainButtonWidth: 13em;
     --mainButtonHeight: 2.5em;
     --mainButtonFont: 'Sigmar';
     --testBorder: 0px;
