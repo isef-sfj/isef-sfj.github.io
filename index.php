@@ -20,41 +20,38 @@
             
         </header>
 
-
-        <section id="player">
-
-            <div id="playerIcon">
-                <img id="playerIconFace" src="/img/playerFace.png" alt="">
-            </div>
-
-            <div id="playerName">
-                Spielername
-            </div>
-
-        </section>
         
          <!-- In der Quiz-Duell App stehen hier irgendwelche neuen Levels oder sowas.
             Die Seite hat so leer ausgesehen, deswegen habe ich die Vorschau-Elemente
             rein gemacht. War aber nicht so abgesprochen, kann gerne wieder weg. JFL -->
 
         <section id="previewHeadline">
-            Das sind die neuesten Fragen
+            Die neuesten Fragen
         </section>
+
+        <?php
+
+            include ('dbConnection.php');
+
+
+            $query = "select * from quizfragen order by id desc limit 3";
+            $datafromdb = $pdo->query($query);
+
+        ?>
+
 
         <section>
 
             <div id="previewField">
-                <div class="previewFieldEntry">
-                    Hier könnten die letzten 3 (+/-) Fragen stehen, die eingegeben wurden.
-                </div>
+
+            <?php foreach($datafromdb as $data) { ?>
 
                 <div class="previewFieldEntry">
-                    In welchem Monat wird das Oktoberfest gefeiert?
+                    <?php echo $data['frage']; ?>
                 </div>
 
-                <div class="previewFieldEntry">
-                    Wie vermehren sich kernlose Trauben?
-                </div>
+                <?php } ?>
+                
             </div>
             
         </section>
@@ -65,9 +62,9 @@
                 Neues Spiel
             </a></div>
             
-            <div class="mainButton">
+            <div><a href="enterQuestion.php" class="mainButton">
                 Neue Frage erstellen
-            </div>
+            </a></div>
             
             <div class="mainButton">
                 Fragen bearbeiten
