@@ -16,22 +16,20 @@
     <!-- ich würde später die index.html als index.php speichern
         und den Header, den Player und evtl. den Footer in Dateien auslagern.
         Dann muss man nicht jede Seite bei Änderungen anfassen. JFL -->
-    <header id="header">
-
-        <h2>Wähle deinen Spielernamen und deinen Icon!</h2>
-
+    <header>
+        <h1>ISEF-Duell</h1>
     </header>
 
 
     <section id="player">
-
-        <div id="playerIcon">
+        <h2>Warteraum</h2>
+        <!-- <div id="playerIcon">
             <img id="playerIconFace" src="/img/playerFace.png" alt="">
         </div>
 
         <div id="playerName">
             Spielername
-        </div>
+        </div> -->
 
     </section>
 
@@ -39,15 +37,15 @@
         <form>
             <label for="playerName"></label>
             <input placeholder="Spielername eingeben" id="playerName" name="playerName" type="text">
-            <br>
-            <select required="" name="icon" id="icon">
+            <br><br>
+            <select required="" name="icon" id="icon" class="selectDropdown">
                 <option value="">Wähle einen Icon aus</option>
                 <option value="Icon1">Icon1</option>
                 <option value="Icon2">Icon2</option>
                 <option value="Icon3">Icon3</option>
             </select>
             <br>
-            <select name="degreeCourse" id="degreeCourse">
+            <select name="degreeCourse" id="degreeCourse" class="selectDropdown">
                 <option value="">Wähle deinen Studiengang</option>
                 <option value="Fach1">Informatik</option>
                 <option value="Fach2">Pädagogik</option>
