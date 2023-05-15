@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,53 +8,60 @@
     <link rel="stylesheet" href="style/style.css">
     <title>Namenswahl</title>
 </head>
+
 <body>
 
-    
 
-        <!-- ich würde später die index.html als index.php speichern
+
+    <!-- ich würde später die index.html als index.php speichern
         und den Header, den Player und evtl. den Footer in Dateien auslagern.
         Dann muss man nicht jede Seite bei Änderungen anfassen. JFL -->
-        <header id="header">
-          
-                <h2>Wähle deinen Spielernamen und deinen Icon!</h2>
-            
-        </header>
+    <header id="header">
+
+        <h2>Wähle deinen Spielernamen und deinen Icon!</h2>
+
+    </header>
 
 
-        <section id="player">
+    <section id="player">
 
-            <div id="playerIcon">
-                <img id="playerIconFace" src="/img/playerFace.png" alt="">
-            </div>
+        <div id="playerIcon">
+            <img id="playerIconFace" src="/img/playerFace.png" alt="">
+        </div>
 
-            <div id="playerName">
-                Spielername
-            </div>
+        <div id="playerName">
+            Spielername
+        </div>
 
-        </section>
+    </section>
 
-        <section id="nameIconChoice">
-            <form>
-                <label for="playerName">Spielername</label>
-                <input id="playerName" name="playerName" type="text">
-                <br>
-                <select required="" name="icon" id="icon">
-                    <option value="">Wähle einen Icon aus</option>
-                    <option value="Icon1">Icon1</option>
-                    <option value="Icon2">Icon2</option>
-                    <option value="Icon3">Icon3</option>
-                </select>
-                <br>
-                <select name="degreeCourse" id="degreeCourse">
-                    <option value="">Wähle deinen Studiengang</option>
-                    <option value="Fach1">Informatik</option>
-                    <option value="Fach2">Pädagogik</option>
-                    <option value="Fach3">Betriebswirtschaftslehre</option>
-                </select>
-                <br>
-            </form>
-        </section>
+    <section id="nameIconChoice">
+        <form>
+            <label for="playerName"></label>
+            <input placeholder="Spielername eingeben" id="playerName" name="playerName" type="text">
+            <br>
+            <select required="" name="icon" id="icon">
+                <option value="">Wähle einen Icon aus</option>
+                <option value="Icon1">Icon1</option>
+                <option value="Icon2">Icon2</option>
+                <option value="Icon3">Icon3</option>
+            </select>
+            <br>
+            <select name="degreeCourse" id="degreeCourse">
+                <option value="">Wähle deinen Studiengang</option>
+                <option value="Fach1">Informatik</option>
+                <option value="Fach2">Pädagogik</option>
+                <option value="Fach3">Betriebswirtschaftslehre</option>
+            </select>
+            <br>
+        </form>
+    </section>
+    <section id="arrowBox">
+        <a href="/index.php"><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
+        <a href="moduleChoice.html" class="mainButton">
+            Modulauswahl</a>
+    </section>
 
 </body>
+
 </html>
