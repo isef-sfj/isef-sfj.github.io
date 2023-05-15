@@ -13,7 +13,7 @@
    
     include ('dbConnection.php');
 
-    $id = 13; //$_POST["id"];
+    $id = $_GET["id"];
     $query = "select * from quizfragen where id=$id limit 1";
     $datafromdb = $pdo->query($query);
 
@@ -81,7 +81,7 @@
     </form>
 
     <section id="arrowBox">
-            <a href="/index.php" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
+            <a href="/editQuestionChoice.php" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
             <!-- Damit der Zurück-Pfeil auch ohne Weiter-Pfeil
             immer an der gleichen Stelle ist habe ich einen leeren
             Platzhalter eingefügt. JFL-->
