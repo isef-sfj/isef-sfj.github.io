@@ -218,7 +218,7 @@ body {
     font-size: 1.7em;
     font-family: var(--mainButtonFont);
     color: var(--fontColor);
-    background: linear-gradient(0deg, #0dcca1, #40e641 );
+    background: linear-gradient(0deg, #eef137, #eae12c );
     width: var(--mainButtonWidth);
     height: var(--mainButtonHeight);
     margin: 0em;
