@@ -26,7 +26,7 @@
     --testBorder: 0px;
     --arrowWidth: 4em;
     --arrowHeigth:4em;
-    --arrowMargin:0.5em;
+    --arrowMargin:0.2em;
   }
 
 
@@ -195,7 +195,7 @@ body {
     list-style-type: none;
     text-decoration: none;
     }
-  
+
   .mainButton:hover{
   color: #0022ff;
   }
@@ -204,6 +204,8 @@ body {
     width: 100%;
     display: flex;
     justify-content: end;
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
   }
   
   .arrow {
@@ -211,6 +213,25 @@ body {
     width: var(--arrowWidth);
     margin: var(--arrowMargin);
   }
+
+  .navigationButton{
+    font-size: 1.7em;
+    font-family: var(--mainButtonFont);
+    color: var(--fontColor);
+    background: linear-gradient(0deg, #0dcca1, #40e641 );
+    width: var(--mainButtonWidth);
+    height: var(--mainButtonHeight);
+    margin: 0em;
+    border-radius: 5em;
+    transition : 300ms;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    list-style-type: none;
+    text-decoration: none;
+    }
 
   .arrowPlaceholder {
     height: var(--arrowHeigth);
