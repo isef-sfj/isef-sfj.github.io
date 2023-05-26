@@ -65,10 +65,10 @@
             <div><a href="enterQuestion.php" class="mainButton">
                 Neue Frage erstellen
             </a></div>
-            
-            <div class="mainButton">
+
+            <div><a href="editQuestionChoice.php" class="mainButton">
                 Fragen bearbeiten
-            </div>
+            </a></div>
         
         </section>
 
