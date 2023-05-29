@@ -115,18 +115,4 @@ class Question extends Dbh {
                         'id' => $this->id]);
     }
 
-    public function getQuestionById($id) {
-        $sql = "SELECT * FROM quizfragen WHERE id=$id";
-        $stmt = $this->connect()->query($sql);
-                
-        return $stmt;
-    }
-
-    public function deleteQuestion($id) {
-        
-        $sql = "DELETE FROM quizfragen WHERE id=:id";
-        $stmt = $this->connect()->prepare($sql);
-        $stmt->execute(['id' => $id]);
-    }
-
 }

@@ -9,15 +9,6 @@
 </head>
 <body>
 
-<?php
-   
-    include ('dbConnection.php');
-
-    $id = $_GET["id"];
-    $query = "select * from quizfragen where id=$id limit 1";
-    $datafromdb = $pdo->query($query);
-
-?>
 
         
         <header id="header">
@@ -32,12 +23,12 @@
 
         
     
-    <form action="dbUpdate.php" method="post">
+    <form action="../classes/editQuestion-C.php" method="post">
         
         
         <div class="flexContainerEQQuestion">
 
-                <?php foreach($datafromdb as $data) { ?>
+                <?php foreach($question as $data) { ?>
 
                     
 
@@ -69,10 +60,16 @@
                 <?php } ?>
                 
            
-            
+                <input value="edit" name="goal" type="hidden" >
             
 
         </div>
+
+        <form action="../classes/editQuestion-C.php" method="post">
+        <input value="delete" name="goal" type="hidden" >
+        <input value=$id name="id" type="hidden" >
+        <button>Frage löschen</button>
+        </form>
         
         <?php echo '<a href="dbDelete.php?id=' . $data['id'] .'">Frage löschen</a>' ?>
 
@@ -84,7 +81,7 @@
     </form>
 
     <section id="arrowBox">
-            <a href="/editQuestionChoice.php" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
+            <a href="editQuestionChoice-V.php" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
             <!-- Damit der Zurück-Pfeil auch ohne Weiter-Pfeil
             immer an der gleichen Stelle ist habe ich einen leeren
             Platzhalter eingefügt. JFL-->

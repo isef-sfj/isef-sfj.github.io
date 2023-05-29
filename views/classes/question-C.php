@@ -33,20 +33,4 @@ class QuestionContr {
 
     }
 
-    function getQuestionById($id) {
-        $q = new Question();
-        $questionById = $q->getQuestionById($id);
-        return $questionById;
-    }
-
-    function editQuestion($id, $frage, $antwort1_richtig, $antwort2, $antwort3, $antwort4) {
-        $q = new Question();
-        $q->editQuestion($id, $frage, $antwort1_richtig, $antwort2, $antwort3, $antwort4);
-    }
-
-    function deleteQuestion($id) {
-        $q = new Question();
-        $q->deleteQuestion($id);
-    }
-
 }

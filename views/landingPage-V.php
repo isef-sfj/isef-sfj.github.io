@@ -30,7 +30,7 @@
         
 
         <section>
-
+            
             <div id="previewField">
 
             <?php foreach($questions as $data) { ?>
@@ -51,11 +51,11 @@
                 Neues Spiel
             </a></div>
             
-            <div><a href="enterQuestion.php" class="mainButton">
+            <div><a href="../classes/addQuestion-C.php" class="mainButton">
                 Neue Frage erstellen
             </a></div>
 
-            <div><a href="editQuestionChoice.php" class="mainButton">
+            <div><a href="../classes/editQuestionChoice-C.php" class="mainButton">
                 Fragen bearbeiten
             </a></div>
         
