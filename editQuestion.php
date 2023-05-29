@@ -74,6 +74,9 @@
 
         </div>
         
+        <?php echo '<a href="dbDelete.php?id=' . $data['id'] .'">Frage löschen</a>' ?>
+
+
         <div class="flexContainerEQQuestionItemButton">
             <button>Frage speichern</button>
         </div>

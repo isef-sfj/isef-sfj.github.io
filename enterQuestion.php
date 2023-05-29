@@ -31,11 +31,11 @@
         <div class="flexContainerEQChoice">
 
             <div class="flexContainerEQChoiceItem">
-            <input placeholder="Modul eingeben" id="modul" name="modul" type="text">
+            <input placeholder="Modul eingeben" id="modul" name="modul" type="text" required>
             </div>  
             
             <div class="flexContainerEQChoiceItem">
-            <input placeholder="Lektion eingeben" id="lektion" name="lektion" type="text">
+            <input placeholder="Lektion eingeben" id="lektion" name="lektion" type="text" required>
             </div>
 
             <!-- Muss in der richtigen Seite durch einen
@@ -49,19 +49,19 @@
         <div class="flexContainerEQQuestion">
 
                 
-            <textarea class="flexContainerEQQuestionItemQuestion" placeholder="Frage eingeben" name="frage" id="frage" ></textarea>
+            <textarea class="flexContainerEQQuestionItemQuestion" placeholder="Frage eingeben" name="frage" id="frage" required></textarea>
             
             
-            <textarea class="flexContainerEQQuestionItemAnswer" placeholder="RICHTIGE Antwort eingeben" name="antwort1_richtig" id="antwort1_richtig" ></textarea>
+            <textarea class="flexContainerEQQuestionItemAnswer" placeholder="RICHTIGE Antwort eingeben" name="antwort1_richtig" id="antwort1_richtig" required></textarea>
             
             
-            <textarea class="flexContainerEQQuestionItemAnswer" placeholder="Falsche Antwort eingeben" name="antwort2" id="antwort2" ></textarea>
+            <textarea class="flexContainerEQQuestionItemAnswer" placeholder="Falsche Antwort eingeben" name="antwort2" id="antwort2" required></textarea>
             
             
-            <textarea class="flexContainerEQQuestionItemAnswer" placeholder="Falsche Antwort eingeben" name="antwort3" id="antwort3" ></textarea>
+            <textarea class="flexContainerEQQuestionItemAnswer" placeholder="Falsche Antwort eingeben" name="antwort3" id="antwort3" required></textarea>
             
             
-            <textarea class="flexContainerEQQuestionItemAnswer" placeholder="Falsche Antwort eingeben" name="antwort4" id="antwort4" ></textarea>
+            <textarea class="flexContainerEQQuestionItemAnswer" placeholder="Falsche Antwort eingeben" name="antwort4" id="antwort4" required></textarea>
             
             
 
