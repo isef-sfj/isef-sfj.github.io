@@ -47,6 +47,8 @@ class QuestionContr {
     function deleteQuestion($id) {
         $q = new Question();
         $q->deleteQuestion($id);
+
+
     }
 
 }

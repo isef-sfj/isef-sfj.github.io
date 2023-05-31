@@ -65,20 +65,20 @@
 
         </div>
 
-        <form action="../classes/editQuestion-C.php" method="post">
-        <input value="delete" name="goal" type="hidden" >
-        <input value=$id name="id" type="hidden" >
-        <button>Frage löschen</button>
-        </form>
+    
         
-        <?php echo '<a href="dbDelete.php?id=' . $data['id'] .'">Frage löschen</a>' ?>
-
 
         <div class="flexContainerEQQuestionItemButton">
             <button>Frage speichern</button>
         </div>
         <br><br>
     </form>
+
+    <form action="../classes/editQuestion-C.php" method="post">
+        <input value="delete" name="goal" type="hidden" >
+        <input value=<?php echo "$id" ?> name="id" type="hidden" >
+        <button>Frage löschen</button>
+        </form>
 
     <section id="arrowBox">
             <a href="editQuestionChoice-V.php" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>

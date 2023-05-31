@@ -123,10 +123,39 @@ class Question extends Dbh {
     }
 
     public function deleteQuestion($id) {
-        
+        $this->id = $id;
+
         $sql = "DELETE FROM quizfragen WHERE id=:id";
         $stmt = $this->connect()->prepare($sql);
-        $stmt->execute(['id' => $id]);
+        $stmt->execute(['id' => $this->id]);
+
+        /* 
+            <?php
+
+           
+            $host = $arrayDbData['host'];
+            $dbname = $arrayDbData['dbname'];
+            $charset = $arrayDbData['charset'];
+            $username = $arrayDbData['username'];
+            $password = $arrayDbData['password'];
+
+            try {
+                $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=$charset", $username, $password);
+            } catch (Exception $e) {
+                die('Interner Fehler: Die Datenbank-Verbindung konnte nicht aufgebaut werden :(' . $e->getMessage());
+            }
+
+
+
+            $id = $_GET["id"];
+
+            $sql = "DELETE FROM quizfragen WHERE id=:id";
+
+            $stmt = $pdo->prepare($sql);
+
+            $stmt->execute(['id' => $id]);
+        */
+
     }
 
 }
