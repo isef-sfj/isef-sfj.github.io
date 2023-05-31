@@ -81,7 +81,7 @@
         </form>
 
     <section id="arrowBox">
-            <a href="editQuestionChoice-V.php" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
+            <a href="../classes/editQuestionChoice-C.php?goal=id" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
             <!-- Damit der Zurück-Pfeil auch ohne Weiter-Pfeil
             immer an der gleichen Stelle ist habe ich einen leeren
             Platzhalter eingefügt. JFL-->

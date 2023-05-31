@@ -25,12 +25,10 @@ class QuestionContr {
 
     }
 
-    function getIdsForEditQuestionChoice() {
-
+    function getIdsForEditQuestionChoice($modul) {
         $q = new Question();
-        $ids = $q->getIds();
+        $ids = $q->getIdsByModul($modul);
         return $ids;
-
     }
 
     function getQuestionById($id) {

@@ -5,15 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
-    <script language="javascript" type="text/javascript">
+    <script language="javascript" type="text/javascript" src="../script/script.js"></script>
 
-    function sendid() {
-    var element = document.getElementById('idSelect');
-    var id = element.options[element.selectedIndex].value;
-    window.location.href = "../classes/editQuestion-C.php?id=" + id;
-}
-
-    </script>
+    
     <title>ISEF-Quiz</title>
 </head>
 <body>
@@ -29,7 +23,7 @@
         </header>
 
         
-                <h2>Bitte wähle eine ID aus</h2>
+        <h2>Bitte wähle eine ID aus</h2>
 
         
     
@@ -37,14 +31,14 @@
         
         
         <div >
-
-                    
-                    <select id="idSelect">
-                        <?php foreach($ids as $data) { ?>
-                            <option name="id" id="id" value="<?php echo $data['id']; ?>"><?php echo $data['id']; ?></option>
-                        <?php } ?>
-                    </select>
-
+            
+            
+            <select id="idSelect" >
+                <?php foreach($ids as $datai) { ?>
+                    <option name="id" id="id" value="<?php echo $datai['id']; ?>"><?php echo $datai['id']; ?></option>
+                <?php } ?>
+            </select>
+           
                     
 
         </div>
@@ -62,7 +56,7 @@
     
 
     <section id="arrowBox">
-            <a href="../index3.php" ><img src="../img/arrowLeft.png" alt="" class="arrow"></a>
+            <a href="../classes/editQuestionChoice-C.php?goal=modul" ><img src="../img/arrowLeft.png" alt="" class="arrow"></a>
             <!-- Damit der Zurück-Pfeil auch ohne Weiter-Pfeil
             immer an der gleichen Stelle ist habe ich einen leeren
             Platzhalter eingefügt. JFL-->

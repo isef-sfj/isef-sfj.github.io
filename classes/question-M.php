@@ -21,10 +21,14 @@ class Question extends Dbh {
     }
 
     // Liefert alle ids zurück
-    public function getIds() {
-        $sql = "SELECT id FROM quizfragen";
-        $stmt = $this->connect()->query($sql);
-        return $stmt;
+    public function getIdsByModul($modul) {
+        $this->modul = $modul;
+
+        $statement = $this->connect()->prepare("SELECT id FROM quizfragen WHERE modul=?");
+        $statement->execute(array($modul));
+        $ids = $statement->fetchAll();   
+        return $ids;
+
     }
 
     // Liefert alle Quizfragen zurück.
@@ -129,33 +133,7 @@ class Question extends Dbh {
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute(['id' => $this->id]);
 
-        /* 
-            <?php
-
-           
-            $host = $arrayDbData['host'];
-            $dbname = $arrayDbData['dbname'];
-            $charset = $arrayDbData['charset'];
-            $username = $arrayDbData['username'];
-            $password = $arrayDbData['password'];
-
-            try {
-                $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=$charset", $username, $password);
-            } catch (Exception $e) {
-                die('Interner Fehler: Die Datenbank-Verbindung konnte nicht aufgebaut werden :(' . $e->getMessage());
-            }
-
-
-
-            $id = $_GET["id"];
-
-            $sql = "DELETE FROM quizfragen WHERE id=:id";
-
-            $stmt = $pdo->prepare($sql);
-
-            $stmt->execute(['id' => $id]);
-        */
-
+        
     }
 
 }

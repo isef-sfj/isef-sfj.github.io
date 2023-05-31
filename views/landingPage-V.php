@@ -55,7 +55,7 @@
                 Neue Frage erstellen
             </a></div>
 
-            <div><a href="../classes/editQuestionChoice-C.php" class="mainButton">
+            <div><a href="../classes/editQuestionChoice-C.php?goal=modul" class="mainButton">
                 Fragen bearbeiten
             </a></div>
         
