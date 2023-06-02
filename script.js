@@ -33,8 +33,8 @@ function playerNameChanged() {
     playerName.innerHTML = nameEntered;
 }
 
-function setPlayer() {
-    var name = document.getElementById('showPlayerName').innerHTML;
+function sendPlayer() {
+    var name = document.getElementById('playerName').value;
     var icon = document.getElementById('playerIconFace').src;
     window.location.href = "../classes/nameIconChoice-C.php?name=" + name + "&icon=" + icon + "&goal=setPlayer";
 }

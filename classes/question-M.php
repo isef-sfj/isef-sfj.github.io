@@ -1,6 +1,6 @@
 <?php
 
-include "dbh-M.php";
+include_once "dbh-M.php";
 
 class Question extends Dbh {
 

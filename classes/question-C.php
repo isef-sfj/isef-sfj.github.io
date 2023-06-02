@@ -1,6 +1,6 @@
 <?php
 
-include 'question-M.php';
+include_once 'question-M.php';
 
 class QuestionContr {
 

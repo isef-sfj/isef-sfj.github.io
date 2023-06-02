@@ -18,3 +18,18 @@ try {
     die('Interner Fehler: Die Datenbank-Verbindung konnte nicht aufgebaut werden :(' . $e->getMessage());
 }
 
+$sql = "SELECT * FROM quizfragen";
+$stmt = $pdo->query($sql);
+
+foreach($stmt as $data) { 
+
+    echo ("<div class='previewFieldEntry'>");
+    echo $data['frage'];
+    echo (" </div>");
+   
+
+}
+
+echo("Ich lebe");
+
+

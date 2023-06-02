@@ -47,7 +47,7 @@
 
         <section id="buttonField">
 
-            <div><a href="nameIconChoice-C.php?goal=nameIconChoice" class="mainButton">
+            <div><a href="../classes/nameIconChoice-C.php?goal=nameIconChoice" class="mainButton">
                 Neues Spiel
             </a></div>
             
