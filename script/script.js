@@ -35,6 +35,7 @@ function playerNameChanged() {
 
 function setPlayer() {
     var name = document.getElementById('showPlayerName').innerHTML;
+    var encodetName = encodeURI(name);
     var icon = document.getElementById('playerIconFace').src;
-    window.location.href = "../classes/nameIconChoice-C.php?name=" + name + "&icon=" + icon + "&goal=setPlayer";
+    window.location.href = "../classes/nameIconChoice-C.php?name=" + encodetName + "&icon=" + icon + "&goal=setPlayer";
 }

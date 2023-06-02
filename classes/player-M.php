@@ -76,7 +76,7 @@ class Player extends Dbh {
                                         :icon)";
 
         $stmt = $this->connect()->prepare($sql);
-
+        echo ("In setPlayer() im Model");
         $stmt->execute(['name' => $this->name,
                         'icon' => $this->icon]);
     }
