@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
-    <script language="javascript" type="text/javascript" src="../script/script.js"></script>
     <title>ISEF-Quiz</title>
 </head>
 <body>
@@ -28,38 +27,28 @@
             </div>
 
             <div id="playerName">
-                <?php echo($name) ?>
+            <?php echo($name) ?>
             </div>
-
-
-            <?php foreach($id as $data) { ?>
-                <div id="id" hidden>
-                        <?php echo $data['id']; ?>
-                    </div>
-            <?php } ?>
-
         </section>
 
     </div>
 
+
+    <?php echo($id) ?><br>
+    <?php echo($modul) ?>
         
 
         <label for="modulSelect">Wähle Dein Modul</label>
 
         <div >
             
-            <select id="modulSelect">
-                <?php foreach($modules as $datam) { ?>
-                    <option name="modul" id="modul" value="<?php echo $datam['modul']; ?>"><?php echo $datam['modul']; ?></option>
-                <?php } ?>
-            </select>
+            
            
         </div>
 
         
         <section id="arrowBox">
             <a href="../classes/nameIconChoice-C.php?goal=nameIconChoice" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
-            <button class="navigationButton" onclick="setIdModule()">Modulauswahl</button>
         </section>
          
 

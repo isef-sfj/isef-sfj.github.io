@@ -76,9 +76,11 @@ class Player extends Dbh {
                                         :icon)";
 
         $stmt = $this->connect()->prepare($sql);
-        echo ("In setPlayer() im Model");
         $stmt->execute(['name' => $this->name,
                         'icon' => $this->icon]);
+        $stmt2 = "SELECT * FROM player ORDER BY id DESC LIMIT 1";
+        $id = $this->connect()->query($stmt2);
+        return $id;
     }
 
     // Player bearbeiten

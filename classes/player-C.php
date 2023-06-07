@@ -18,7 +18,8 @@ class PlayerContr {
 
     function setPlayer ($name, $icon) {
         $p = new Player();
-        $p->setPlayer($name, $icon);
+        $id = $p->setPlayer($name, $icon);
+        return $id;
     }
 
     function editPlayer($id, $name, $icon) {
