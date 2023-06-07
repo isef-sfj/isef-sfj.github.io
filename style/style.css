@@ -311,6 +311,7 @@ body {
 
   .playerIconContainer {
     display: grid;
+    grid-auto-flow: row;
     grid-template-columns: 6em 6em 6em 6em;
     grid-template-rows: 6em 3em;
     gap: 2em;

@@ -39,3 +39,14 @@ function setPlayer() {
     var icon = document.getElementById('playerIconFace').src;
     window.location.href = "../classes/nameIconChoice-C.php?name=" + encodetName + "&icon=" + icon + "&goal=setPlayer";
 }
+
+function setIdModule() {
+    var name = document.getElementById('playerName').innerHTML;
+    var encodetName = encodeURI(name);
+    var icon = document.getElementById('playerIconFace').src;
+    var modulVar = document.getElementById('modul');
+    var modul = modulVar.options[modulVar.selectedIndex].value;
+    var idVar = document.getElementById('id');
+    var id = idVar.options[idVar.selectedIndex].value;
+    window.location.href = "../classes/lessonChoice-C.php?id=" + id + "&modul=" + modul + "&icon=" + icon + "&name=" + name + "&goal=lessonChoice";
+}
