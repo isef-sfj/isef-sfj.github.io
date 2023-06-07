@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
     <title>ISEF-Quiz</title>
 </head>
 <body>
 
     
-
         <!-- ich würde später die index.html als index.php speichern
         und den Header, den Player und evtl. den Footer in Dateien auslagern.
         Dann muss man nicht jede Seite bei Änderungen anfassen. JFL -->
@@ -26,14 +25,16 @@
 
         
     
-    <form action="dbWrite.php" method="post">
+    <form action="../classes/enterQuestion-C.php" method="post">
         
         <div class="flexContainerEQChoice">
 
+            <label for="modul">Modul eingeben:</label>
             <div class="flexContainerEQChoiceItem">
             <input placeholder="Modul eingeben" id="modul" name="modul" type="text" required>
             </div>  
             
+            <label for="lektion">Lektion eingeben:</label>
             <div class="flexContainerEQChoiceItem">
             <input placeholder="Lektion eingeben" id="lektion" name="lektion" type="text" required>
             </div>
@@ -48,7 +49,7 @@
 
         <div class="flexContainerEQQuestion">
 
-                
+            <label for="frage">Frage eingeben:</label>    
             <textarea class="flexContainerEQQuestionItemQuestion" placeholder="Frage eingeben" name="frage" id="frage" required></textarea>
             
             
@@ -66,7 +67,7 @@
             
 
         </div>
-        
+            <input value="new" name="goal" type="hidden" >
         <div class="flexContainerEQQuestionItemButton">
             <button>Frage speichern</button>
         </div>
@@ -74,12 +75,12 @@
     </form>
 
     <section id="arrowBox">
-            <a href="/index.php" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
-            <!-- Damit der Zurück-Pfeil auch ohne Weiter-Pfeil
-            immer an der gleichen Stelle ist habe ich einen leeren
-            Platzhalter eingefügt. JFL-->
-            <div class="arrowPlaceholder"></div> 
-        </section>
+        <a href="/index3.php" ><img src="../img/arrowLeft.png" alt="" class="arrow"></a>
+        <!-- Damit der Zurück-Pfeil auch ohne Weiter-Pfeil
+        immer an der gleichen Stelle ist habe ich einen leeren
+        Platzhalter eingefügt. JFL-->
+        <div class="arrowPlaceholder"></div> 
+    </section>
 
 </body>
 </html>

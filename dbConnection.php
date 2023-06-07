@@ -13,7 +13,7 @@ $username = $arrayDbData['username'];
 $password = $arrayDbData['password'];
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=$charset", $username, $password);
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 } catch (Exception $e) {
     die('Interner Fehler: Die Datenbank-Verbindung konnte nicht aufgebaut werden :(' . $e->getMessage());
 }
