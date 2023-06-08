@@ -92,7 +92,7 @@ body {
   font-size: 1.7em;
   font-family: var(--mainButtonFont);
   color: white;
-  background:#a8a2a2;
+  background: #e9e6e6;
   width: var(--mainButtonWidth);
   height: var(--mainButtonHeight);
   margin-bottom: 1em;
