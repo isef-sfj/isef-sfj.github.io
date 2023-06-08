@@ -68,8 +68,12 @@
             <br><br>
             <form>
             <br>
+            <section id="previewHeadline">
+            Wähle deinen Studiengang:
+            </section>
+            <br>
             <select name="degreeCourse" id="degreeCourse" class="selectDropdown">
-                <option value="">Wähle deinen Studiengang</option>
+                <option value="">Studiengang</option>
                 <option value="Fach1">Informatik</option>
                 <option value="Fach2">Pädagogik</option>
                 <option value="Fach3">Betriebswirtschaftslehre</option>
