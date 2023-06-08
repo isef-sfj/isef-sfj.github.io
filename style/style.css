@@ -221,7 +221,7 @@ body {
     font-size: 1.7em;
     font-family: var(--mainButtonFont);
     color: var(--fontColor);
-    background: linear-gradient(0deg, #f1de37, #ead42c );
+    background: linear-gradient(0deg, #f7c931, #ead42c );
     width: var(--mainButtonWidth);
     height: var(--mainButtonHeight);
     margin: 0em;
@@ -236,7 +236,7 @@ body {
     text-decoration: none;
     }
     .navigationButton:hover{
-      color: #f7c931;
+      color: #f7a531;
       }
 
   .arrowPlaceholder {
