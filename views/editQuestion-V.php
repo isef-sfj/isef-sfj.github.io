@@ -4,20 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
     <title>ISEF-Quiz</title>
 </head>
 <body>
 
-<?php
-   
-    include ('dbConnection.php');
-
-    $id = $_GET["id"];
-    $query = "select * from quizfragen where id=$id limit 1";
-    $datafromdb = $pdo->query($query);
-
-?>
 
         
         <header id="header">
@@ -32,16 +23,16 @@
 
         
     
-    <form action="dbUpdate.php" method="post">
+    <form action="../classes/editQuestion-C.php" method="post">
         
         
         <div class="flexContainerEQQuestion">
 
-                <?php foreach($datafromdb as $data) { ?>
+                <?php foreach($question as $data) { ?>
 
                     
 
-                    <h3>ID</h3>
+                    
                     <textarea readonly class="flexContainerEQQuestionItemQuestion" name="id" id="id" >
                     <?php echo $id; ?>
                     </textarea>
@@ -69,19 +60,28 @@
                 <?php } ?>
                 
            
-            
+                <input value="edit" name="goal" type="hidden" >
             
 
         </div>
+
+    
         
+
         <div class="flexContainerEQQuestionItemButton">
             <button>Frage speichern</button>
         </div>
         <br><br>
     </form>
 
+    <form action="../classes/editQuestion-C.php" method="post">
+        <input value="delete" name="goal" type="hidden" >
+        <input value=<?php echo "$id" ?> name="id" type="hidden" >
+        <button>Frage löschen</button>
+        </form>
+
     <section id="arrowBox">
-            <a href="/editQuestionChoice.php" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
+            <a href="../classes/editQuestionChoice-C.php?goal=id" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
             <!-- Damit der Zurück-Pfeil auch ohne Weiter-Pfeil
             immer an der gleichen Stelle ist habe ich einen leeren
             Platzhalter eingefügt. JFL-->
