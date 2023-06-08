@@ -78,7 +78,7 @@
         </form>
     </section>
     <section id="arrowBox">
-        <a href="../index3.php"><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
+        <a href="../index.php"><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
         
         <button class="navigationButton" onclick="setPlayer()">Modulauswahl</button>
     </section>
