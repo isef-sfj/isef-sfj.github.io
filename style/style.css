@@ -70,7 +70,7 @@ body {
     font-size: 1.7em;
     font-family: var(--mainButtonFont);
     color: #fff;
-    background: linear-gradient(0deg, rgb(247, 54, 157), rgb(240, 67, 148));
+    background: linear-gradient(0deg, rgb(255, 103, 16), rgb(255, 129, 50));
     width: var(--mainButtonWidth);
     height: var(--mainButtonHeight);
     margin-bottom: 1em;

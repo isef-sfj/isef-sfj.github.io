@@ -59,7 +59,7 @@
         
         <section id="arrowBox">
             <a href="../classes/nameIconChoice-C.php?goal=nameIconChoice" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
-            <button class="navigationButton" onclick="setIdModule()">Modulauswahl</button>
+            <button class="navigationButton" onclick="setIdModule()">Lektionsauswahl</button>
         </section>
          
 
