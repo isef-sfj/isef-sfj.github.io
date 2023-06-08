@@ -92,7 +92,10 @@ body {
   font-size: 1.7em;
   font-family: var(--mainButtonFont);
   color: white;
-  background: #e9e6e6;
+  ::placeholder{
+    color: white;
+  }
+  background: #d9d7d7;
   width: var(--mainButtonWidth);
   height: var(--mainButtonHeight);
   margin-bottom: 1em;
