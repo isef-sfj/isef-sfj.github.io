@@ -76,7 +76,7 @@
                 <option value="">Studiengang</option>
                 <option value="Fach1">Informatik</option>
                 <option value="Fach2">Pädagogik</option>
-                <option value="Fach3">Betriebswirtschaftslehre</option>
+                <option value="Fach3">BWL</option>
             </select>
             <br>
         </form>
