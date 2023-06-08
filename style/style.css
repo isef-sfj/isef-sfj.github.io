@@ -91,8 +91,8 @@ body {
 .insertForm {
   font-size: 1.7em;
   font-family: var(--mainButtonFont);
-  color: #a8a2a2;
-  background: white;
+  color: white;
+  background:#a8a2a2;
   width: var(--mainButtonWidth);
   height: var(--mainButtonHeight);
   margin-bottom: 1em;
