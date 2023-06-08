@@ -37,7 +37,7 @@ if (isset($_GET['lesson'])) {
 
 
 if ($goal == "leer") {
-    header('Location: ../index3.php');
+    header('Location: ../index.php');
 }
 
 if ($goal == "nameIconChoice") {

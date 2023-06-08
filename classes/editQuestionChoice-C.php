@@ -19,7 +19,7 @@ if (isset($_GET['modul'])) {
 }
 
 if ($goal == "leer") {
-    header('Location: ../index3.php');
+    header('Location: ../index.php');
 }
 
 if ($goal == "modul") {

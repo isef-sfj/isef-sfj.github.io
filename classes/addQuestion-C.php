@@ -27,7 +27,7 @@ if ($goal == 'new') {
    
     $qContr->setQuestion($modul, $lektion, $frage, $antwort1_richtig, $antwort2, $antwort3, $antwort4);
         
-    header('Location: ../index3.php');
+    header('Location: ../index.php');
     
     }
     

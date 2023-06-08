@@ -30,7 +30,7 @@ if ($goal == 'edit') {
    
     $qContr->editQuestion($id, $frage, $antwort1_richtig, $antwort2, $antwort3, $antwort4);
         
-    header('Location: ../index3.php');
+    header('Location: ../index.php');
     
 }
 
@@ -39,5 +39,5 @@ if ($goal == "delete") {
     $qc = new QuestionContr();
     $qc->deleteQuestion($id);
 
-    header('Location: ../index3.php');
+    header('Location: ../index.php');
 }
