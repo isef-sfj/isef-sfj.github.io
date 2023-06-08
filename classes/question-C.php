@@ -25,6 +25,14 @@ class QuestionContr {
 
     }
 
+    function getLessons($modul) {
+
+        $q = new Question();
+        $lessons = $q->getLessons($modul);
+        return $lessons;
+
+    }
+
     function getIdsForEditQuestionChoice($modul) {
         $q = new Question();
         $ids = $q->getIdsByModul($modul);

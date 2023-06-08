@@ -41,12 +41,12 @@ function setPlayer() {
 }
 
 function setIdModule() {
+    
+    var id = document.getElementById('id').innerText.trim();
+    var element = document.getElementById('modulSelect');
+    var modul = element.options[element.selectedIndex].value.trim();
+    var icon = document.getElementById('playerIconFace').src.trim();    
     var name = document.getElementById('playerName').innerHTML;
-    var encodetName = encodeURI(name);
-    var icon = document.getElementById('playerIconFace').src;
-    var modulVar = document.getElementById('modul');
-    var modul = modulVar.options[modulVar.selectedIndex].value;
-    var idVar = document.getElementById('id');
-    var id = idVar.options[idVar.selectedIndex].value;
-    window.location.href = "../classes/lessonChoice-C.php?id=" + id + "&modul=" + modul + "&icon=" + icon + "&name=" + name + "&goal=lessonChoice";
+    var encodetName = encodeURI(name).trim();
+    window.location.href = "../classes/nameIconChoice-C.php?id=" + id + "&modul=" + modul + "&icon=" + icon + "&name=" + encodetName + "&goal=lessonChoice";
 }

@@ -53,6 +53,14 @@ class Question extends Dbh {
 
     }
 
+    // Gibt alle Lektionen eines Moduls zurück, ohne Dubletten
+    public function getLessons($modul) {
+        $statement = $this->connect()->prepare("SELECT DISTINCT lektion FROM quizfragen WHERE modul=?");
+        $statement->execute(array($modul));
+        $lessons = $statement->fetchAll();   
+        return $lessons;
+    }
+
     // Neue Quizfrage speichern
     public function setQuestion($modul, $lektion, $frage, $antwort1_richtig, $antwort2, $antwort3, $antwort4) {
         

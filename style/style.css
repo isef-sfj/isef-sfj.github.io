@@ -329,4 +329,32 @@ body {
     justify-content: center;
   }
 
+  .centerLessonContainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .lessonContainer {
+    display: flex;
+    flex-direction: row;
+    max-width: 840px;
+    flex-wrap: wrap;
+  }
+
+  .lessonContainerItem {
+    font-family: var(--mainFont);
+    width: 200px;
+    max-height: 400px;
+    margin: 20px;
+    padding: 20px;
+    background: linear-gradient(0deg, rgb(247, 54, 157), rgb(240, 67, 148));
+    border-radius: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  
+
   

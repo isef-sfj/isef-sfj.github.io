@@ -34,21 +34,18 @@
     </div>
 
 
-    <?php echo($id) ?><br>
-    <?php echo($modul) ?>
-        
-
-        <label for="modulSelect">Wähle Dein Modul</label>
-
-        <div >
-            
-            
-           
+     Wähle eine Lektion aus dem Modul "<?php echo($modul) ?>"
+        <div class="centerLessonContainer">
+            <div class="lessonContainer">
+            <option name="lektion" class="lessonContainerItem" value="alle">Alle Lektionen</option>
+                <?php foreach($lessons as $datal) { ?>
+                    <option name="lektion" class="lessonContainerItem" value="<?php echo $datal['lektion']; ?>"><?php echo $datal['lektion']; ?></option>
+                <?php } ?>
+            </div>
         </div>
-
         
         <section id="arrowBox">
-            <a href="../classes/nameIconChoice-C.php?goal=nameIconChoice" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
+            <a href="nameIconChoice-C.php?goal=nameIconChoice" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
         </section>
          
 

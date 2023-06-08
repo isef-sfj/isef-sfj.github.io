@@ -49,6 +49,8 @@ if ($goal == "lessonChoice") {
     $name;
     $icon;
     $modul;
+    $pc = new QuestionContr();
+    $lessons = $pc->getLessons($modul);
     include '../views/lessonChoice-V.php';
 }
 
