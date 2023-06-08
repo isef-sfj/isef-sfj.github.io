@@ -135,7 +135,7 @@ body {
 
 #previewHeadline {
     font-family: var(--mainFont);
-    color: white;
+    color: rgb(19, 175, 223);
 }
 
 #previewField {
