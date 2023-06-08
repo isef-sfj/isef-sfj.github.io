@@ -32,10 +32,10 @@
 
 
 h1 {
-    color: white;
-    /* background: linear-gradient(to right,#7928CA, #FF0080);
+    /* color: white; */
+    background: linear-gradient(to right,#7928CA, #FF0080);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    -webkit-text-fill-color: transparent;
     font-family: var(--mainFont);
     font-size: 3em;
 }
