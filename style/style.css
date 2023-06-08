@@ -330,9 +330,14 @@ body {
     justify-content: center;
   }
 
+  #showPlayerName {
+    font-family: var(--mainFont);
+  }
+
   .iconName {
     display: flex;
     justify-content: center;
+    font-family: var(--mainFont);
   }
 
   .centerLessonContainer {
