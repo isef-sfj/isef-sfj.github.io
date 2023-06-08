@@ -83,6 +83,11 @@ body {
     border: none;
 }
 
+.selectDropdown:hover{
+  color: rgb(219, 31, 150);
+  }
+
+
 .insertForm {
   font-size: 1.7em;
   font-family: var(--mainButtonFont);
@@ -100,9 +105,6 @@ body {
   border: none;
 }
 
-.selectDropdown:hover{
-    color: #0022ff;
-    }
 
 #header {
     display: flex;
