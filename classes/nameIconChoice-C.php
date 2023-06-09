@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require_once 'player-C.php';
 require_once 'question-C.php';
@@ -60,4 +61,14 @@ if ($goal == "setPlayer") {
     $qc = new QuestionContr();
     $modules = $qc->getModulForEditQuestionChoice();
     include '../views/moduleChoice-V.php';
+}
+
+if ($goal == "waiting") {
+    $_SESSION['id'] = $id;
+    $_SESSION['name'] = $name;
+    $_SESSION['icon'] = $icon;
+    $_SESSION['modul'] = $modul;
+    $_SESSION['lesson'] = $lesson;
+
+    header('Location: play-C.php');
 }
