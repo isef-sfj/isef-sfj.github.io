@@ -19,7 +19,8 @@
 
 
     <section id="player">
-        <h2>Warteraum</h2>
+        <!-- kann weg. FS -->
+        <!-- <h2>Warteraum</h2> -->
         <div id="playerIcon">
             <img id="playerIconFace" src="/img/playerFace.png" alt="">
         </div>
