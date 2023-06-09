@@ -68,7 +68,7 @@
         </div>
             <input value="new" name="goal" type="hidden" >
         <div class="flexContainerEQQuestionItemButton">
-            <button>Frage speichern</button>
+            <button class="mainButton">Frage speichern</button>
         </div>
         <br><br>
     </form>
