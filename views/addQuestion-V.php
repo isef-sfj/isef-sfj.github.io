@@ -39,7 +39,7 @@
             <!-- Muss in der richtigen Seite durch einen
             a href ersetzt werden, da sonst die Action aus
             dem action-Attribut der Form ausgelöst wird! -->
-            <button>Neues Modul</button>
+            <button class="mainButton">Neues Modul</button>
           
         </div>    
             
