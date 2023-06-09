@@ -26,13 +26,15 @@
         
         <div class="flexContainerEQChoice">
 
-            <label class="previewHeadline" for="modul">Modul eingeben:</label><br>
+            
             <div class="flexContainerEQChoiceItem">
+            <label class="previewHeadline" for="modul">Modul eingeben:</label><br>
             <input class="insertForm" placeholder="Modul eingeben" id="modul" name="modul" type="text" required>
             </div>  
             
-            <label class="previewHeadline" for="lektion">Lektion eingeben:</label><br>
+            
             <div class="flexContainerEQChoiceItem">
+            <label class="previewHeadline" for="lektion">Lektion eingeben:</label><br>
             <input class="insertForm" placeholder="Lektion eingeben" id="lektion" name="lektion" type="text" required>
             </div>
 
