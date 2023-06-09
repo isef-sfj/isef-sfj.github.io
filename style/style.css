@@ -338,6 +338,10 @@ body {
     font-family: var(--mainFont);
   }
 
+  #playerName{
+    font-family: var(--mainFont);
+  }
+
   .iconName {
     display: flex;
     justify-content: center;
