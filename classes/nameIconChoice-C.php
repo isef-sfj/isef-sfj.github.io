@@ -46,10 +46,10 @@ if ($goal == "nameIconChoice") {
 }
 
 if ($goal == "lessonChoice") {
-    $id;
-    $name;
-    $icon;
-    $modul;
+    $_SESSION['id'] = $id;
+    $_SESSION['name'] = $name;
+    $_SESSION['icon'] = $icon;
+    $_SESSION['modul'] = $modul;
     $pc = new QuestionContr();
     $lessons = $pc->getLessons($modul);
     include '../views/lessonChoice-V.php';
@@ -64,11 +64,6 @@ if ($goal == "setPlayer") {
 }
 
 if ($goal == "waiting") {
-    $_SESSION['id'] = $id;
-    $_SESSION['name'] = $name;
-    $_SESSION['icon'] = $icon;
-    $_SESSION['modul'] = $modul;
     $_SESSION['lesson'] = $lesson;
-
-    header('Location: play-C.php');
+    header("Location: play-C.php?goal=waiting");
 }

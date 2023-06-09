@@ -50,3 +50,9 @@ function setIdModule() {
     var encodetName = encodeURI(name).trim();
     window.location.href = "../classes/nameIconChoice-C.php?id=" + id + "&modul=" + modul + "&icon=" + icon + "&name=" + encodetName + "&goal=lessonChoice";
 }
+
+function startGame() {
+    var element = document.getElementById('lektion');
+    var lesson = element.options[element.selectedIndex].value.trim();
+    window.location.href = "nameIconChoice-C.php?goal=waiting&lesson=" + lesson;
+}

@@ -1,20 +1,22 @@
-<?php
+<?php session_start()?>
 
-$goal = "";
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 
-if (isset($_POST["goal"])) {
-    $goal = $_POST["goal"];
-} 
-
-
-switch ($goal) {
-    case "hase":
-        echo "Hase";
-        break;
-    case "igel":
-        echo "Igel";
-        break;
-    default:
-        header('Location: classes/landingPage-C.php');
-        exit;
-}
+<form action="saveData.php" method="POST">
+<p>Name:<br>
+<input type="text" name="name" value="">
+<p>Exit Wort:<br>
+<input type="text" name="exitwort" value="">
+<p><input type="Submit" value="speichern">
+</form>
+    
+</body>
+</html>
