@@ -48,6 +48,7 @@
         
         <section id="arrowBox">
             <a href="nameIconChoice-C.php?goal=nameIconChoice" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
+            <button class="navigationButton" onclick="setIdModule()">Warteraum</button>
         </section>
          
 
