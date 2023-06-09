@@ -32,11 +32,12 @@
         </section>
 
     </div>
-    <!-- <div class="previewHeadline">
-        Wähle eine Lektion aus dem Modul
-    <div> -->
+    <div class="previewHeadline">
+        Wähle eine Lektion aus dem Modul:
+    <div>
 
-     Wähle eine Lektion aus dem Modul "<?php echo($modul) ?>"
+     <!-- Wähle eine Lektion aus dem Modul "<?php echo($modul) ?>" -->
+     "<?php echo($modul) ?>"
         <div class="centerLessonContainer">
             <div class="lessonContainer">
             <option name="lektion" class="lessonContainerItem" value="alle">Alle Lektionen</option>
