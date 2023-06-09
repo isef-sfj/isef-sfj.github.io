@@ -79,7 +79,7 @@
         <!-- Damit der Zurück-Pfeil auch ohne Weiter-Pfeil
         immer an der gleichen Stelle ist habe ich einen leeren
         Platzhalter eingefügt. JFL-->
-        <input value="new" name="goal" type="hidden" >
+        <!-- <input value="new" name="goal" type="hidden" > -->
         <div class="flexContainerEQQuestionItemButton">
             <button class="mainButton">Frage speichern</button>
         </div> 
