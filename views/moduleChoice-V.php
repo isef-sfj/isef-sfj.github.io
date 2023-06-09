@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
     <script language="javascript" type="text/javascript" src="../script/script.js"></script>
-    <title>ISEF-Quiz</title>
+    <title>Modulauswahl</title>
 </head>
 <body>
 
@@ -19,8 +19,8 @@
 
     <div id="headerMC">
        
-
-        <h2>Dein Wartreraum</h2>
+        <!-- kann weg. FS -->
+        <!-- <h2>Dein Wartreraum</h2> -->
 
         <section id="player">
             <div id="playerIcon">
@@ -44,13 +44,13 @@
 
         
 
-        <label for="modulSelect">Wähle Dein Modul</label>
+        <label for="modulSelect" class="previewFieldEntry" >Wähle Dein Modul</label>
 
         <div >
             
             <select id="modulSelect">
                 <?php foreach($modules as $datam) { ?>
-                    <option name="modul" id="modul" value="<?php echo $datam['modul']; ?>"><?php echo $datam['modul']; ?></option>
+                    <option name="modul" id="modul" class="selectDropdown" value="<?php echo $datam['modul']; ?>"><?php echo $datam['modul']; ?></option>
                 <?php } ?>
             </select>
            

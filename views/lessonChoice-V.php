@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
-    <title>ISEF-Quiz</title>
+    <title>Lektionsauswahl</title>
 </head>
 <body>
 
@@ -18,8 +18,8 @@
 
     <div id="headerMC">
        
-
-        <h2>Dein Wartreraum</h2>
+        <!-- kann denk ich weg. FS -->
+        <!-- <h2>Dein Wartreraum</h2> -->
 
         <section id="player">
             <div id="playerIcon">
