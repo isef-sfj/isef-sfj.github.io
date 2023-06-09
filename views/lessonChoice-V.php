@@ -33,11 +33,10 @@
 
     </div>
     <div class="previewHeadline">
-        Wähle eine Lektion aus dem Modul:
-    <div>
+        
 
      <!-- Wähle eine Lektion aus dem Modul "<?php echo($modul) ?>" -->
-     "<?php echo($modul) ?>"
+     Wähle eine Lektion aus dem Modul "<?php echo($modul) ?>"
         <div class="centerLessonContainer">
             <div class="lessonContainer">
             <option name="lektion" class="lessonContainerItem" value="alle">Alle Lektionen</option>
@@ -46,7 +45,7 @@
                 <?php } ?>
             </div>
         </div>
-        
+        <div>
         <section id="arrowBox">
             <a href="nameIconChoice-C.php?goal=nameIconChoice" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
             <button class="navigationButton" onclick="setIdModule()">Warteraum</button>
