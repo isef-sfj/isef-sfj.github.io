@@ -13,15 +13,12 @@
         <!-- ich würde später die index.html als index.php speichern
         und den Header, den Player und evtl. den Footer in Dateien auslagern.
         Dann muss man nicht jede Seite bei Änderungen anfassen. JFL -->
-        <header id="header">
-          
+        <header>
                 <h1>ISEF-Duell</h1>
-                
-            
         </header>
 
         
-                <h2>Fragen erstellen</h2>
+        <h2>Fragen erstellen</h2>
 
         
     
@@ -29,12 +26,12 @@
         
         <div class="flexContainerEQChoice">
 
-            <label for="modul">Modul eingeben:</label>
+            <label class="previewHeadline" for="modul">Modul eingeben:</label>
             <div class="flexContainerEQChoiceItem">
             <input placeholder="Modul eingeben" id="modul" name="modul" type="text" required>
             </div>  
             
-            <label for="lektion">Lektion eingeben:</label>
+            <label class="previewHeadline" for="lektion">Lektion eingeben:</label>
             <div class="flexContainerEQChoiceItem">
             <input placeholder="Lektion eingeben" id="lektion" name="lektion" type="text" required>
             </div>
@@ -49,19 +46,19 @@
 
         <div class="flexContainerEQQuestion">
 
-            <label for="frage">Frage eingeben:</label>    
+            <label class="previewHeadline" for="frage">Frage eingeben:</label>    
             <textarea class="flexContainerEQQuestionItemQuestion" placeholder="Frage eingeben" name="frage" id="frage" required></textarea>
             
-            
+            <label class="previewHeadline" for="antwort1_richtig">Richtige Antwort eingeben:</label>
             <textarea class="flexContainerEQQuestionItemAnswer" placeholder="RICHTIGE Antwort eingeben" name="antwort1_richtig" id="antwort1_richtig" required></textarea>
             
-            
+            <label class="previewHeadline" for="antwort2">Erste falsche Antwort eingeben:</label>
             <textarea class="flexContainerEQQuestionItemAnswer" placeholder="Falsche Antwort eingeben" name="antwort2" id="antwort2" required></textarea>
             
-            
+            <label class="previewHeadline" for="antwort3">Zweite falsche Antwort eingeben:</label>
             <textarea class="flexContainerEQQuestionItemAnswer" placeholder="Falsche Antwort eingeben" name="antwort3" id="antwort3" required></textarea>
             
-            
+            <label class="previewHeadline" for="antwort4">Dritte falsche Antwort eingeben:</label>
             <textarea class="flexContainerEQQuestionItemAnswer" placeholder="Falsche Antwort eingeben" name="antwort4" id="antwort4" required></textarea>
             
             
@@ -75,7 +72,7 @@
     </form>
 
     <section id="arrowBox">
-        <a href="/index3.php" ><img src="../img/arrowLeft.png" alt="" class="arrow"></a>
+        <a href="/index.php" ><img src="../img/arrowLeft.png" alt="" class="arrow"></a>
         <!-- Damit der Zurück-Pfeil auch ohne Weiter-Pfeil
         immer an der gleichen Stelle ist habe ich einen leeren
         Platzhalter eingefügt. JFL-->
