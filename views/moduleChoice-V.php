@@ -44,13 +44,13 @@
 
         
 
-        <label for="modulSelect" class="previewFieldEntry" >Wähle Dein Modul</label>
+        <label for="modulSelect" class="previewHeadline" >Wähle Dein Modul</label>
 
         <div >
             
-            <select id="modulSelect">
+            <select id="modulSelect" class="selectDropdown">
                 <?php foreach($modules as $datam) { ?>
-                    <option name="modul" id="modul" class="selectDropdown" value="<?php echo $datam['modul']; ?>"><?php echo $datam['modul']; ?></option>
+                    <option name="modul" id="modul" value="<?php echo $datam['modul']; ?>"><?php echo $datam['modul']; ?></option>
                 <?php } ?>
             </select>
            
