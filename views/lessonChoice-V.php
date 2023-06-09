@@ -32,9 +32,9 @@
         </section>
 
     </div>
-    <div class="previewHeadline">
+    <!-- <div class="previewHeadline">
         Wähle eine Lektion aus dem Modul
-    <div>
+    <div> -->
 
      Wähle eine Lektion aus dem Modul "<?php echo($modul) ?>"
         <div class="centerLessonContainer">
