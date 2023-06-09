@@ -360,6 +360,7 @@ body {
     flex-direction: row;
     max-width: 840px;
     flex-wrap: wrap;
+    color: white;
   }
 
   .lessonContainerItem {
