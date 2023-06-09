@@ -68,7 +68,7 @@
             <br><br>
             <form>
             <br>
-            <section id="previewHeadline">
+            <section class="previewHeadline">
             Wähle deinen Studiengang:
             </section>
             <br>

@@ -139,7 +139,7 @@ body {
     width: 100px;
 }
 
-#previewHeadline {
+.previewHeadline {
     font-family: var(--mainFont);
     color: rgb(165, 226, 245);
 }

@@ -12,7 +12,7 @@
                 <h1>ISEF-Duell</h1>
         </header>
 
-        <section id="previewHeadline">
+        <section class="previewHeadline">
             Die neuesten Fragen
         </section>
 
