@@ -25,31 +25,35 @@ session_start();
         </section>
 
         <div>
-            Du wirst die Lektion <?php $_SESSION['lesson'] ?> aus dem Modul <?php $_SESSION['modul'] ?> spielen!
+            Du wirst die Lektion <strong><?php echo($_SESSION['lesson']) ?></strong> aus dem Modul <strong><?php echo($_SESSION['modul']) ?></strong> spielen!
         </div>
         
         <section>
             
-            <div id="previewField">
-
-                <!-- <?php //foreach($questions as $data) { ?>
-
-                    <div class="previewFieldEntry">
-                        <?php //echo $data['frage']; ?>
-                    </div>
-
-                <?php // } ?> -->
+            <div id="playerField">
+                <div class="playerFieldEntry">
+                    <img src="<?php echo($_SESSION['icon']) ?>" alt="">
+                    <br>
+                    <?php echo($_SESSION['name']) ?>
+                    <br>
+                    <button>ready</button>
+                </div>
+                <div class="playerFieldEntry">
+                    
+                </div>
+                <div class="playerFieldEntry">
+                    
+                </div>
+                <div class="playerFieldEntry">
+                    
+                </div>
+                
                 
             </div>
             
         </section>
 
-        <section id="buttonField">
-
-            <div><a href="#" class="mainButton">
-                Bereit zum Spielen
-            </a></div>
-        </section>
+        
 
     </body>
 </html>

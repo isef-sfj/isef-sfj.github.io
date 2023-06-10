@@ -58,6 +58,5 @@ function goWaitingroom() {
 function saveLesson(lektion) {
     var element = document.getElementById('lektion');
     element.classList.add("ausgesucht");
-    alert ("SCRIPT.JS:   ../classes/session-C.php?lesson= " + lektion)
     window.location.href = "../classes/session-C.php?lesson=" + lektion;
 }
