@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require_once 'player-C.php';
 require_once 'question-C.php';
@@ -45,12 +46,24 @@ if ($goal == "nameIconChoice") {
 }
 
 if ($goal == "lessonChoice") {
-    $id;
-    $name;
-    $icon;
-    $modul;
+    if (!isset($_SESSION['id'])) {
+        $_SESSION['id'] = $id;
+    }
+
+    if (!isset($_SESSION['name'])) {
+        $_SESSION['name'] = $name;
+    }
+
+    if (!isset($_SESSION['icon'])) {
+        $_SESSION['icon'] = $icon;
+    }
+
+    if (!isset($_SESSION['modul'])) {
+        $_SESSION['modul'] = $modul;
+    }
+    
     $pc = new QuestionContr();
-    $lessons = $pc->getLessons($modul);
+    $lessons = $pc->getLessons($_SESSION['modul']);
     include '../views/lessonChoice-V.php';
 }
 
@@ -60,4 +73,8 @@ if ($goal == "setPlayer") {
     $qc = new QuestionContr();
     $modules = $qc->getModulForEditQuestionChoice();
     include '../views/moduleChoice-V.php';
+}
+
+if ($goal == "waiting") {
+    header("Location: play-C.php?goal=waiting");
 }

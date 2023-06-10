@@ -50,3 +50,14 @@ function setIdModule() {
     var encodetName = encodeURI(name).trim();
     window.location.href = "../classes/nameIconChoice-C.php?id=" + id + "&modul=" + modul + "&icon=" + icon + "&name=" + encodetName + "&goal=lessonChoice";
 }
+
+function goWaitingroom() {
+    window.location.href = "../classes/nameIconChoice-C.php?goal=waiting";
+}
+
+function saveLesson(lektion) {
+    var element = document.getElementById('lektion');
+    element.classList.add("ausgesucht");
+    alert ("SCRIPT.JS:   ../classes/session-C.php?lesson= " + lektion)
+    window.location.href = "../classes/session-C.php?lesson=" + lektion;
+}
