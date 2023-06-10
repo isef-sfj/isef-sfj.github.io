@@ -41,16 +41,25 @@ session_start()
             <div class="lessonContainer">
             <option id="lektion" name="lektion" class="lessonContainerItem" value="alle">Alle Lektionen</option>
                 <?php foreach($lessons as $datal) { ?>
-                    <option name="lektion" class="lessonContainerItem" value="<?php echo $datal['lektion']; ?>"><?php echo $datal['lektion']; ?></option>
+                    <option id="<?php echo $datal['lektion']; ?>" onclick="saveLesson('<?php echo $datal['lektion']; ?>')" name="lektion" class="lessonContainerItem" value="<?php echo $datal['lektion']; ?>"><?php echo $datal['lektion']; ?></option>
                 <?php } ?>
             </div>
         </div>
 
         <div>
+
+        <br>
+        <br>
+        <?php echo("id: " . $_SESSION['id']); ?>
+        <?php echo("name: " . $_SESSION['name']); ?>
+        <?php echo("icon: " . $_SESSION['icon']); ?>
+        <?php echo("modul: " . $_SESSION['modul']); ?>
+        <?php echo("lesson: " . $_SESSION['lesson']); ?>
+        
         <section id="arrowBox">
             <a href="nameIconChoice-C.php?goal=nameIconChoice" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
-            <button type="submit" onclick="startGame()"></button>
-            <a href="nameIconChoice-C.php?goal=waiting" >Warteraum</a>
+            <!-- <a href="nameIconChoice-C.php?goal=waiting" >Warteraum</a> -->
+            <button onclick="goWaitingroom()">Ab in den Warteraum</button>
         </section>
          
 

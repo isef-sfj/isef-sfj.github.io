@@ -51,8 +51,13 @@ function setIdModule() {
     window.location.href = "../classes/nameIconChoice-C.php?id=" + id + "&modul=" + modul + "&icon=" + icon + "&name=" + encodetName + "&goal=lessonChoice";
 }
 
-function startGame() {
+function goWaitingroom() {
+    window.location.href = "../classes/nameIconChoice-C.php?goal=waiting";
+}
+
+function saveLesson(lektion) {
     var element = document.getElementById('lektion');
-    var lesson = element.options[element.selectedIndex].value.trim();
-    window.location.href = "nameIconChoice-C.php?goal=waiting&lesson=" + lesson;
+    element.classList.add("ausgesucht");
+    alert ("SCRIPT.JS:   ../classes/session-C.php?lesson= " + lektion)
+    window.location.href = "../classes/session-C.php?lesson=" + lektion;
 }
