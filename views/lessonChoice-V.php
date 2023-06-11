@@ -23,9 +23,9 @@ session_start()
 
     <div id="headerMC">
 
-        <section id="player">
-            <div id="playerIcon">
-                <img id="playerIconFace" src=<?php echo($_SESSION['icon']) ?> alt="">
+        <section class="player">
+            <div class="playerIcon">
+                <img class="playerIconFace" src=<?php echo($_SESSION['icon']) ?> alt="">
             </div>
 
             <div id="playerName">

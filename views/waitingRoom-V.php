@@ -26,6 +26,8 @@ session_start();
 
         <div>
             Du wirst die Lektion <strong><?php echo($_SESSION['lesson']) ?></strong> aus dem Modul <strong><?php echo($_SESSION['modul']) ?></strong> spielen!
+        </div><div>
+            Deine <strong>Mitspieler</strong>:
         </div>
         
         <section>
@@ -39,7 +41,11 @@ session_start();
                     <button>ready</button>
                 </div>
                 <div class="playerFieldEntry">
-                    
+                <img src="../img/playerFace.png" alt="">
+                    <br>
+                        John Doe
+                    <br>
+                    <button>ready</button>
                 </div>
                 <div class="playerFieldEntry">
                     
