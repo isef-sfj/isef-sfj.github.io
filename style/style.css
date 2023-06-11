@@ -375,6 +375,10 @@ body {
     text-overflow: ellipsis;
   }
 
+  .ausgesucht {
+    background: #40e641;
+  }
+
   
 
   
