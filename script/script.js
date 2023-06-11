@@ -56,7 +56,26 @@ function goWaitingroom() {
 }
 
 function saveLesson(lektion) {
-    var element = document.getElementById('lektion');
-    element.classList.add("ausgesucht");
-    window.location.href = "../classes/session-C.php?lesson=" + lektion;
+
+    let ausgesuchtAlt = document.getElementsByClassName ("ausgesucht");
+    let numItems = ausgesuchtAlt.length;
+
+    for (let i=0; i<numItems; i++) {
+        ausgesuchtAlt[i].classList.remove('ausgesucht');
+    }
+    setLessonChoice(lektion);
+}
+
+function setLessonChoice(lesson) {
+        // AJAX nutzen mit IE7+, Chrome, Firefox, Safari, Opera
+        xmlhttp=new XMLHttpRequest();
+        xmlhttp.onreadystatechange=function(lesson) {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+                    document.getElementById(xmlhttp.responseText).classList.add('ausgesucht');
+                }
+            }
+        xmlhttp.open("GET","setLessonChoice.php?lesson="+lesson, true);
+        xmlhttp.send();
+
+      
 }
