@@ -210,6 +210,32 @@ body {
   color: #4c964e;
   }
 
+  .submButton{
+    
+    font-size: 1.7em;
+    font-family: var(--mainButtonFont);
+    color: var(--fontColor);
+    background: linear-gradient(0deg, #0dcca1, #40e641 );
+    width: var(--mainButtonWidth);
+    height: var(--mainButtonHeight);
+    margin: 0rem;
+    border-radius: 5em;
+    transition : 300ms;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    list-style-type: none;
+    text-decoration: none;
+    border: (0deg, #0dcca1, #40e641 );
+    }
+
+  .submButton:hover{
+  color: #4c964e;
+  }
+
+
   #arrowBox {
     width: 100%;
     display: flex;

@@ -76,8 +76,8 @@
 
     <section id="arrowBox">
         <div class="flexContainerEQQuestionItemButton">
-        <a href="/index.php" ><img src="../img/arrowLeft.png" alt="" class="arrow"></a>
-            <button class="mainButton">Frage speichern</button>
+            <a href="/index.php" ><img src="../img/arrowLeft.png" alt="" class="arrow"></a>
+            <button class="submButton">Frage speichern</button>
         </div> 
     </section>
 
