@@ -46,7 +46,7 @@ session_start();
                     <br>
                         John Doe
                     <br>
-                    <button class=mainButton">ready</button>
+                    <button class="mainButton">ready</button>
                 </div>
                 <div class="playerFieldEntry">
                     
