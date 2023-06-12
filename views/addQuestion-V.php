@@ -75,12 +75,8 @@
     </form>
 
     <section id="arrowBox">
-        <a href="/index.php" ><img src="../img/arrowLeft.png" alt="" class="arrow"></a>
-        <!-- Damit der Zurück-Pfeil auch ohne Weiter-Pfeil
-        immer an der gleichen Stelle ist habe ich einen leeren
-        Platzhalter eingefügt. JFL-->
-        <!-- <input value="new" name="goal" type="hidden" > -->
         <div class="flexContainerEQQuestionItemButton">
+        <a href="/index.php" ><img src="../img/arrowLeft.png" alt="" class="arrow"></a>
             <button class="mainButton">Frage speichern</button>
         </div> 
     </section>
