@@ -65,7 +65,7 @@
 
         
             <label for="playerName"></label>
-            <input placeholder="Spielername eingeben" id="playerName" name="playerName" type="text" class="insertForm" onkeyup="playerNameChanged()">
+            <input placeholder="Spielername eingeben" name="playerName" type="text" class="insertForm" onkeyup="playerNameChanged()">
             <br><br>
             <form>
             <br>
