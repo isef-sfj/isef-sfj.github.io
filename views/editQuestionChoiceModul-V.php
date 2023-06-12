@@ -33,9 +33,9 @@
         </div>
         <section id="arrowBox">
             <a href="../index.php" ><img src="../img/arrowLeft.png" alt="" class="arrow"></a>
-            <div class="navigationButton" class="flexContainerEQQuestionItemButton">
-            <button onClick="sendmodul()">IDs für Modul anzeigen</button>
-        </div>
+            <div class="flexContainerEQQuestionItemButton">
+                <button class="navigationButton" onClick="sendmodul()">IDs für Modul anzeigen</button>
+            </div>
         </section>
 
 </body>
