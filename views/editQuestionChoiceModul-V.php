@@ -22,9 +22,8 @@
         <section class="previewHeadline">
             Bitte wähle das Modul, das du bearbeiten möchtest:
         </section>
-        
-        <div >
-            
+        <br>
+        <div>
             <select class="selectDropdown" id="modulSelect">
                 <?php foreach($moduls as $datam) { ?>
                     <option name="modul" id="modul" value="<?php echo $datam['modul']; ?>"><?php echo $datam['modul']; ?></option>
