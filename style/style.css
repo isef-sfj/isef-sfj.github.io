@@ -312,6 +312,8 @@ body {
   .flexContainerEQQuestionItemButton {
     display: flex;
     justify-content: end;    
+    margin: 0em;
+    border: 0em;
   }
 
   .playerIcon {
