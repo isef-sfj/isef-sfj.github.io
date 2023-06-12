@@ -203,7 +203,7 @@ body {
     cursor: pointer;
     list-style-type: none;
     text-decoration: none;
-    border:  var(--testBorder) solid rgb(233, 16, 186);
+    border: (0deg, #0dcca1, #40e641 );
     }
 
   .mainButton:hover{
