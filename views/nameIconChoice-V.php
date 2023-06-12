@@ -25,7 +25,7 @@
             <img id="playerIconFace" src="/img/playerFace.png" alt="">
         </div>
 
-        <div id="showPlayerName">
+        <div class="previewHeadline" id="showPlayerName">
             John Doe
         </div>
 

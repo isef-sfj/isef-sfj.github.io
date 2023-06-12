@@ -20,13 +20,14 @@ session_start();
                 <h1>ISEF-Duell</h1>
         </header>
 
-        <section id="previewHeadline">
+        <section class="previewHeadline">
             Warteraum
         </section>
 
-        <div>
+        <div class="previewHeadline">
             Du wirst die Lektion <strong><?php echo($_SESSION['lesson']) ?></strong> aus dem Modul <strong><?php echo($_SESSION['modul']) ?></strong> spielen!
-        </div><div>
+        </div>
+        <div class="previewHeadline">
             Deine <strong>Mitspieler</strong>:
         </div>
         
@@ -38,14 +39,14 @@ session_start();
                     <br>
                     <?php echo($_SESSION['name']) ?>
                     <br>
-                    <button>ready</button>
+                    <button class="mainButton">ready</button>
                 </div>
                 <div class="playerFieldEntry">
                 <img src="../img/playerFace.png" alt="">
                     <br>
                         John Doe
                     <br>
-                    <button>ready</button>
+                    <button class=mainButton">ready</button>
                 </div>
                 <div class="playerFieldEntry">
                     
