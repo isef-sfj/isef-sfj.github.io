@@ -13,7 +13,7 @@
         <!-- ich würde später die index.html als index.php speichern
         und den Header, den Player und evtl. den Footer in Dateien auslagern.
         Dann muss man nicht jede Seite bei Änderungen anfassen. JFL -->
-        <header>
+        <header id="header">
                 <h1>ISEF-Duell</h1>
         </header>
 

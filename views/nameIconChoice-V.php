@@ -13,7 +13,7 @@
 
 <body>
 
-    <header>
+    <header id="header">
         <h1>ISEF-Duell</h1>
     </header>
 

@@ -14,15 +14,10 @@ session_start()
 </head>
 <body>
 
-    <header>
-          
+    <header id="header">
         <h1>ISEF-Duell</h1>
-        
     </header>
-
-
     <div id="headerMC">
-
         <section class="player">
             <div class="playerIcon">
                 <img class="playerIconFace" src=<?php echo($_SESSION['icon']) ?> alt="">
