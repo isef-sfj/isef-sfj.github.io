@@ -97,8 +97,8 @@ body {
     color: white;
     opacity: 1;
   }
-  width: var(--mainButtonWidth);
-  height: var(--mainButtonHeight);
+  width: 32em;
+  height: 6em;
   margin-bottom: 1em;
   border-radius: 0.5em;
   transition : 300ms;
