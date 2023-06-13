@@ -17,9 +17,10 @@
                 
             
         </header>
-        <section class="previewHeadline">
+        <!-- <section class="previewHeadline">
             Frage bearbeiten
-        </section>
+        </section> -->
+        <h2>Frage bearbeiten</h2>
         <br>
     <form action="../classes/editQuestion-C.php" method="post">
         
@@ -82,11 +83,11 @@
         
 
     <section id="arrowBox">
-            <a href="../classes/editQuestionChoice-C.php?goal=modul" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
-            <div class="flexContainerEQQuestionItemButton">
-                <button class="submButton">Frage speichern</button>
-            </div>
-        </section>
+        <a href="../classes/editQuestionChoice-C.php?goal=modul" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
+        <div class="flexContainerEQQuestionItemButton">
+           <button class="submButton">Frage speichern</button>
+        </div>
+    </section>
     </form>
 </body>
 </html>
