@@ -79,7 +79,7 @@
         <input value="delete" name="goal" type="hidden" >
         <input value=<?php echo "$id" ?> name="id" type="hidden" >
         <button class="deleteButton">Frage löschen</button>
-        </form>
+        
 
     <section id="arrowBox">
             <a href="../classes/editQuestionChoice-C.php?goal=modul" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
@@ -87,6 +87,6 @@
                 <button class="submButton">Frage speichern</button>
             </div>
         </section>
-
+    </form>
 </body>
 </html>
