@@ -12,10 +12,10 @@
                 <h1>ISEF-Duell</h1>
         </header>
 
-        <section class="previewHeadline">
+        <!-- <section class="previewHeadline">
             Die neuesten Fragen
-        </section>
-
+        </section> -->
+        <h2>Die neuesten Fragen</h2>
         <section>
             <div id="previewField">
                 <?php foreach($questions as $data) { ?>
