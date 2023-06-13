@@ -89,7 +89,7 @@ body {
 
 
 .insertForm {
-  font-size: 1 em;
+  font-size: 1em;
   font-family: var(--mainButtonFont);
   color: white;
   background: #d9d7d7;
@@ -97,8 +97,8 @@ body {
     color: white;
     opacity: 1;
   }
-  width: 32em;
-  height: 6em;
+  width: 22em;
+  height: 4em;
   margin-bottom: 1em;
   border-radius: 0.5em;
   transition : 300ms;
