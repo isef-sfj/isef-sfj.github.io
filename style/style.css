@@ -41,7 +41,8 @@ h1 {
 }
 
 h2 {
-    color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255); */
+    color: rgb(212, 245, 255);
     font-family: var(--mainFont);
     font-size: 2em;
     margin-left: 50px;
