@@ -82,7 +82,7 @@
         </form>
 
     <section id="arrowBox">
-            <a href="../classes/editQuestionChoice-C.php?goal=id" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
+            <a href="../classes/editQuestionChoice-C.php?goal=modul" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
             <div class="flexContainerEQQuestionItemButton">
                 <button class="submButton">Frage speichern</button>
             </div>
