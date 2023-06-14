@@ -30,13 +30,19 @@ function setPlayerIconKuh() {
 function playerNameChanged() {
     var nameEntered = document.getElementById('playerName').value.trim();
     var playerName = document.getElementById('showPlayerName');
-    playerName.innerHTML = nameEntered;
+    
+    String.prototype.stripTags = function() {
+        let matchTag = /<(?:.|\s)*?>/g;
+        return this.replace(matchTag, "");
+    };
+     
+    playerName.innerHTML = nameEntered.stripTags();
 }
 
 function setPlayer() {
-    var name = document.getElementById('showPlayerName').innerHTML;
+    var name = document.getElementById('showPlayerName').innerHTML.trim();
     var encodetName = encodeURI(name);
-    var icon = document.getElementById('playerIconFace').src;
+    var icon = document.getElementById('playerIconFace').src.trim();
     window.location.href = "../classes/nameIconChoice-C.php?name=" + encodetName + "&icon=" + icon + "&goal=setPlayer";
 }
 

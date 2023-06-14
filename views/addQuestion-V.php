@@ -22,7 +22,7 @@
 
         
     
-    <form action="../classes/enterQuestion-C.php" method="post">
+    <form action="../classes/addQuestion-C.php?" method="post">
         
         <div class="flexContainerEQChoice">
 
@@ -66,13 +66,13 @@
             
 
         </div>
-        <!-- Verschiebung in den Navigationsbereich  -->
-            <!-- <input value="new" name="goal" type="hidden" >
+            <input value="new" name="goal" type="hidden">
+        <!-- Verschiebung in den Navigationsbereich  
         <div class="flexContainerEQQuestionItemButton">
             <button class="mainButton">Frage speichern</button>
         </div> -->
         <br><br>
-    </form>
+    
 
     <section id="arrowBox">
         <div class="flexContainerEQQuestionItemButton">
@@ -80,6 +80,8 @@
             <button class="submButton">Frage speichern</button>
         </div> 
     </section>
+
+    </form>
 
 </body>
 </html>
