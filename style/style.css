@@ -204,7 +204,7 @@ body {
     cursor: pointer;
     list-style-type: none;
     text-decoration: none;
-    border: (0deg, #0dcca1, #40e641 );
+    border:  var(--testBorder) solid rgb(233, 16, 186);
     }
 
   .mainButton:hover{
@@ -219,7 +219,7 @@ body {
     background: linear-gradient(0deg, #0dcca1, #40e641 );
     width: var(--mainButtonWidth);
     height: var(--mainButtonHeight);
-    margin: 0rem;
+    margin: 1em;
     border-radius: 5em;
     transition : 300ms;
     display: flex;
@@ -229,7 +229,7 @@ body {
     cursor: pointer;
     list-style-type: none;
     text-decoration: none;
-    border: (0deg, #0dcca1, #40e641 );
+    border:  var(--testBorder) solid rgb(233, 16, 186);
     }
 
   .submButton:hover{
