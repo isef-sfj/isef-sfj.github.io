@@ -54,13 +54,12 @@ session_start();
                     <a class="previewHeadline">Spieler 4</a>
                     <button class="readyButton">ready</button>
                 </div>
-                
-                
             </section>
-            
-
-        
-
+            <section id="arrowBox">
+            <a href="nameIconChoice-C.php?goal=nameIconChoice" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
+            <!-- <a href="nameIconChoice-C.php?goal=waiting" >Warteraum</a> -->
+            <button class="navigationButton">Platzhalter</button>
+        </section>
     </body>
 </html>
 

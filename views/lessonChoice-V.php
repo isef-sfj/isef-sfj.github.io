@@ -46,9 +46,7 @@ session_start()
         <section id="arrowBox">
             <a href="nameIconChoice-C.php?goal=nameIconChoice" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
             <!-- <a href="nameIconChoice-C.php?goal=waiting" >Warteraum</a> -->
-            <button onclick="goWaitingroom()">Ab in den Warteraum</button>
+            <button class="navigationButton" onclick="goWaitingroom()">Ab in den Warteraum</button>
         </section>
-         
-
 </body>
 </html>
