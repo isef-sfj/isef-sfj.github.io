@@ -33,11 +33,11 @@ session_start();
         
             
             <section id="playerField">
-                <div class="playerFieldEntry">
-                    <img class="playerIcon" src="<?php echo($_SESSION['icon']) ?>" alt="">
-                    <!-- <br> -->
+                <div class="playerIcon" class="playerFieldEntry">
+                    <img  src="<?php echo($_SESSION['icon']) ?>" alt="">
+                    <br>
                     <?php echo($_SESSION['name']) ?>
-                    <!-- <br> -->
+                    <br>
                     <button  class="playerIcon" class="mainButton">ready</button>
                 </div>
                 <div class="playerFieldEntry">
