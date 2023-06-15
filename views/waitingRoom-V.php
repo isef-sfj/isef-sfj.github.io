@@ -43,22 +43,18 @@ session_start();
                 <div class="playerFieldEntry">
                 <img src="../img/playerFace.png" alt="">
                     <br>
-                        Spieler 2
+                        <a class="previewHeadline">Spieler 2</a>
                     <br>
                     <button class="readyButton">ready</button>
                 </div>
                 <div class="playerFieldEntry">
                     <img src="../img/playerFace.png" alt="">
-                    <br>
-                        Spieler 3
-                    <br>
+                    <a class="previewHeadline">Spieler 3</a>
                     <button class="readyButton">ready</button>
                 </div>
                 <div class="playerFieldEntry">
                     <img src="../img/playerFace.png" alt="">
-                    <br>
-                        Spieler 4
-                    <br>
+                    <a class="previewHeadline">Spieler 4</a>
                     <button class="readyButton">ready</button>
                 </div>
                 
