@@ -439,9 +439,8 @@ body {
 }
 
 .previewFieldEntry{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: table-cell;
+  vertical-align: middle;
 }
 
   
