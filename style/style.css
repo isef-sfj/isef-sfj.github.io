@@ -426,7 +426,7 @@ body {
     /* grid-auto-flow: row; */
     grid-template-columns: 6em 6em 6em 6em;
     grid-template-rows: 6em;
-    gap: 2em;
+    gap: 3em;
     /* display: grid; */
     /* grid-template-rows: 3em;
     grid-template-columns: repeat(4, 3em); */
@@ -469,5 +469,30 @@ body {
   }
   .deleteButton:hover{
     color: #ac1010;
+    }
+
+    .readyButton{
+    
+      /* font-size: 1.7em; */
+      font-family: var(--mainButtonFont);
+      color: var(--fontColor);
+      background: linear-gradient(0deg, #0dcca1, #40e641 );
+      /* width: var(--mainButtonWidth); */
+      height: var(--mainButtonHeight);
+      margin: 1em;
+      border-radius: 5em;
+      transition : 300ms;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      list-style-type: none;
+      text-decoration: none;
+      border:  var(--testBorder) solid rgb(233, 16, 186);
+      }
+  
+    .mainButton:hover{
+    color: #4c964e;
     }
   
