@@ -40,9 +40,7 @@ session_start()
                 <?php } ?>
             </div>
         </div>
-
-        <div>
-
+    </div>
         <section id="arrowBox">
             <a href="nameIconChoice-C.php?goal=nameIconChoice" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
             <!-- <a href="nameIconChoice-C.php?goal=waiting" >Warteraum</a> -->
