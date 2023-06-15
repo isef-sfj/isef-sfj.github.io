@@ -35,16 +35,13 @@ session_start();
             <section id="playerField">
                 <div class="playerFieldEntry">
                     <img  src="<?php echo($_SESSION['icon']) ?>" alt="">
-                    <br>
+                    <!-- Hier muss noch die Klasse previewHeadline rein  -->
                     <?php echo($_SESSION['name']) ?>
-                    <br>
                     <button class="readyButton">ready</button>
                 </div>
                 <div class="playerFieldEntry">
-                <img src="../img/playerFace.png" alt="">
-                    <br>
-                        <a class="previewHeadline">Spieler 2</a>
-                    <br>
+                    <img src="../img/playerFace.png" alt="">
+                    <a class="previewHeadline">Spieler 2</a>
                     <button class="readyButton">ready</button>
                 </div>
                 <div class="playerFieldEntry">
