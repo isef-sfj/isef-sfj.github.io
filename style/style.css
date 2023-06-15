@@ -438,7 +438,7 @@ body {
     align-items: center; */
 }
 
-.previewFieldEntry{
+.playerFieldEntry{
   display: flex;
   flex-direction: column;
   vertical-align: middle;
