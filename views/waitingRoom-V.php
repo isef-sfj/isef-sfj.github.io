@@ -56,7 +56,7 @@ session_start();
                 </div>
             </section>
             <section id="arrowBox">
-            <a href="nameIconChoice-C.php?goal=nameIconChoice" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
+            <a href="../classes/nameIconChoice-C.php?goal=nameIconChoice" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
             <!-- <a href="nameIconChoice-C.php?goal=waiting" >Warteraum</a> -->
             <button class="navigationButton">Platzhalter</button>
         </section>
