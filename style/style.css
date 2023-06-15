@@ -416,9 +416,10 @@ body {
   /* Waiting room */
   #playerField {
     margin-top: 2em;
+    margin-bottom: 2em;
     display: grid;
-    grid-template-columns: 8em 8em 8em 8em;
-    grid-template-rows: 8em;
+    grid-template-columns: 6em 6em 6em 6em;
+    grid-template-rows: 12em;
     gap: 3em;
 }
 
@@ -457,11 +458,9 @@ body {
 
     .readyButton{
     
-      /* font-size: 1.7em; */
       font-family: var(--mainButtonFont);
       color: var(--fontColor);
       background: linear-gradient(0deg, #0dcca1, #40e641 );
-      /* width: var(--mainButtonWidth); */
       height: var(--mainButtonHeight);
       margin: 1em;
       border-radius: 5em;
