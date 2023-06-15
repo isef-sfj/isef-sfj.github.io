@@ -421,11 +421,20 @@ body {
     padding: 0;
     width: 100%;
     max-width: 1000px; */
-    display: grid;
+    /* display: grid;
     grid-auto-flow: row;
     grid-template-columns: 6em 6em 6em 6em;
     grid-template-rows: 6em 6em 6em;
+    gap: 2em; */
+    display: grid;
+    grid-template-rows: 6em;
+    grid-template-columns: repeat(3, 6em);
     gap: 2em;
+  
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
 }
   
 .deleteButton{
