@@ -428,7 +428,7 @@ body {
     gap: 2em; */
     display: grid;
     grid-template-rows: 6em;
-    grid-template-columns: repeat(3, 6em);
+    grid-template-columns: repeat(4, 6em);
     gap: 2em;
   
     justify-content: center;
