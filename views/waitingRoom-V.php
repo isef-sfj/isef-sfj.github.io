@@ -31,9 +31,8 @@ session_start();
             Deine <strong>Mitspieler</strong>:
         </div>
         
-        <section>
             
-            <div id="playerField">
+            <section id="playerField">
                 <div class="playerIcon" class="playerFieldEntry">
                     <img src="<?php echo($_SESSION['icon']) ?>" alt="">
                     <br>
@@ -64,9 +63,8 @@ session_start();
                 </div>
                 
                 
-            </div>
+            </section>
             
-        </section>
 
         
 
