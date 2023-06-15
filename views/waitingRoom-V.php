@@ -33,28 +33,28 @@ session_start();
         
             
             <section id="playerField">
-                <div class="playerIcon" class="playerFieldEntry">
+                <div class="playerFieldEntry">
                     <img  src="<?php echo($_SESSION['icon']) ?>" alt="">
                     <br>
                     <?php echo($_SESSION['name']) ?>
                     <br>
                     <button class="mainButton">ready</button>
                 </div>
-                <div class="playerIcon" class="playerFieldEntry">
+                <div class="playerFieldEntry">
                 <img src="../img/playerFace.png" alt="">
                     <br>
                         Spieler 2
                     <br>
                     <button class="mainButton">ready</button>
                 </div>
-                <div class="playerIcon" class="playerFieldEntry">
+                <div class="playerFieldEntry">
                     <img src="../img/playerFace.png" alt="">
                     <br>
                         Spieler 3
                     <br>
                     <button class="mainButton">ready</button>
                 </div>
-                <div class="playerIcon" class="playerFieldEntry">
+                <div class="playerFieldEntry">
                     <img src="../img/playerFace.png" alt="">
                     <br>
                         Spieler 4
