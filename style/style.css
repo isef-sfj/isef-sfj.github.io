@@ -416,11 +416,11 @@ body {
   /* Waiting room */
   #playerField {
     /* display: flex; */
-    flex-direction: row;
+    /* flex-direction: row;
     justify-content: space-around;
     padding: 0;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1000px; */
     display: grid;
     grid-auto-flow: row;
     grid-template-columns: 6em 6em 6em 6em;
