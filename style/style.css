@@ -442,6 +442,9 @@ body {
   display: flex;
   flex-direction: column;
   vertical-align: middle;
+  justify-items: center;
+  height: 6em;
+  width: 6em;
 }
 
   
