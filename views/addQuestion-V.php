@@ -30,15 +30,14 @@
                 <input class="insertForm" placeholder="Modul eingeben" id="modul" name="modul" type="text" required>
             </div>  -->
             <!-- Modualauswahl -->
-            <label for="modulSelect" class="previewHeadline">Wähle Dein Modul:</label>
-            <br>
             <div >
+                <label for="modulSelect" class="previewHeadline">Wähle Dein Modul:</label><br>
                 <select id="modulSelect" class="selectDropdown">
                     <?php foreach($modules as $datam) { ?>
                         <option name="modul" id="modul" value="<?php echo $datam['modul']; ?>"><?php echo $datam['modul']; ?></option>
                     <?php } ?>
                 </select>
-            </div> 
+            </div>
             
             <div class="flexContainerEQChoiceItem">
                 <label class="previewHeadline" for="lektion">Lektion eingeben:</label><br>
