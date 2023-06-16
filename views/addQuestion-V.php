@@ -31,7 +31,7 @@
             </div>  
             
             <div class="flexContainerEQChoiceItem">
-                label class="previewHeadline" for="lektion">Lektion eingeben:</label><br>
+                <label class="previewHeadline" for="lektion">Lektion eingeben:</label><br>
                 <input class="insertForm" placeholder="Lektion eingeben" id="lektion" name="lektion" type="text" required>
             </div>
 
