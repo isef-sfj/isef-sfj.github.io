@@ -219,7 +219,7 @@ body {
     background: linear-gradient(0deg, #0dcca1, #40e641 );
     width: var(--mainButtonWidth);
     height: var(--mainButtonHeight);
-    margin: 1em;
+    margin: 0.2em;
     border-radius: 5em;
     transition : 300ms;
     display: flex;
