@@ -32,7 +32,7 @@
             <!-- Modualauswahl -->
             <div >
                 <label for="modulSelect" class="previewHeadline">Wähle Dein Modul:</label><br>
-                <select id="modulSelect" class="selectDropdown">
+                <select id="modulSelect" class="selectDropdownAddQuestion">
                     <?php foreach($modules as $datam) { ?>
                         <option name="modul" id="modul" value="<?php echo $datam['modul']; ?>"><?php echo $datam['modul']; ?></option>
                     <?php } ?>
@@ -47,7 +47,7 @@
             <div class="flexContainerEQChoiceItem">
                 <label class="previewHeadline" for="degreeCourse">Wähle deinen Studiengang:</label><br>
                 <!-- <input class="insertForm" placeholder="Studiengang eingeben" id="studiengang" name="studiengang" type="text" required> -->
-                <select name="degreeCourse" id="degreeCourse" class="selectDropdown">
+                <select name="degreeCourse" id="degreeCourse" class="selectDropdownAddQuestion">
                     <option value="">Studiengang</option>
                     <option value="Fach1">Informatik</option>
                     <option value="Fach2">Pädagogik</option>
