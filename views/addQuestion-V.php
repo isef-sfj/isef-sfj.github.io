@@ -45,7 +45,7 @@
             </div>
             <!-- Studiengang -->
             <div class="flexContainerEQChoiceItem">
-                <label class="previewHeadline" for="degreeCourse">Studiengang auswählen:</label><br>
+                <label class="previewHeadline" for="degreeCourse">Wähle deinen Studiengang:</label><br>
                 <!-- <input class="insertForm" placeholder="Studiengang eingeben" id="studiengang" name="studiengang" type="text" required> -->
                 <select name="degreeCourse" id="degreeCourse" class="selectDropdown">
                     <option value="">Studiengang</option>
