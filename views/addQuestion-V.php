@@ -23,6 +23,7 @@
         
     
     <form action="../classes/addQuestion-C.php?" method="post">
+    <div class="flexContainerEQChoice">
         <!-- Studiengang -->
         <div class="flexContainerEQChoiceItem">
                 <label class="previewHeadline" for="degreeCourse">Wähle deinen Studiengang:</label>
@@ -34,13 +35,13 @@
                     <option value="Fach3">BWL</option>
                 </select>
             </div>
-        <div class="flexContainerEQChoice">
+        
             <!-- <div class="flexContainerEQChoiceItem">
                 <label class="previewHeadline" for="modul">Modul eingeben:</label><br>
                 <input class="insertForm" placeholder="Modul eingeben" id="modul" name="modul" type="text" required>
             </div>  -->
             <!-- Modualauswahl -->
-            <div >
+            <div class="flexContainerEQChoiceItem" >
                 <label for="modulSelect" class="previewHeadline">Wähle Dein Modul:</label><br>
                 <select id="modulSelect" class="selectDropdownAddQuestion">
                     <?php foreach($modules as $datam) { ?>
