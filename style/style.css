@@ -88,6 +88,46 @@ body {
   color: rgb(186, 27, 128);
   }
 
+  .selectDropdownAddQuestion {
+    font-size: 1.7em;
+    font-family: var(--mainButtonFont);
+    color: #fff;
+    background: #d9d7d7;
+    width: var(--mainButtonWidth);
+    height: var(--mainButtonHeight);
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+    transition : 300ms;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.selectDropdownAddQuestion:hover{
+  color: rgb(95, 95, 95);
+  }
+
+.selectDropdown:hover{
+  color: rgb(186, 27, 128);
+  }
+
+.selectDropdown:hover{
+  color: rgb(186, 27, 128);
+  }
+
+.selectDropdown:hover{
+  color: rgb(186, 27, 128);
+  }
+
+.selectDropdown:hover{
+  color: rgb(186, 27, 128);
+  }
+
+
+
+
 
 .insertForm {
   font-size: 1em;
