@@ -30,7 +30,8 @@
                 <input class="insertForm" placeholder="Modul eingeben" id="modul" name="modul" type="text" required>
             </div>  -->
             <!-- Modualauswahl -->
-            <label for="modulSelect" class="previewHeadline">Wähle Dein Modul:</label><br>
+            <label for="modulSelect" class="previewHeadline">Wähle Dein Modul:</label>
+            <br>
             <div >
                 <select id="modulSelect" class="selectDropdown">
                     <?php foreach($modules as $datam) { ?>
