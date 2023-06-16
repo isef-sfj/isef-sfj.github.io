@@ -119,7 +119,7 @@ body {
     margin: 0em;
     font-size: 2em;
     border: var(--testBorder) solid rgb(2, 149, 160);
-   
+   height: 150px;
 }
 
 #player {
