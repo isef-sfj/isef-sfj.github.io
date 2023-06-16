@@ -23,7 +23,7 @@ session_start()
                 <img class="playerIconFace" src=<?php echo($_SESSION['icon']) ?> alt="">
             </div>
 
-            <div id="playerName">
+            <div id="showPlayerName">
             <?php echo($_SESSION['name']) ?>
             </div>
         </section>

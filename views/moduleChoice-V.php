@@ -25,7 +25,7 @@
                 <img id="playerIconFace" src=<?php echo($icon) ?> alt="">
             </div>
 
-            <div id="playerName">
+            <div id="showPlayerName">
                 <?php echo($name) ?>
             </div>
 
