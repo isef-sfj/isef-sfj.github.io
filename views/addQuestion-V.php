@@ -25,10 +25,19 @@
     <form action="../classes/addQuestion-C.php?" method="post">
         
         <div class="flexContainerEQChoice">
-            <div class="flexContainerEQChoiceItem">
+            <!-- <div class="flexContainerEQChoiceItem">
                 <label class="previewHeadline" for="modul">Modul eingeben:</label><br>
                 <input class="insertForm" placeholder="Modul eingeben" id="modul" name="modul" type="text" required>
-            </div>  
+            </div>  -->
+            <!-- Modualauswahl -->
+            <label for="modulSelect" class="previewHeadline">Wähle Dein Modul:</label><br>
+            <div >
+                <select id="modulSelect" class="selectDropdown">
+                    <?php foreach($modules as $datam) { ?>
+                        <option name="modul" id="modul" value="<?php echo $datam['modul']; ?>"><?php echo $datam['modul']; ?></option>
+                    <?php } ?>
+                </select>
+            </div> 
             
             <div class="flexContainerEQChoiceItem">
                 <label class="previewHeadline" for="lektion">Lektion eingeben:</label><br>
