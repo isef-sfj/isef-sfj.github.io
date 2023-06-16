@@ -375,6 +375,11 @@ body {
     /* color: rgb(165, 226, 245); */
   }
 
+  .blueInk{
+    font-family: var(--mainFont);
+    color: rgb(165, 226, 245);
+  }
+
   .iconName {
     display: flex;
     justify-content: center;
