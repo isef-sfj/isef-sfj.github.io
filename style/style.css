@@ -93,8 +93,8 @@ body {
     font-family: var(--mainButtonFont);
     color: #fff;
     background: #d9d7d7;
-    width: var(--mainButtonWidth);
-    height: var(--mainButtonHeight);
+    width: 22em;
+    height: 4em;
     margin-bottom: 1em;
     border-radius: 0.5em;
     transition : 300ms;
