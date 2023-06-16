@@ -34,7 +34,7 @@ session_start();
             
             <section id="playerField">
                 <div class="playerFieldEntry">
-                    <img  src="<?php echo($_SESSION['icon']) ?>" alt="">
+                    <img class="previewHeadline" src="<?php echo($_SESSION['icon']) ?>" alt="">
                     <!-- Hier muss noch die Klasse previewHeadline rein  -->
                     <?php echo($_SESSION['name']) ?>
                     <button class="readyButton">ready</button>
