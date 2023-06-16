@@ -23,7 +23,17 @@
         
     
     <form action="../classes/addQuestion-C.php?" method="post">
-        
+        <!-- Studiengang -->
+        <div class="flexContainerEQChoiceItem">
+            <label class="previewHeadline" for="degreeCourse">Wähle deinen Studiengang:</label><br>
+            <!-- <input class="insertForm" placeholder="Studiengang eingeben" id="studiengang" name="studiengang" type="text" required> -->
+            <select name="degreeCourse" id="degreeCourse" class="selectDropdownAddQuestion">
+                <option value="">Studiengang</option>
+                <option value="Fach1">Informatik</option>
+                <option value="Fach2">Pädagogik</option>
+                <option value="Fach3">BWL</option>
+            </select>
+        </div>
         <div class="flexContainerEQChoice">
             <!-- <div class="flexContainerEQChoiceItem">
                 <label class="previewHeadline" for="modul">Modul eingeben:</label><br>
@@ -43,19 +53,6 @@
                 <label class="previewHeadline" for="lektion">Lektion eingeben:</label><br>
                 <input class="insertForm" placeholder="Lektion eingeben" id="lektion" name="lektion" type="text" required>
             </div>
-            <!-- Studiengang -->
-            <div class="flexContainerEQChoiceItem">
-                <label class="previewHeadline" for="degreeCourse">Wähle deinen Studiengang:</label><br>
-                <!-- <input class="insertForm" placeholder="Studiengang eingeben" id="studiengang" name="studiengang" type="text" required> -->
-                <select name="degreeCourse" id="degreeCourse" class="selectDropdownAddQuestion">
-                    <option value="">Studiengang</option>
-                    <option value="Fach1">Informatik</option>
-                    <option value="Fach2">Pädagogik</option>
-                    <option value="Fach3">BWL</option>
-                </select>
-            </div>
-
-            
 
             <!-- Muss in der richtigen Seite durch einen
             a href ersetzt werden, da sonst die Action aus
