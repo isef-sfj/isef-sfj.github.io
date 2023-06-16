@@ -25,7 +25,7 @@
     <form action="../classes/addQuestion-C.php?" method="post">
         <!-- Studiengang -->
         <div class="flexContainerEQChoiceItem">
-                <label class="previewHeadline" for="degreeCourse">Wähle deinen Studiengang:</label><br>
+                <label class="previewHeadline" for="degreeCourse">Wähle deinen Studiengang:</label>
                 <!-- <input class="insertForm" placeholder="Studiengang eingeben" id="studiengang" name="studiengang" type="text" required> -->
                 <select name="degreeCourse" id="degreeCourse" class="selectDropdownAddQuestion">
                     <option value="">Studiengang</option>
