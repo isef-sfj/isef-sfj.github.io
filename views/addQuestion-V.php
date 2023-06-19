@@ -41,7 +41,7 @@
                 <input class="insertForm" placeholder="Modul eingeben" id="modul" name="modul" type="text" required>
             </div>  -->
             <!-- Modualauswahl -->
-            <div class="flexContainerEQChoiceItem" >
+            <div class="flexContainerEQChoiceItem" id="containerModulSelect">
                 <label for="modulSelect" class="previewHeadline">Wähle Dein Modul:</label><br>
                 <select id="modulSelect" class="selectDropdownAddQuestion">
                     <?php foreach($modules as $datam) { ?>
