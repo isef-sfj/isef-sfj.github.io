@@ -1,19 +1,18 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
-    <title>ISEF-Quiz</title>
-</head>
+<?php
+include "essentials/head.php";
+?>
+
 <body>
 
+<<<<<<< HEAD
+        <header>
+=======
     
         <!-- ich würde später die index.html als index.php speichern
         und den Header, den Player und evtl. den Footer in Dateien auslagern.
         Dann muss man nicht jede Seite bei Änderungen anfassen. JFL -->
         <header id="header">
+>>>>>>> efbbc0c2f1aebe372c2d1e3f894bcb40e9753575
                 <h1>ISEF-Duell</h1>
         </header>
 
