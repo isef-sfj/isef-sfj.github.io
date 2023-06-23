@@ -53,5 +53,8 @@ include "essentials/head.php";
             <button class="navigationButton">Platzhalter</button>
         </section>
     </body>
-</html>
+
+<?php
+    include "essentials/footer.php";
+?>
 

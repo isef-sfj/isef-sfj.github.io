@@ -29,4 +29,7 @@ include "essentials/head.php";
         </section>
 
 </body>
-</html>
+
+<?php
+    include "essentials/footer.php";
+?>
