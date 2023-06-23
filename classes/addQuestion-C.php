@@ -10,6 +10,8 @@ if (isset($_POST["goal"])) {
 }
 
 if ($goal == 'leer') {
+  $qc = new QuestionContr();
+  $modules = $qc->getModulForEditQuestionChoice();
   include '../views/addQuestion-V.php';
 }
 

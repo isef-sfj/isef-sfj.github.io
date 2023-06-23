@@ -3,10 +3,8 @@ include "essentials/head.php";
 ?>
 <body>
 
-    <header>
-          
+    <header id="header">
         <h1>ISEF-Duell</h1>
-        
     </header>
 
 
@@ -20,7 +18,7 @@ include "essentials/head.php";
                 <img id="playerIconFace" src=<?php echo($icon) ?> alt="">
             </div>
 
-            <div id="playerName">
+            <div id="playerName" class="blueInk">
                 <?php echo($name) ?>
             </div>
 

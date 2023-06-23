@@ -37,11 +37,12 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: var(--mainFont);
-    font-size: 3em;
+    font-size: 2em;
 }
 
 h2 {
-    color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255); */
+    color: rgb(212, 245, 255);
     font-family: var(--mainFont);
     font-size: 2em;
     margin-left: 50px;
@@ -87,9 +88,29 @@ body {
   color: rgb(186, 27, 128);
   }
 
+  .selectDropdownAddQuestion {
+    font-size: 1em;
+    font-family: var(--mainButtonFont);
+    color: #fff;
+    background: #d9d7d7;
+    width: 16em;
+    height: 4em;
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+    transition : 300ms;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.selectDropdownAddQuestion:hover{
+  color: rgb(95, 95, 95);
+  }
 
 .insertForm {
-  font-size: 1.7em;
+  font-size: 1em;
   font-family: var(--mainButtonFont);
   color: white;
   background: #d9d7d7;
@@ -97,8 +118,8 @@ body {
     color: white;
     opacity: 1;
   }
-  width: var(--mainButtonWidth);
-  height: var(--mainButtonHeight);
+  width: 22em;
+  height: 4em;
   margin-bottom: 1em;
   border-radius: 0.5em;
   transition : 300ms;
@@ -115,10 +136,10 @@ body {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    margin: 1em 0em 0.5em 0em;
+    margin: 0em;
     font-size: 2em;
     border: var(--testBorder) solid rgb(2, 149, 160);
-   
+   height: 150px;
 }
 
 #player {
@@ -203,11 +224,38 @@ body {
     cursor: pointer;
     list-style-type: none;
     text-decoration: none;
+    border:  var(--testBorder) solid rgb(233, 16, 186);
     }
 
   .mainButton:hover{
   color: #4c964e;
   }
+
+  .submButton{
+    
+    font-size: 1.7em;
+    font-family: var(--mainButtonFont);
+    color: var(--fontColor);
+    background: linear-gradient(0deg, #0dcca1, #40e641 );
+    width: var(--mainButtonWidth);
+    height: var(--mainButtonHeight);
+    margin: 0.2em;
+    border-radius: 5em;
+    transition : 300ms;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    list-style-type: none;
+    text-decoration: none;
+    border:  var(--testBorder) solid rgb(233, 16, 186);
+    }
+
+  .submButton:hover{
+  color: #4c964e;
+  }
+
 
   #arrowBox {
     width: 100%;
@@ -240,6 +288,7 @@ body {
     cursor: pointer;
     list-style-type: none;
     text-decoration: none;
+    border:  var(--testBorder) solid rgb(233, 16, 186);
     }
     .navigationButton:hover{
       color: #f7a531;
@@ -310,6 +359,8 @@ body {
   .flexContainerEQQuestionItemButton {
     display: flex;
     justify-content: end;    
+    margin: 0em;
+    border: 0em;
   }
 
   .playerIcon {
@@ -336,16 +387,24 @@ body {
 
   #showPlayerName {
     font-family: var(--mainFont);
+    color: rgb(165, 226, 245);
   }
 
   #playerName{
     font-family: var(--mainFont);
+    /* color: rgb(165, 226, 245); */
+  }
+
+  .blueInk{
+    font-family: var(--mainFont);
+    color: rgb(165, 226, 245);
   }
 
   .iconName {
     display: flex;
     justify-content: center;
     font-family: var(--mainFont);
+    color: rgb(165, 226, 245);
   }
 
   .centerLessonContainer {
@@ -375,6 +434,73 @@ body {
     text-overflow: ellipsis;
   }
 
-  
+  .ausgesucht {
+    background: #40e641;
+  }
 
+  /* Waiting room */
+  #playerField {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: grid;
+    grid-template-columns: 6em 6em 6em 6em;
+    grid-template-rows: 12em;
+    gap: 3em;
+}
+
+.playerFieldEntry{
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+  justify-items: center;
+  height: 6em;
+  width: 6em;
+}
+
+  
+.deleteButton{
+  font-size: 1.7em;
+  font-family: var(--mainButtonFont);
+  color: var(--fontColor);
+  background: linear-gradient(0deg, #e54040, #de251f );
+  width: var(--mainButtonWidth);
+  height: var(--mainButtonHeight);
+  margin: 0em;
+  border-radius: 5em;
+  transition : 300ms;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  list-style-type: none;
+  text-decoration: none;
+  border:  var(--testBorder) solid rgb(233, 16, 186);
+  }
+  .deleteButton:hover{
+    color: #ac1010;
+    }
+
+    .readyButton{
+    
+      font-family: var(--mainButtonFont);
+      color: var(--fontColor);
+      background: linear-gradient(0deg, #0dcca1, #40e641 );
+      height: var(--mainButtonHeight);
+      margin: 1em;
+      border-radius: 5em;
+      transition : 300ms;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      list-style-type: none;
+      text-decoration: none;
+      border:  var(--testBorder) solid rgb(233, 16, 186);
+      }
+  
+    .mainButton:hover{
+    color: #4c964e;
+    }
   

@@ -4,7 +4,7 @@ include "essentials/head.php";
 
 <body>
 
-    <header>
+    <header id="header">
         <h1>ISEF-Duell</h1>
     </header>
 
@@ -16,7 +16,7 @@ include "essentials/head.php";
             <img id="playerIconFace" src="/img/playerFace.png" alt="">
         </div>
 
-        <div id="showPlayerName">
+        <div class="previewHeadline" id="showPlayerName">
             John Doe
         </div>
 
@@ -56,7 +56,7 @@ include "essentials/head.php";
 
         
             <label for="playerName"></label>
-            <input placeholder="Spielername eingeben" id="playerName" name="playerName" type="text" class="insertForm" onkeyup="playerNameChanged()">
+            <input placeholder="Spielername eingeben" name="playerName" id="playerName" type="text" class="insertForm" onkeyup="playerNameChanged()">
             <br><br>
             <form>
             <br>

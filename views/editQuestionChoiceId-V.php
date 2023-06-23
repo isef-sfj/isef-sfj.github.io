@@ -13,34 +13,18 @@ include "essentials/head.php";
             
         </header>
 
-        
-        <h2>Bitte wähle eine ID aus</h2>
-
-        
-    
-    
-        
-        
+        <section class="previewHeadline">
+            Bitte wähle die ID der Frage, die du bearbeiten möchtest:
+        </section>
+        <br>
         <div >
             
             
-            <select id="idSelect" >
+            <select class="selectDropdown" id="idSelect" >
                 <?php foreach($ids as $datai) { ?>
                     <option name="id" id="id" value="<?php echo $datai['id']; ?>"><?php echo $datai['id']; ?></option>
                 <?php } ?>
             </select>
-           
-                    
-
-        </div>
-
-
-        
-
-
-        
-        <div class="flexContainerEQQuestionItemButton">
-            <button onClick="sendid()">Frage bearbeiten</button>
         </div>
         <br><br>
         
@@ -48,10 +32,9 @@ include "essentials/head.php";
 
     <section id="arrowBox">
             <a href="../classes/editQuestionChoice-C.php?goal=modul" ><img src="../img/arrowLeft.png" alt="" class="arrow"></a>
-            <!-- Damit der Zurück-Pfeil auch ohne Weiter-Pfeil
-            immer an der gleichen Stelle ist habe ich einen leeren
-            Platzhalter eingefügt. JFL-->
-            <div class="arrowPlaceholder"></div> 
+            <div class="flexContainerEQQuestionItemButton">
+                <button class="navigationButton" onClick="sendid()">Frage bearbeiten</button>
+            </div> 
         </section>
 
 </body>
