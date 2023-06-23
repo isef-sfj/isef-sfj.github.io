@@ -17,7 +17,7 @@ if ($goal == 'leer') {
 
 
 if ($goal == 'new') {
-    $modul = $_POST["selectedModul"];
+    $modul = $_POST["modul"];
     $lektion = $_POST["lektion"];
     $frage = $_POST["frage"];
     $antwort1_richtig = $_POST["antwort1_richtig"];

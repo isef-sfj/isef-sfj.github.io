@@ -13,10 +13,10 @@ include "essentials/head.php";
 
         
     
-    <form action="../classes/addQuestion-C.php?" method="post">
-    <div class="flexContainerEQChoice">
-        <!-- Studiengang -->
-        <div class="flexContainerEQChoiceItem">
+        <form action="../classes/addQuestion-C.php?" method="post">
+        <div class="flexContainerEQChoice">
+            <!-- Studiengang -->
+            <div class="flexContainerEQChoiceItem">
                 <label class="previewHeadline" for="degreeCourse">Wähle deinen Studiengang:</label>
                 <!-- <input class="insertForm" placeholder="Studiengang eingeben" id="studiengang" name="studiengang" type="text" required> -->
                 <select name="degreeCourse" id="degreeCourse" class="selectDropdownAddQuestion">
@@ -26,7 +26,7 @@ include "essentials/head.php";
                     <option value="Fach3">BWL</option>
                 </select>
             </div>
-        
+            
             <!-- <div class="flexContainerEQChoiceItem">
                 <label class="previewHeadline" for="modul">Modul eingeben:</label><br>
                 <input class="insertForm" placeholder="Modul eingeben" id="modul" name="modul" type="text" required>
@@ -34,7 +34,8 @@ include "essentials/head.php";
             <!-- Modualauswahl -->
             <div class="flexContainerEQChoiceItem" id="containerModulSelect">
                 <label for="modulSelect" class="previewHeadline">Wähle Dein Modul:</label><br>
-                <select id="modulSelect" class="selectDropdownAddQuestion">
+                <select id="modulSelect" class="selectDropdownAddQuestion" onchange="modulChanged()">
+                    <option name="modul" id="modul" value="Bitte auswählen">Bitte auswählen</option>
                     <?php foreach($modules as $datam) { ?>
                         <option name="modul" id="modul" value="<?php echo $datam['modul']; ?>"><?php echo $datam['modul']; ?></option>
                     <?php } ?>
@@ -79,7 +80,8 @@ include "essentials/head.php";
             
 
         </div>
-            <input value="new" name="new" type="hidden">
+            <input value="new" name="goal" type="hidden">
+            <input value="" id="selectedModul" name="selectedModul" type="hidden">
         
         <br><br>
     

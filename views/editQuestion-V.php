@@ -68,20 +68,22 @@ include "essentials/head.php";
 
        
         <br><br>
+
+
+        <section id="arrowBox">
+            <a href="../classes/editQuestionChoice-C.php?goal=modul" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
+            <div class="flexContainerEQQuestionItemButton">
+               <button class="submButton">Frage speichern</button>
+            </div>
+        </section>
+
     </form>
 
     <form action="../classes/editQuestion-C.php" method="post">
         <input value="delete" name="goal" type="hidden" >
         <input value=<?php echo "$id" ?> name="id" type="hidden" >
         <button class="deleteButton">Frage löschen</button>
-        
 
-    <section id="arrowBox">
-        <a href="../classes/editQuestionChoice-C.php?goal=modul" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
-        <div class="flexContainerEQQuestionItemButton">
-           <button class="submButton">Frage speichern</button>
-        </div>
-    </section>
     </form>
 </body>
 </html>

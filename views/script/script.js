@@ -85,11 +85,3 @@ function setLessonChoice(lesson) {
 
       
 }
-
-function modulChanged() {
-    var element = document.getElementById('modulSelect');
-    var modul = element.options[element.selectedIndex].value.trim();
-    var goal = document.getElementById('selectedModul');
-    goal.value = modul;
-}
-
