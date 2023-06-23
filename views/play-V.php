@@ -1,9 +1,10 @@
 <?php
 include "essentials/head.php";
 ?>
-
 <body>
 
+    
+       
         <header>
                 <h1>ISEF-Duell</h1>
         </header>
