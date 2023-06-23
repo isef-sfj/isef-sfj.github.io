@@ -10,32 +10,13 @@ include "essentials/head.php";
         </header>
 
         
-        <h2>Fragen erstellen</h2>
+        <h2>Let's play</h2>
 
         
     
     <form action="../classes/enterQuestion-C.php" method="post">
         
-        <div class="flexContainerEQChoice">
-
-            
-            <div class="flexContainerEQChoiceItem">
-            <label class="previewHeadline" for="modul">Modul eingeben:</label><br>
-            <input class="insertForm" placeholder="Modul eingeben" id="modul" name="modul" type="text" required>
-            </div>  
-            
-            
-            <div class="flexContainerEQChoiceItem">
-            <label class="previewHeadline" for="lektion">Lektion eingeben:</label><br>
-            <input class="insertForm" placeholder="Lektion eingeben" id="lektion" name="lektion" type="text" required>
-            </div>
-
-            <!-- Muss in der richtigen Seite durch einen
-            a href ersetzt werden, da sonst die Action aus
-            dem action-Attribut der Form ausgelöst wird! -->
-            <button class="mainButton">Neues Modul</button>
-          
-        </div>    
+        
             
 
         <div class="flexContainerEQQuestion">
@@ -58,8 +39,8 @@ include "essentials/head.php";
             
 
         </div>
-        <!-- Verschiebung in den Navigationsbereich  -->
-            <!-- <input value="new" name="goal" type="hidden" >
+        
+           <input value="new" name="goal" type="hidden" >
         <div class="flexContainerEQQuestionItemButton">
             <button class="mainButton">Frage speichern</button>
         </div> -->
