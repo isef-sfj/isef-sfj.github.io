@@ -7,28 +7,16 @@ include "essentials/head.php";
     </header>
 
     <h2>Let's play</h2>
-
-    <textarea id="testAusgabe">Nix angekommen :(</textarea>
-    
         <div class="playContainer">
 
-            <div class="questionBox">
-                Fragetext
-            </div>
+            <div id="qText"></div>
             
             <div class="answerBox">
-                <div class="answerField">
-                    Antwort 1
-                </div>
-                <div class="answerField">
-                    Antwort 2
-                </div>
-                <div class="answerField">
-                    Antwort 3
-                </div>
-                <div class="answerField">
-                    Antwort 4
-                </div>
+                <div id="a1"></div>
+                <div id="a2"></div>
+                <div id="a3"></div>
+                <div id="a4"></div>
+                
             </div>
             
         </div>
