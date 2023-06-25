@@ -1,4 +1,4 @@
-var questions = null;
+let questions = null;
 
 function getQuestionsWithAjax() {
     // AJAX nutzen mit IE7+, Chrome, Firefox, Safari, Opera
@@ -13,26 +13,46 @@ function getQuestionsWithAjax() {
     xmlhttp.send();
 }
 
+function buttonClicked(source){
+    console.log(source.id);
+    let gegebeneAntwort = source.innerText;
+    document.getElementById('angeklickt').innerText = gegebeneAntwort;
+    if (source.id == "antwort1_richtig") {
+        console.log("Rischtisch!");
+    } else {
+        console.log("Falsch!");
+    }
+    
+    
+}
+
 function play() {
     
     getQuestionsWithAjax();
 
     let frage = document.getElementById("qText");
+    frage.id = "frage";
     let antwort1 = document.getElementById("a1");
+    antwort1.id = "antwort1_richtig";
     let antwort2 = document.getElementById("a2");
+    antwort2.id = "antwort2";
     let antwort3 = document.getElementById("a3");
+    antwort3.id = "antwort3";
     let antwort4 = document.getElementById("a4");
+    antwort4.id = "antwort4";
     
     
     function showQuestion(number) {
         frage.innerText = questions[number]['frage'];
-        antwort1.innerText = questions[number]['antwort1_richtig']
-        antwort2.innerText = questions[number]['antwort2']
-        antwort3.innerText = questions[number]['antwort3']
-        antwort4.innerText = questions[number]['antwort4']
+        antwort1.innerText = questions[number]['antwort1_richtig'];
+        antwort2.innerText = questions[number]['antwort2'];
+        antwort3.innerText = questions[number]['antwort3'];
+        antwort4.innerText = questions[number]['antwort4'];
     }
 
     showQuestion(3);
+
+    
 
     /*
     questions.forEach(element => {
