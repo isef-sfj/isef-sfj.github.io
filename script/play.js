@@ -1,4 +1,7 @@
 let questions = null;
+let rundenZaehler = 0;
+let punkte = null;
+let gegebeneAntwort = "";
 
 function getQuestionsWithAjax() {
     // AJAX nutzen mit IE7+, Chrome, Firefox, Safari, Opera
@@ -13,22 +16,11 @@ function getQuestionsWithAjax() {
     xmlhttp.send();
 }
 
-function buttonClicked(source){
-    console.log(source.id);
-    let gegebeneAntwort = source.innerText;
-    document.getElementById('angeklickt').innerText = gegebeneAntwort;
-    if (source.id == "antwort1_richtig") {
-        console.log("Rischtisch!");
-    } else {
-        console.log("Falsch!");
-    }
-    
-    
-}
-
 function play() {
     
     getQuestionsWithAjax();
+    rundenZaehler = 0;
+    punkte = 0;
 
     let frage = document.getElementById("qText");
     frage.id = "frage";
@@ -40,28 +32,57 @@ function play() {
     antwort3.id = "antwort3";
     let antwort4 = document.getElementById("a4");
     antwort4.id = "antwort4";
-    
-    
-    function showQuestion(number) {
-        frage.innerText = questions[number]['frage'];
-        antwort1.innerText = questions[number]['antwort1_richtig'];
-        antwort2.innerText = questions[number]['antwort2'];
-        antwort3.innerText = questions[number]['antwort3'];
-        antwort4.innerText = questions[number]['antwort4'];
+
+    askNextQuestion();
+}
+
+function askNextQuestion() {
+    if (rundenZaehler < questions.length) {
+
+        document.getElementById("antwort1_richtig").disabled = false;
+        document.getElementById("antwort2").disabled = false;
+        document.getElementById("antwort3").disabled = false;
+        document.getElementById("antwort4").disabled = false;
+
+        document.getElementById("antwort1_richtig").style.backgroundColor = "";
+        document.getElementById("antwort2").style.backgroundColor = "";
+        document.getElementById("antwort3").style.backgroundColor = "";
+        document.getElementById("antwort4").style.backgroundColor = "";
+
+        document.getElementById("frage").innerText = questions[rundenZaehler]['frage'];
+        document.getElementById("antwort1_richtig").innerText = questions[rundenZaehler]['antwort1_richtig'];
+        document.getElementById("antwort2").innerText = questions[rundenZaehler]['antwort2'];
+        document.getElementById("antwort3").innerText = questions[rundenZaehler]['antwort3'];
+        document.getElementById("antwort4").innerText = questions[rundenZaehler]['antwort4'];
+    } else {
+        console.log("Fertig! Punktestand ist: " + punkte);
+        document.getElementById("playContainer").hidden = true;
     }
+}
 
-    showQuestion(3);
+function checkAnswer(source) {
 
+    if (source.id == "antwort1_richtig") {
+        console.log("Rischtisch!");
+        source.style.backgroundColor = "green";
+        punkte+=1;
+    } else {
+        console.log("Falsch!");
+        source.style.backgroundColor = "red";
+        rightAnswer = document.getElementById("antwort1_richtig");
+        rightAnswer.style.backgroundColor = "green";
+    }
+    rundenZaehler++;
+    console.log("questions.length: " + questions.length + " - rundenZaehler: " + rundenZaehler);
+    console.log("Runde " + rundenZaehler + "Punktestand: " + punkte);
+
+    document.getElementById("antwort1_richtig").disabled = true;
+    document.getElementById("antwort2").disabled = true;
+    document.getElementById("antwort3").disabled = true;
+    document.getElementById("antwort4").disabled = true;
     
+    setTimeout(function(){
+        askNextQuestion()
+    }, 2000);
 
-    /*
-    questions.forEach(element => {
-        frage.innerText = element['frage'];
-        antwort1.innerText = element['antwort1_richtig']
-        antwort2.innerText = element['antwort2']
-        antwort3.innerText = element['antwort3']
-        antwort4.innerText = element['antwort4']
-    });
-    */ 
-    
 }
