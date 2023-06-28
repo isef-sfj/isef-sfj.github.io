@@ -28,7 +28,7 @@ include "essentials/head.php";
                 <div class="playerFieldEntry">
                     <img class="previewHeadline" src="<?php echo($_SESSION['icon']) ?>" alt="">
                     <!-- Hier muss noch die Klasse previewHeadline rein  -->
-                    <?php echo($_SESSION['name']) ?>
+                    <?php class="previewHeadline" echo($_SESSION['name']) ?>
                     <button class="readyButton">ready</button>
                 </div>
                 <div class="playerFieldEntry">
