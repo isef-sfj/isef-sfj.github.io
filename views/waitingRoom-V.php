@@ -29,7 +29,8 @@ include "essentials/head.php";
                     <img class="previewHeadline" src="<?php echo($_SESSION['icon']) ?>" alt="">
                     <!-- Hier muss noch die Klasse previewHeadline rein  -->
                     <?php echo($_SESSION['name']) ?>
-                    <button class="readyButton">ready</button>
+                    <a href="quiz-V.php" >play</a>
+                    <!-- <button class="readyButton">ready</button> -->
                 </div>
                 <div class="playerFieldEntry">
                     <img src="../img/playerFace.png" alt="">
@@ -53,5 +54,8 @@ include "essentials/head.php";
             <button class="navigationButton">Platzhalter</button>
         </section>
     </body>
-</html>
+
+<?php
+    include "essentials/footer.php";
+?>
 

@@ -144,4 +144,13 @@ class Question extends Dbh {
         
     }
 
+    public function getQuestionsForQuiz() {
+
+        $statement = $this->connect()->prepare("SELECT * FROM quizfragen WHERE modul=? AND lektion=?");
+        $statement->execute(array("Modul TEST", "Lektion TEST"));
+        $questions = $statement->fetchAll();   
+        return $questions;
+    }
+
 }
+

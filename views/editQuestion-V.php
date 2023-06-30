@@ -86,4 +86,7 @@ include "essentials/head.php";
 
     </form>
 </body>
-</html>
+
+<?php
+    include "essentials/footer.php";
+?>

@@ -38,4 +38,7 @@ include "essentials/head.php";
             <button class="navigationButton" onclick="goWaitingroom()">Ab in den Warteraum</button>
         </section>
 </body>
-</html>
+
+<?php
+    include "essentials/footer.php";
+?>

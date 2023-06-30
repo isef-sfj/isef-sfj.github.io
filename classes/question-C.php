@@ -57,4 +57,10 @@ class QuestionContr {
 
     }
 
+    public function getQuestionsForQuiz() {
+        $q = new Question();
+        $quiz = $q->getQuestionsForQuiz();      
+        return json_encode($quiz);
+    }
+
 }
