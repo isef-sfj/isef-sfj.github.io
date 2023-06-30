@@ -21,6 +21,14 @@ include "essentials/head.php";
                 
             </div>
             
+            <div class="radioButttons">
+                <input type= "radio" id= "advised" name= "sure" value= "advised" checked="true">
+                <label for="contact">Geraten</label>
+                <input type= "radio" id= "known" name= "sure" value= "known">
+                <label for="contact">Gewusst</label>
+            </div>
+
+
             <br>
 
             <p id="demo"></p>
