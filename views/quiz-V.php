@@ -14,13 +14,24 @@ include "essentials/head.php";
             </div>
             
             <div id="answerBox" class="answerBox">
-                <button name="a1" id="antwort1_richtig" onclick="checkAnswer(this)">Antwort 1</button>
-                <button name="a2" id="antwort2" onclick="checkAnswer(this)">Antwort 2</button>
-                <button name="a3" id="antwort3" onclick="checkAnswer(this)">Antwort 3</button>
-                <button name="a4" id="antwort4" onclick="checkAnswer(this)">Antwort 4</button>
+                <button name="a1" id="antwort1_richtig" onclick="storeSelectedAnswer(this)">Antwort 1</button>
+                <button name="a2" id="antwort2" onclick="storeSelectedAnswer(this)">Antwort 2</button>
+                <button name="a3" id="antwort3" onclick="storeSelectedAnswer(this)">Antwort 3</button>
+                <button name="a4" id="antwort4" onclick="storeSelectedAnswer(this)">Antwort 4</button>
                 
             </div>
             
+            <div class="radioButttons">
+                <input type= "radio" id= "advised" name= "sure" value= "advised" checked="true">
+                <label for="contact">Geraten</label>
+                <input type= "radio" id= "known" name= "sure" value= "known">
+                <label for="contact">Gewusst</label>
+            </div>
+
+            <div id="sendAnswer">
+                <button id="sendAnswerBtn" onclick="checkAnswer()">Antwort abgeben</button>
+            </div>
+
             <br>
 
             <p id="demo"></p>
