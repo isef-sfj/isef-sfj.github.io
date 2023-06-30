@@ -9,15 +9,31 @@ include "essentials/head.php";
     <h2>Let's play</h2>
         <div id="playContainer" class="playContainer">
 
-            <div id="qText">
+            <div id="frage">
                 Fragentext
             </div>
             
             <div id="answerBox" class="answerBox">
-                <button name="a1" id="a1" onclick="checkAnswer(this)">Antwort 1</button>
-                <button name="a2" id="a2" onclick="checkAnswer(this)">Antwort 2</button>
-                <button name="a3" id="a3" onclick="checkAnswer(this)">Antwort 3</button>
-                <button name="a4" id="a4" onclick="checkAnswer(this)">Antwort 4</button>
+                <button name="a1" id="antwort1_richtig" onclick="checkAnswer(this)">Antwort 1</button>
+                <button name="a2" id="antwort2" onclick="checkAnswer(this)">Antwort 2</button>
+                <button name="a3" id="antwort3" onclick="checkAnswer(this)">Antwort 3</button>
+                <button name="a4" id="antwort4" onclick="checkAnswer(this)">Antwort 4</button>
+                
+            </div>
+            
+            <br>
+
+            <p id="demo"></p>
+
+        </div>
+
+        <div id="resultContainer" class="resultContainer" hidden="true">
+
+            
+            <div id="resultBox" class="resultBox" >
+                
+                <h2>Ergebnis:</h2>    
+                Du hast <div id="showPoints">eine unbekannte Zahl</div> Punkte erspielt.
                 
             </div>
            
