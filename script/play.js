@@ -60,6 +60,9 @@ function askNextQuestion() {
 }
 
 function storeSelectedAnswer(btn) {
+    if (idOfClickedBtn != null) {
+        document.getElementById(idOfClickedBtn).style.backgroundColor = "";
+    }
     idOfClickedBtn = btn.id;
     document.getElementById(idOfClickedBtn).style.backgroundColor = "yellow";
     document.getElementById("sendAnswerBtn").disabled = false;

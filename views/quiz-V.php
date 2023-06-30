@@ -44,7 +44,7 @@ include "essentials/head.php";
             <div id="resultBox" class="resultBox" >
                 
                 <h2>Ergebnis:</h2>    
-                Du hast <div id="showPoints">eine unbekannte Zahl</div> Punkte erspielt.
+                Du hast <div id="showPoints">eine unbekannte Zahl</div> Punkte gesammelt.
                 
             </div>
            
