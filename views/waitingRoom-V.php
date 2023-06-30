@@ -28,8 +28,8 @@ include "essentials/head.php";
                 <div class="playerFieldEntry">
                     <img class="previewHeadline" src="<?php echo($_SESSION['icon']) ?>" alt="">
                     <!-- Hier muss noch die Klasse previewHeadline rein  -->
-                    <?php echo($_SESSION['name']) ?>
-                    <a href="quiz-V.php" >play</a>
+                    <div class="previewHeadline"> <?php echo($_SESSION['name']) ?></div>
+                    <a class="readyButton" href="quiz-V.php" >play</a>
                     <!-- <button class="readyButton">ready</button> -->
                 </div>
                 <div class="playerFieldEntry">
