@@ -2,6 +2,7 @@ let questions = null;
 let rundenZaehler = 0;
 let punkte = null;
 let gegebeneAntwort = "";
+let idOfClickedBtn = null;
 
 
 
@@ -45,6 +46,10 @@ function askNextQuestion() {
         document.getElementById("antwort2").innerText = questions[rundenZaehler]['antwort2'];
         document.getElementById("antwort3").innerText = questions[rundenZaehler]['antwort3'];
         document.getElementById("antwort4").innerText = questions[rundenZaehler]['antwort4'];
+
+        document.getElementById("known").checked = false;
+        document.getElementById("advised").checked = true;
+        document.getElementById("sendAnswerBtn").disabled = true;
         
     } else {
         console.log("Fertig! Punktestand ist: " + punkte);
@@ -54,8 +59,15 @@ function askNextQuestion() {
     }
 }
 
-function checkAnswer(source) {
-    if (source == undefined) {
+function storeSelectedAnswer(btn) {
+    idOfClickedBtn = btn.id;
+    document.getElementById(idOfClickedBtn).style.backgroundColor = "yellow";
+    document.getElementById("sendAnswerBtn").disabled = false;
+}
+
+function checkAnswer() {
+
+    if (idOfClickedBtn == null) {
         rightAnswer = document.getElementById("antwort1_richtig");
         rightAnswer.style.backgroundColor = "green";
         rundenZaehler++;
@@ -72,17 +84,23 @@ function checkAnswer(source) {
         }, 2000);
     }
 
-    if (source.id == "antwort1_richtig") {
+    if (idOfClickedBtn == "antwort1_richtig") {
         console.log("Rischtisch!");
-        source.style.backgroundColor = "green";
+        document.getElementById(idOfClickedBtn).style.backgroundColor = "green";
         punkte+=1;
+
+        if (document.getElementById("known").checked) {
+            punkte+=2;
+        }
+
     } else {
         console.log("Falsch!");
-        source.style.backgroundColor = "red";
+        document.getElementById(idOfClickedBtn).style.backgroundColor = "red";
         rightAnswer = document.getElementById("antwort1_richtig");
         rightAnswer.style.backgroundColor = "green";
     }
     rundenZaehler++;
+
     console.log("questions.length: " + questions.length + " - rundenZaehler: " + rundenZaehler);
     console.log("Runde " + rundenZaehler + " - Punktestand: " + punkte);
 
