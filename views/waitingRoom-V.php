@@ -48,6 +48,7 @@ include "essentials/head.php";
                     <button class="readyButton">ready</button>
                 </div>
             </section>
+            <div id="playerId" hidden><?php echo ($_SESSION['id']) ?></div>
             <section id="arrowBox">
             <a href="../classes/nameIconChoice-C.php?goal=nameIconChoice" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
             <!-- <a href="nameIconChoice-C.php?goal=waiting" >Warteraum</a> -->
