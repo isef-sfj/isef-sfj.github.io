@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../style/style.css">
     <script language="javascript" type="text/javascript" src="../script/play.js"></script>
     <script language="javascript" type="text/javascript" src="../script/script.js"></script>
-    <script language="javascript" type="text/javascript" src="../script/findGame.js"></script>
 
     <title>ISEF-Quiz</title>
     <link rel="icon" type="image/x-icon" href="../img/favicon.png">
