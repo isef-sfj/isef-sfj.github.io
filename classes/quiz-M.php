@@ -152,6 +152,7 @@ class Quiz extends Dbh {
         $questions = $statement->fetchAll();   
         return $questions;
     }
+    */
 
 }
 
