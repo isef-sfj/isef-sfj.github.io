@@ -1,8 +1,14 @@
 let questions = null;
 let rundenZaehler = 0;
-let punkte = null;
-let gegebeneAntwort = "";
+// 6 Variablen testen :)
+let punkte = [];
+punkte[0]=5;
+punkte[1]=7;
+let frage = [];
+let gegebeneAntwort = [];
+let richtigeAntwort = [];
 let idOfClickedBtn = null;
+let zaehlerM1 = 0;
 
 
 
@@ -13,6 +19,7 @@ function getQuestionsWithAjax() {
             if (xmlhttp.readyState==4 && xmlhttp.status==200) {
                 questions = xmlhttp.responseText;
                 questions = JSON.parse(questions)
+                console.log(questions);
             }
         }
     xmlhttp.open("GET","../classes/getQuestionsForQuiz.php", false);
@@ -23,7 +30,6 @@ function play() {
     
     getQuestionsWithAjax();
     rundenZaehler = 0;
-    punkte = 0;
 
     askNextQuestion();
 }
@@ -42,6 +48,7 @@ function askNextQuestion() {
         document.getElementById("antwort4").style.backgroundColor = "";
 
         document.getElementById("frage").innerText = questions[rundenZaehler]['frage'];
+        frage[rundenZaehler] = questions[rundenZaehler]['frage'];
         document.getElementById("antwort1_richtig").innerText = questions[rundenZaehler]['antwort1_richtig'];
         document.getElementById("antwort2").innerText = questions[rundenZaehler]['antwort2'];
         document.getElementById("antwort3").innerText = questions[rundenZaehler]['antwort3'];
@@ -52,10 +59,10 @@ function askNextQuestion() {
         document.getElementById("sendAnswerBtn").disabled = true;
         
     } else {
-        console.log("Fertig! Punktestand ist: " + punkte);
+        console.log("Fertig! Punktestand ist: " + punkte[rundenZaehler]);
         document.getElementById("playContainer").hidden = true;
         document.getElementById("resultContainer").hidden = false;
-        document.getElementById("showPoints").innerText = punkte;
+        document.getElementById("showPoints").innerText = punkte[rundenZaehler];
     }
 }
 
@@ -64,18 +71,24 @@ function storeSelectedAnswer(btn) {
         document.getElementById(idOfClickedBtn).style.backgroundColor = "";
     }
     idOfClickedBtn = btn.id;
+    gegebeneAntwort[rundenZaehler] = btn.innerText;
+    richtigeAntwort[rundenZaehler] = document.getElementById('antwort1_richtig').innerText;
     document.getElementById(idOfClickedBtn).style.backgroundColor = "yellow";
     document.getElementById("sendAnswerBtn").disabled = false;
+    console.log(gegebeneAntwort[rundenZaehler]);
+    console.log(richtigeAntwort[rundenZaehler]);
 }
 
 function checkAnswer() {
 
     if (idOfClickedBtn == null) {
         rightAnswer = document.getElementById("antwort1_richtig");
-        rightAnswer.style.backgroundColor = "green";
+        // rightAnswer.style.backgroundColor = "green";
+        zaehlerM1 = rundenZaehler;
         rundenZaehler++;
         console.log("questions.length: " + questions.length + " - rundenZaehler: " + rundenZaehler);
-        console.log("Runde " + rundenZaehler + " - Punktestand: " + punkte);
+        console.log("Runde " + rundenZaehler + " - Punktestand: " + punkte[rundenZaehler]);
+        
 
         document.getElementById("antwort1_richtig").disabled = true;
         document.getElementById("antwort2").disabled = true;
@@ -87,25 +100,35 @@ function checkAnswer() {
         }, 2000);
     }
 
+    console.log("rundenZähler vor ++: " + rundenZaehler);
+    console.log("zählerMinus1: vor ++: " + zaehlerM1);
+
     if (idOfClickedBtn == "antwort1_richtig") {
         console.log("Rischtisch!");
-        document.getElementById(idOfClickedBtn).style.backgroundColor = "green";
-        punkte+=1;
+        
+        // document.getElementById(idOfClickedBtn).style.backgroundColor = "green";
+        punkte[zaehlerM1];
 
         if (document.getElementById("known").checked) {
-            punkte+=2;
+            punkte[zaehlerM1]+=2;
         }
 
     } else {
         console.log("Falsch!");
-        document.getElementById(idOfClickedBtn).style.backgroundColor = "red";
+        // document.getElementById(idOfClickedBtn).style.backgroundColor = "red";
         rightAnswer = document.getElementById("antwort1_richtig");
-        rightAnswer.style.backgroundColor = "green";
+        // rightAnswer.style.backgroundColor = "green";
     }
+    zaehlerM1 = rundenZaehler;
     rundenZaehler++;
 
+    console.log("rundenZähler nach ++: " + rundenZaehler);
+    console.log("zählerMinus1: nach ++: " + zaehlerM1);
+    console.log("Punkte mit rundenZähler: " + punkte[rundenZaehler]);
+    console.log("Punkte mit ZählerM1: " + punkte[zaehlerM1]);
+
     console.log("questions.length: " + questions.length + " - rundenZaehler: " + rundenZaehler);
-    console.log("Runde " + rundenZaehler + " - Punktestand: " + punkte);
+    console.log("Runde " + rundenZaehler + " - Punktestand: " + punkte[zaehlerM1]);
 
     document.getElementById("antwort1_richtig").disabled = true;
     document.getElementById("antwort2").disabled = true;
@@ -114,7 +137,7 @@ function checkAnswer() {
     
      setTimeout(function(){
         askNextQuestion()
-     }, 2000);
+     }, 20);
 
 }
 

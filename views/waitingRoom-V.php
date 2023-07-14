@@ -31,13 +31,13 @@ include "essentials/head.php";
                     <!-- <button class="readyButton">ready</button> -->
                 </div>
                 <div class="playerFieldEntry">
-                    <img src="../img/playerFace.png" alt="">
-                    <a class="previewHeadline">Spieler 2</a>
+                    <img src="../img/playerIcons/affe.svg" alt="">
+                    <a class="previewHeadline">Ape</a>
                     <button class="readyButton">ready</button>
                 </div>
                 <div class="playerFieldEntry">
-                    <img src="../img/playerFace.png" alt="">
-                    <a class="previewHeadline">Spieler 3</a>
+                    <img src="../img/playerIcons/eule.svg" alt="">
+                    <a class="previewHeadline">kEule</a>
                     <button class="readyButton">ready</button>
                 </div>
             </section>
