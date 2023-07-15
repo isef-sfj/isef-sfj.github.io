@@ -42,7 +42,7 @@ include "essentials/head.php";
         </div>
 
         <!-- Container, in dem das Ergebnis nach 3 Fragen angezeigt wird -->
-        <div class="halftimeContainer" id="halftimeContainer">
+        <div class="halftimeContainer" id="halftimeContainer" >
             <h2><?php echo($_SESSION['lesson']) ?> aus <?php echo($_SESSION['modul']) ?></h1>
             <h3>Zwischenergebnis</h3>
             <div id="givenQuestion1">1. Frage:</div> 
@@ -101,10 +101,67 @@ include "essentials/head.php";
         </div>
 
         <!-- Container, in dem das Endergebnis angezeigt wird -->
-        <div id="resultContainer" class="resultContainer" hidden="true">
+        <div id="resultContainer" class="resultContainer" >
             <div id="resultBox" class="resultBox" >
                 <h2>Ergebnis:</h2>    
                 Du hast <div id="showPoints">eine unbekannte Zahl</div> Punkte gesammelt.
+                <br>
+                <div id="givenQuestion4">4. Frage:</div> 
+            <div id="givenAnswerBox">
+                <div id="answer41">
+                    Antwort 1
+                </div>
+                <div id="answer42">
+                    Antwort 2
+                </div>
+                <div id="answer43">
+                    Antwort 3
+                </div>
+                <div id="answer44">
+                    Antwort 4
+                </div>
+                <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers4"></div></h3>
+                <h4>Wahl der Mitspieler: <div id="otherAnswers4"></div>Ape: Antwort 4 (geraten), kEule: Antwort 1 (geraten)</h3>
+            </div>
+            <br>
+            <div id="givenQuestion5">5. Frage:</div> 
+            <div id="givenAnswerBox">
+                <div id="answer51">
+                    Antwort 1
+                </div>
+                <div id="answer52">
+                    Antwort 2
+                </div>
+                <div id="answer53">
+                    Antwort 3
+                </div>
+                <div id="answer54">
+                    Antwort 4
+                </div>
+                <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers5"></div></h3>
+                <h4>Wahl der Mitspieler: <div id="otherAnswers5"></div>Ape: Antwort 2 (geraten), kEule: Antwort 3 (geraten)</h3>
+            </div>
+            <br>
+            <div id="givenQuestion6">6. Frage:</div> 
+            <div id="givenAnswerBox">
+                <div id="answer61">
+                    Antwort 1
+                </div>
+                <div id="answer62">
+                    Antwort 2
+                </div>
+                <div id="answer63">
+                    Antwort 3
+                </div>
+                <div id="answer64">
+                    Antwort 4
+                </div>
+                <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers6"></div></h3>
+                <h4>Wahl der Mitspieler: <div id="otherAnswers6">Ape: Antwort 1 (geraten), kEule: Antwort 1 (gewusst)</div></h3>
+            </div>
+            <a href="javascript:location.reload()">Diese Lektion nochmal spielen</a>
+            <br>
+            <a href="../index.php">Zurück zur Startseite</a>
             </div>
         </div>
     
