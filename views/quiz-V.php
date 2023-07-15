@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "essentials/head.php";
 ?>
 <body>
@@ -42,7 +43,7 @@ include "essentials/head.php";
 
         <!-- Container, in dem das Ergebnis nach 3 Fragen angezeigt wird -->
         <div class="halftimeContainer" id="halftimeContainer">
-            <h2><?php echo($_SESSION['lesson']) ?> / <?php echo($_SESSION['modul']) ?></h1>
+            <h2><?php echo($_SESSION['lesson']) ?> aus <?php echo($_SESSION['modul']) ?></h1>
             <h3>Zwischenergebnis</h3>
             <div id="givenQuestion1">1. Frage:</div> 
             <div id="givenAnswerBox">

@@ -1,19 +1,23 @@
 let questions = null;
 let rundenZaehler = 0;
-// 6 Variablen testen :)
-let punkte = [];
-punkte[0]=5;
-punkte[1]=7;
+const punkte = [0,0,0,0,0,0];
 let frage = [];
 let gegebeneAntwort = [];
 let richtigeAntwort = [];
 let idOfClickedBtn = null;
-let zaehlerM1 = 0;
+let punkteAusRunde = 0;
+let gesamtpunkte = 0;
 
+// Start des Quiz, wird nur einmal aufgerufen
+function play() {
+    getQuestionsWithAjax();
+    rundenZaehler = 0;
+    askNextQuestion();
+}
 
-
+// Holt die Quizfragen aus der DB
 function getQuestionsWithAjax() {
-    // AJAX nutzen mit IE7+, Chrome, Firefox, Safari, Opera
+    
     xmlhttp=new XMLHttpRequest();
     xmlhttp.onreadystatechange=function() {
             if (xmlhttp.readyState==4 && xmlhttp.status==200) {
@@ -26,118 +30,81 @@ function getQuestionsWithAjax() {
     xmlhttp.send();
 }
 
-function play() {
-    
-    getQuestionsWithAjax();
-    rundenZaehler = 0;
-
-    askNextQuestion();
+// Speichert die ausgewählte Antwort in der Variable
+function storeSelectedAnswer(btn) {
+    idOfClickedBtn = btn.id;
+    gegebeneAntwort[rundenZaehler] = btn.innerText;
+    richtigeAntwort[rundenZaehler] = document.getElementById('antwort1_richtig').innerText;
+    document.getElementById(idOfClickedBtn).style.backgroundColor = "yellow";
+    document.getElementById("sendAnswerBtn").disabled = false;
 }
 
-function askNextQuestion() {
-    if (rundenZaehler < questions.length) {
+// Prüft ob die gegebene Antwort richtig ist und speichert entsprechend die Punkte
+function checkAnswer() {
+    // Wenn Antwort richtig 1 Punkt addieren
+    if (idOfClickedBtn == "antwort1_richtig") {
+        punkteAusRunde = 1;
+        // Wenn Antwort GEWUSST 2 zusätzliche Punkte addieren
+        if (document.getElementById("known").checked) {
+            punkteAusRunde += 2;
+        }
+    // Wenn Antwort falsch, Null Punkte addieren
+    } else {
+        rightAnswer = document.getElementById("antwort1_richtig");
+        punkteAusRunde = 0;
+    }
+    // Antworten sind nicht mehr anklickbar
+    document.getElementById("antwort1_richtig").disabled = true;
+    document.getElementById("antwort2").disabled = true;
+    document.getElementById("antwort3").disabled = true;
+    document.getElementById("antwort4").disabled = true;
+    // Punkte aus Runde werden in Array gespeichert
+    punkte[rundenZaehler] = punkteAusRunde;
+    // Gesamtpunkte werden berechnet
+    gesamtpunkte += punkteAusRunde;
+    console.log("Punkte aus Runde: " + punkte[rundenZaehler]);
+    console.log("Gesamtunkte: " + gesamtpunkte);
 
+    rundenZaehler++;
+
+     setTimeout(function(){
+        askNextQuestion()
+     }, 20);
+
+}
+// Zeigt die nächste Frage incl. Antworten an
+function askNextQuestion() {
+    // Wenn noch Fragen übrig sind -> nächste Frage anzeigen
+    if (rundenZaehler < questions.length) {
+        // Alle Antworten werden anklickbar gemacht
         document.getElementById("antwort1_richtig").disabled = false;
         document.getElementById("antwort2").disabled = false;
         document.getElementById("antwort3").disabled = false;
         document.getElementById("antwort4").disabled = false;
-
+        // Bei allen Antworten wird die Hintergrundfarbe enfernt
         document.getElementById("antwort1_richtig").style.backgroundColor = "";
         document.getElementById("antwort2").style.backgroundColor = "";
         document.getElementById("antwort3").style.backgroundColor = "";
         document.getElementById("antwort4").style.backgroundColor = "";
-
+        // Text von Frage und Antworten wird in die HTML-Elemente geschrieben
         document.getElementById("frage").innerText = questions[rundenZaehler]['frage'];
         frage[rundenZaehler] = questions[rundenZaehler]['frage'];
         document.getElementById("antwort1_richtig").innerText = questions[rundenZaehler]['antwort1_richtig'];
         document.getElementById("antwort2").innerText = questions[rundenZaehler]['antwort2'];
         document.getElementById("antwort3").innerText = questions[rundenZaehler]['antwort3'];
         document.getElementById("antwort4").innerText = questions[rundenZaehler]['antwort4'];
-
+        // Radiobutton gewusst/geraten wird auf Startzustand gesetzt
         document.getElementById("known").checked = false;
         document.getElementById("advised").checked = true;
+        // Senden-Button wird deaktiviert
         document.getElementById("sendAnswerBtn").disabled = true;
-        
+    // Wenn alle Fragen gespielt, Ergebnis anzeigen
     } else {
-        console.log("Fertig! Punktestand ist: " + punkte[rundenZaehler]);
+        console.log("Fertig! Punktestand ist: " + gesamtpunkte);
         document.getElementById("playContainer").hidden = true;
         document.getElementById("resultContainer").hidden = false;
-        document.getElementById("showPoints").innerText = punkte[rundenZaehler];
+        document.getElementById("showPoints").innerText = gesamtpunkte;
     }
+
+    console.log(punkte);
 }
-
-function storeSelectedAnswer(btn) {
-    if (idOfClickedBtn != null) {
-        document.getElementById(idOfClickedBtn).style.backgroundColor = "";
-    }
-    idOfClickedBtn = btn.id;
-    gegebeneAntwort[rundenZaehler] = btn.innerText;
-    richtigeAntwort[rundenZaehler] = document.getElementById('antwort1_richtig').innerText;
-    document.getElementById(idOfClickedBtn).style.backgroundColor = "yellow";
-    document.getElementById("sendAnswerBtn").disabled = false;
-    console.log(gegebeneAntwort[rundenZaehler]);
-    console.log(richtigeAntwort[rundenZaehler]);
-}
-
-function checkAnswer() {
-
-    if (idOfClickedBtn == null) {
-        rightAnswer = document.getElementById("antwort1_richtig");
-        // rightAnswer.style.backgroundColor = "green";
-        zaehlerM1 = rundenZaehler;
-        rundenZaehler++;
-        console.log("questions.length: " + questions.length + " - rundenZaehler: " + rundenZaehler);
-        console.log("Runde " + rundenZaehler + " - Punktestand: " + punkte[rundenZaehler]);
-        
-
-        document.getElementById("antwort1_richtig").disabled = true;
-        document.getElementById("antwort2").disabled = true;
-        document.getElementById("antwort3").disabled = true;
-        document.getElementById("antwort4").disabled = true;
-        
-        setTimeout(function(){
-            askNextQuestion()
-        }, 2000);
-    }
-
-    console.log("rundenZähler vor ++: " + rundenZaehler);
-    console.log("zählerMinus1: vor ++: " + zaehlerM1);
-
-    if (idOfClickedBtn == "antwort1_richtig") {
-        console.log("Rischtisch!");
-        
-        // document.getElementById(idOfClickedBtn).style.backgroundColor = "green";
-        punkte[zaehlerM1];
-
-        if (document.getElementById("known").checked) {
-            punkte[zaehlerM1]+=2;
-        }
-
-    } else {
-        console.log("Falsch!");
-        // document.getElementById(idOfClickedBtn).style.backgroundColor = "red";
-        rightAnswer = document.getElementById("antwort1_richtig");
-        // rightAnswer.style.backgroundColor = "green";
-    }
-    zaehlerM1 = rundenZaehler;
-    rundenZaehler++;
-
-    console.log("rundenZähler nach ++: " + rundenZaehler);
-    console.log("zählerMinus1: nach ++: " + zaehlerM1);
-    console.log("Punkte mit rundenZähler: " + punkte[rundenZaehler]);
-    console.log("Punkte mit ZählerM1: " + punkte[zaehlerM1]);
-
-    console.log("questions.length: " + questions.length + " - rundenZaehler: " + rundenZaehler);
-    console.log("Runde " + rundenZaehler + " - Punktestand: " + punkte[zaehlerM1]);
-
-    document.getElementById("antwort1_richtig").disabled = true;
-    document.getElementById("antwort2").disabled = true;
-    document.getElementById("antwort3").disabled = true;
-    document.getElementById("antwort4").disabled = true;
-    
-     setTimeout(function(){
-        askNextQuestion()
-     }, 20);
-
-}
-
