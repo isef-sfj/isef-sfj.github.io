@@ -22,8 +22,6 @@ include "essentials/head.php";
         <div class="previewHeadline">
             Deine <strong>Mitspieler</strong>:
         </div>
-        
-            
             <section id="playerField">
                 <div class="playerFieldEntry">
                     <img class="previewHeadline" src="<?php echo($_SESSION['icon']) ?>" alt="">
@@ -33,18 +31,13 @@ include "essentials/head.php";
                     <!-- <button class="readyButton">ready</button> -->
                 </div>
                 <div class="playerFieldEntry">
-                    <img src="../img/playerFace.png" alt="">
-                    <a class="previewHeadline">Spieler 2</a>
+                    <img src="../img/playerIcons/affe.svg" alt="">
+                    <a class="previewHeadline">Ape</a>
                     <button class="readyButton">ready</button>
                 </div>
                 <div class="playerFieldEntry">
-                    <img src="../img/playerFace.png" alt="">
-                    <a class="previewHeadline">Spieler 3</a>
-                    <button class="readyButton">ready</button>
-                </div>
-                <div class="playerFieldEntry">
-                    <img src="../img/playerFace.png" alt="">
-                    <a class="previewHeadline">Spieler 4</a>
+                    <img src="../img/playerIcons/eule.svg" alt="">
+                    <a class="previewHeadline">kEule</a>
                     <button class="readyButton">ready</button>
                 </div>
             </section>
