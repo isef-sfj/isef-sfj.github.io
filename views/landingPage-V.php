@@ -5,10 +5,7 @@ include "essentials/head.php";
         <header id="header">
                 <h1>ISEF-Duell</h1>
         </header>
-
-        <!-- <section class="previewHeadline">
-            Die neuesten Fragen
-        </section> -->
+        
         <h2>Die neuesten Fragen</h2>
         
         <section>
@@ -32,7 +29,6 @@ include "essentials/head.php";
                 Fragen bearbeiten
             </a></div>
         </section>
-        
 </body>
 
 <?php

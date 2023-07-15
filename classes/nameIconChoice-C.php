@@ -11,7 +11,6 @@ $icon = NULL;
 $modul = NULL;
 $lesson = NULL;
 
-
 if (isset($_GET['goal'])) {
     $goal = $_GET['goal'];
 }
@@ -36,7 +35,6 @@ if (isset($_GET['lesson'])) {
     $lesson = $_GET['lesson'];
 }
 
-
 if ($goal == "leer") {
     header('Location: ../index.php');
 }
@@ -46,24 +44,14 @@ if ($goal == "nameIconChoice") {
 }
 
 if ($goal == "lessonChoice") {
-    //if (!isset($_SESSION['id'])) {
         $_SESSION['id'] = $id;
-    //}
-
-    //if (!isset($_SESSION['name'])) {
         $_SESSION['name'] = $name;
-    //}
-
-    //if (!isset($_SESSION['icon'])) {
         $_SESSION['icon'] = $icon;
-    //}
-
-    //if (!isset($_SESSION['modul'])) {
         $_SESSION['modul'] = $modul;
-    //}
     
     $pc = new QuestionContr();
     $lessons = $pc->getLessons($_SESSION['modul']);
+    
     include '../views/lessonChoice-V.php';
 }
 

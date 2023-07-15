@@ -1,13 +1,10 @@
 <?php
-
 include 'question-C.php';
-
 $goal = 'leer';
 
 if (isset($_POST['goal'])) {
     $goal = $_POST['goal'];
 }
-
 
 if ($goal == "leer") {
     $id = $_GET["id"];
@@ -16,7 +13,6 @@ if ($goal == "leer") {
 
     include '../views/editQuestion-V.php';
 }
-
 
 if ($goal == 'edit') {
     $id = $_POST["id"];
@@ -27,11 +23,9 @@ if ($goal == 'edit') {
     $antwort4 = $_POST["antwort4"];
     
     $qContr = new QuestionContr();
-   
     $qContr->editQuestion($id, $frage, $antwort1_richtig, $antwort2, $antwort3, $antwort4);
         
     header('Location: ../index.php');
-    
 }
 
 if ($goal == "delete") {

@@ -1,10 +1,9 @@
 <?php
 session_start();
-
+// ------ IN PROTOTYP NOCH NICHT GENUTZT!!! ------
 include_once "dbh-M.php";
 
 class Quiz extends Dbh {
-
     private $id;
     private $timestamp;
     private $modul;
@@ -99,60 +98,4 @@ class Quiz extends Dbh {
                         'player4_points' => $this->player4_points,
                         'quiz_status' => $this->quiz_status]);
     }
-
-    /*
-    // Quizfrage bearbeiten
-    public function editQuestion($id, $frage, $antwort1_richtig, $antwort2, $antwort3, $antwort4) {
-
-        $this->id = $id;
-        $this->frage = $frage;
-        $this->antwort1_richtig = $antwort1_richtig;
-        $this->antwort2 = $antwort2;
-        $this->antwort3 = $antwort3;
-        $this->antwort4 = $antwort4;
-
-        $sql = "UPDATE quizfragen SET   frage=:frage,
-                                        antwort1_richtig=:antwort1_richtig,
-                                        antwort2=:antwort2,
-                                        antwort3=:antwort3,
-                                        antwort4=:antwort4
-                WHERE id=:id";
-
-        $stmt = $this->connect()->prepare($sql);
-
-        $stmt->execute(['frage' => $this->frage,
-                        'antwort1_richtig' => $this->antwort1_richtig,
-                        'antwort2' => $this->antwort2,
-                        'antwort3' => $this->antwort3,
-                        'antwort4' => $this->antwort4,
-                        'id' => $this->id]);
-    }
-
-    public function getQuestionById($id) {
-        $sql = "SELECT * FROM quizfragen WHERE id=$id";
-        $stmt = $this->connect()->query($sql);
-                
-        return $stmt;
-    }
-
-    public function deleteQuestion($id) {
-        $this->id = $id;
-
-        $sql = "DELETE FROM quizfragen WHERE id=:id";
-        $stmt = $this->connect()->prepare($sql);
-        $stmt->execute(['id' => $this->id]);
-
-        
-    }
-
-    public function getQuestionsForQuiz() {
-
-        $statement = $this->connect()->prepare("SELECT * FROM quizfragen WHERE modul=? AND lektion=?");
-        $statement->execute(array($_SESSION['modul'], $_SESSION['lesson']));
-        $questions = $statement->fetchAll();   
-        return $questions;
-    }
-    */
-
 }
-

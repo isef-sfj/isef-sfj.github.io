@@ -21,7 +21,6 @@ function play() {
 
 // Holt die Quizfragen aus der DB
 function getQuestionsWithAjax() {
-    
     xmlhttp=new XMLHttpRequest();
     xmlhttp.onreadystatechange=function() {
             if (xmlhttp.readyState==4 && xmlhttp.status==200) {
@@ -143,7 +142,6 @@ function askNextQuestion() {
 }
 
 function fillResultBoxText() {
-    
     for (let i = 0 ; i < questions.length ; i++) {
         document.getElementById("givenQuestion"+(i+1)).innerText = questions[i]['frage'];
         document.getElementById("answer"+(i+1)+"1").innerText = questions[i]['antwort1_richtig'];

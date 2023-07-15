@@ -14,14 +14,17 @@ function setPlayerIconAffe() {
     var element = document.getElementById('playerIconFace');
     element.src = '/img/playerIcons/affe.svg';
 }
+
 function setPlayerIconEule() {
     var element = document.getElementById('playerIconFace');
     element.src = '/img/playerIcons/eule.svg';
 }
+
 function setPlayerIconFrosch() {
     var element = document.getElementById('playerIconFace');
     element.src = '/img/playerIcons/frosch.svg';
 }
+
 function setPlayerIconKuh() {
     var element = document.getElementById('playerIconFace');
     element.src = '/img/playerIcons/kuh.png';
@@ -47,7 +50,6 @@ function setPlayer() {
 }
 
 function setIdModule() {
-    
     var id = document.getElementById('id').innerText.trim();
     var element = document.getElementById('modulSelect');
     var modul = element.options[element.selectedIndex].value.trim();
@@ -62,7 +64,6 @@ function goWaitingroom() {
 }
 
 function saveLesson(lektion) {
-
     let ausgesuchtAlt = document.getElementsByClassName ("ausgesucht");
     let numItems = ausgesuchtAlt.length;
 
@@ -82,8 +83,6 @@ function setLessonChoice(lesson) {
             }
         xmlhttp.open("GET","setLessonChoice.php?lesson="+lesson, true);
         xmlhttp.send();
-
-      
 }
 
 function modulChanged() {

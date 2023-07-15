@@ -1,5 +1,4 @@
 <?php
-
 include 'question-C.php';
 
 $goal = "leer";

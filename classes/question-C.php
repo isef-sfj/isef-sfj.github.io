@@ -1,15 +1,11 @@
 <?php
-
 include_once 'question-M.php';
 
 class QuestionContr {
-
     function getQuestionsForLandingpage($quantity=0) {
-
         $questions = new Question();
         $qforlandingpage = $questions->getQuestions($quantity);
         return $qforlandingpage;
-
     }
 
     function setQuestion ($modul, $lektion, $frage, $antwort1_richtig, $antwort2, $antwort3, $antwort4) {
@@ -18,19 +14,15 @@ class QuestionContr {
     }
 
     function getModulForEditQuestionChoice() {
-
         $q = new Question();
         $moduls = $q->getModuls();
         return $moduls;
-
     }
 
     function getLessons($modul) {
-
         $q = new Question();
         $lessons = $q->getLessons($modul);
         return $lessons;
-
     }
 
     function getIdsForEditQuestionChoice($modul) {
@@ -53,8 +45,6 @@ class QuestionContr {
     function deleteQuestion($id) {
         $q = new Question();
         $q->deleteQuestion($id);
-
-
     }
 
     public function getQuestionsForQuiz() {
@@ -62,5 +52,4 @@ class QuestionContr {
         $quiz = $q->getQuestionsForQuiz();      
         return json_encode($quiz);
     }
-
 }

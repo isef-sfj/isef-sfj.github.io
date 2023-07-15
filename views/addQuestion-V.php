@@ -1,18 +1,11 @@
 <?php
 include "essentials/head.php";
 ?>
-
 <body>
-
         <header>
                 <h1>ISEF-Duell</h1>
         </header>
-
-        
         <h2>Fragen erstellen</h2>
-
-        
-    
         <form action="../classes/addQuestion-C.php?" method="post">
         <div class="flexContainerEQChoice">
             <!-- Studiengang -->
@@ -27,10 +20,6 @@ include "essentials/head.php";
                 </select>
             </div>
             
-            <!-- <div class="flexContainerEQChoiceItem">
-                <label class="previewHeadline" for="modul">Modul eingeben:</label><br>
-                <input class="insertForm" placeholder="Modul eingeben" id="modul" name="modul" type="text" required>
-            </div>  -->
             <!-- Modualauswahl -->
             <div class="flexContainerEQChoiceItem" id="containerModulSelect">
                 <label for="modulSelect" class="previewHeadline">Wähle Dein Modul:</label><br>
@@ -46,20 +35,12 @@ include "essentials/head.php";
                 <label class="previewHeadline" for="lektion">Lektion eingeben:</label><br>
                 <input class="insertForm" placeholder="Lektion eingeben" id="lektion" name="lektion" type="text" required>
             </div>
-            
-
-            
-
-            <!-- Muss in der richtigen Seite durch einen
-            a href ersetzt werden, da sonst die Action aus
-            dem action-Attribut der Form ausgelöst wird! -->
-            <!-- <button class="mainButton">Neues Modul</button> -->
-          
         </div>  
 
         <div class="flexContainerEQChoice"> 
             <button class="mainButton">Neues Modul</button>
         </div>
+
         <div class="flexContainerEQQuestion">
 
             <label class="previewHeadline" for="frage">Frage eingeben:</label>    
@@ -77,14 +58,12 @@ include "essentials/head.php";
             <label class="previewHeadline" for="antwort4">Dritte falsche Antwort eingeben:</label>
             <textarea class="insertForm" class="flexContainerEQQuestionItemAnswer" placeholder="Falsche Antwort eingeben" name="antwort4" id="antwort4" required></textarea>
             
-            
-
         </div>
+
             <input value="new" name="goal" type="hidden">
             <input value="" id="selectedModul" name="selectedModul" type="hidden">
         
         <br><br>
-    
 
     <section id="arrowBox">
         <div class="flexContainerEQQuestionItemButton">
@@ -92,9 +71,7 @@ include "essentials/head.php";
             <button class="submButton">Frage speichern</button>
         </div> 
     </section>
-
     </form>
-
 </body>
 
 <?php

@@ -1,10 +1,8 @@
 <?php
 session_start();
-
 include "essentials/head.php";
 ?>
 <body>
-
     <header id="header">
         <h1>ISEF-Duell</h1>
     </header>

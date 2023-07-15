@@ -2,10 +2,6 @@
 include "essentials/head.php";
 ?>
 <body>
-
-
-
-        
         <header id="header">
                 <h1>ISEF-Duell</h1>
         </header>
@@ -27,7 +23,6 @@ include "essentials/head.php";
                 <button class="navigationButton" onClick="sendmodul()">Weiter</button>
             </div>
         </section>
-
 </body>
 
 <?php

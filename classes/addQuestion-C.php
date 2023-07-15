@@ -1,8 +1,5 @@
 <?php
-
 include 'question-C.php';
-
-
 $goal = 'leer';
 
 if (isset($_POST["goal"])) {
@@ -14,7 +11,6 @@ if ($goal == 'leer') {
   $modules = $qc->getModulForEditQuestionChoice();
   include '../views/addQuestion-V.php';
 }
-
 
 if ($goal == 'new') {
     $modul = $_POST["selectedModul"];
@@ -30,6 +26,5 @@ if ($goal == 'new') {
     $qContr->setQuestion($modul, $lektion, $frage, $antwort1_richtig, $antwort2, $antwort3, $antwort4);
         
     header('Location: ../index.php');
-    
     }
     

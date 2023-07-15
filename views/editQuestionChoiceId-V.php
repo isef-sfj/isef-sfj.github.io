@@ -2,15 +2,8 @@
 include "essentials/head.php";
 ?>
 <body>
-
-
-
-        
         <header id="header">
-          
                 <h1>ISEF-Duell</h1>
-                
-            
         </header>
 
         <section class="previewHeadline">
@@ -18,8 +11,6 @@ include "essentials/head.php";
         </section>
         <br>
         <div >
-            
-            
             <select class="selectDropdown" id="idSelect" >
                 <?php foreach($ids as $datai) { ?>
                     <option name="id" id="id" value="<?php echo $datai['id']; ?>"><?php echo $datai['id']; ?></option>
@@ -27,16 +18,13 @@ include "essentials/head.php";
             </select>
         </div>
         <br><br>
-        
-    
 
-    <section id="arrowBox">
+        <section id="arrowBox">
             <a href="../classes/editQuestionChoice-C.php?goal=modul" ><img src="../img/arrowLeft.png" alt="" class="arrow"></a>
             <div class="flexContainerEQQuestionItemButton">
                 <button class="navigationButton" onClick="sendid()">Frage bearbeiten</button>
             </div> 
         </section>
-
 </body>
 
 <?php

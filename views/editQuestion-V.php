@@ -2,28 +2,18 @@
 include "essentials/head.php";
 ?>
 <body>
-
-
-        
         <header id="header">
-          
                 <h1>ISEF-Duell</h1>
-                
-            
         </header>
-        <!-- <section class="previewHeadline">
-            Frage bearbeiten
-        </section> -->
+        
         <h2>Frage bearbeiten</h2>
         <br>
+
     <form action="../classes/editQuestion-C.php" method="post">
-        
         
         <div class="flexContainerEQQuestion">
 
                 <?php foreach($question as $data) { ?>
-
-                    
 
                     <label class="previewHeadline" for="name">ID:</label>
                     <textarea class="insertForm" readonly class="flexContainerEQQuestionItemQuestion" name="id" id="id" >
@@ -56,20 +46,10 @@ include "essentials/head.php";
                     </textarea>
 
                 <?php } ?>
-                
            
                 <input value="edit" name="goal" type="hidden" >
-            
-
         </div>
-
-    
-        
-
-       
         <br><br>
-
-
         <section id="arrowBox">
             <a href="../classes/editQuestionChoice-C.php?goal=modul" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
             <div class="flexContainerEQQuestionItemButton">

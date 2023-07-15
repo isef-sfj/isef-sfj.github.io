@@ -1,9 +1,7 @@
 <?php
-
 include_once 'player-M.php';
 
 class PlayerContr {
-
     function getId($name=0) {
         $p = new Player();
         $ids = $p->getId($name);
@@ -31,5 +29,4 @@ class PlayerContr {
         $p = new Player();
         $p->deletePlayer($id);
     }
-
 }

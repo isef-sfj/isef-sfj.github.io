@@ -1,5 +1,4 @@
 <?php
-
 include_once "dbh-M.php";
 
 class Player extends Dbh {
@@ -7,14 +6,12 @@ class Player extends Dbh {
     private $id;
     private $name;
     private $icon;
- 
-    
+
     // Liefert alle Ids zurück.
     // Wenn ein Name angegeben ist, nur die zu diesem Namen passende.
     public function getId($name) {
         switch ($name) {
             case 0:
-                
                 $sql = "SELECT id FROM player";
                 $stmt = $this->connect()->prepare($sql);
                 $namen = $stmt->execute();
@@ -24,7 +21,6 @@ class Player extends Dbh {
                 break;
 
             default:
-
                 $this->name = $name;
 
                 $sql = "SELECT id FROM player WHERE name=:name";
@@ -32,7 +28,6 @@ class Player extends Dbh {
                 $namen = $stmt->execute(['name' => $this->name]);
                 
                 return $namen;
-
         }
 
     }
@@ -42,7 +37,6 @@ class Player extends Dbh {
     public function getName($id=0) {
         switch ($id) {
             case 0:
-                
                 $sql = "SELECT name FROM player";
                 $stmt = $this->connect()->prepare($sql);
                 $namen = $stmt->execute();
@@ -52,7 +46,6 @@ class Player extends Dbh {
                 break;
 
             default:
-
                 $this->id = $id;
 
                 $sql = "SELECT name FROM player WHERE id=:id";
@@ -60,13 +53,10 @@ class Player extends Dbh {
                 $namen = $stmt->execute(['id' => $this->id]);
                 
                 return $namen;
-
         }
-
     }
 
     public function setPlayer($name, $icon) {
-        
         $this->name = $name;
         $this->icon = $icon;
         
@@ -85,7 +75,6 @@ class Player extends Dbh {
 
     // Player bearbeiten
     public function editPlayer($id, $name, $icon) {
-
         $this->id = $id;
         $this->name = $name;
         $this->icon = $icon;
@@ -101,16 +90,11 @@ class Player extends Dbh {
                         'icon' => $this->icon,]);
     }
 
-    
-
     public function deletePlayer($id) {
         $this->id = $id;
 
         $sql = "DELETE FROM player WHERE id=:id";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute(['id' => $this->id]);
-
-        
     }
-
 }

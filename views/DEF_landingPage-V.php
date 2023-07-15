@@ -2,41 +2,26 @@
 include "essentials/head.php";
 ?>
 <body>
-
-        <!-- ich würde später die index.html als index.php speichern
-        und den Header, den Player und evtl. den Footer in Dateien auslagern.
-        Dann muss man nicht jede Seite bei Änderungen anfassen. JFL -->
         <header id="header">
-          
                 <h1>ISEF-Duell</h1>
-            
         </header>
-
-        
-         <!-- In der Quiz-Duell App stehen hier irgendwelche neuen Levels oder sowas.
-            Die Seite hat so leer ausgesehen, deswegen habe ich die Vorschau-Elemente
-            rein gemacht. War aber nicht so abgesprochen, kann gerne wieder weg. JFL -->
 
         <section id="previewHeadline">
             Die neuesten Fragen
         </section>
 
-        
-
         <section>
-            
             <div id="previewField">
 
-            <?php foreach($questions as $data) { ?>
+                <?php foreach($questions as $data) { ?>
 
-                <div class="previewFieldEntry">
-                    <?php echo $data['frage']; ?>
-                </div>
+                    <div class="previewFieldEntry">
+                        <?php echo $data['frage']; ?>
+                    </div>
 
-            <?php } ?>
+                <?php } ?>
                 
             </div>
-            
         </section>
 
         <section id="buttonField">
@@ -54,11 +39,6 @@ include "essentials/head.php";
             </a></div>
         
         </section>
-
-
-
-
-
 </body>
 
 <?php

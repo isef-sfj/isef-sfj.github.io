@@ -1,10 +1,8 @@
 <?php
 session_start();
-
 include_once "dbh-M.php";
 
 class Question extends Dbh {
-
     private $id;
     private $modul;
     private $lektion;
@@ -24,12 +22,10 @@ class Question extends Dbh {
     // Liefert alle ids zurück
     public function getIdsByModul($modul) {
         $this->modul = $modul;
-
         $statement = $this->connect()->prepare("SELECT id FROM quizfragen WHERE modul=?");
         $statement->execute(array($modul));
         $ids = $statement->fetchAll();   
         return $ids;
-
     }
 
     // Liefert alle Quizfragen zurück.
@@ -37,21 +33,17 @@ class Question extends Dbh {
     public function getQuestions($quantity) {
         switch ($quantity) {
             case 0:
-
                 $sql = "SELECT * FROM quizfragen";
                 $stmt = $this->connect()->query($sql);
                 return $stmt;
                 break;
             
             default:
-            
                 $sql = "SELECT * FROM quizfragen ORDER BY id DESC LIMIT $quantity";
                 $stmt = $this->connect()->query($sql);
                 
                 return $stmt;
-
         }
-
     }
 
     // Gibt alle Lektionen eines Moduls zurück, ohne Dubletten
@@ -64,8 +56,6 @@ class Question extends Dbh {
 
     // Neue Quizfrage speichern
     public function setQuestion($modul, $lektion, $frage, $antwort1_richtig, $antwort2, $antwort3, $antwort4) {
-        
-        
         $this->modul = $modul;
         $this->lektion = $lektion;
         $this->frage = $frage;
@@ -99,7 +89,6 @@ class Question extends Dbh {
                         'antwort3' => $this->antwort3,
                         'antwort4' => $this->antwort4]);
     }
-
 
     // Quizfrage bearbeiten
     public function editQuestion($id, $frage, $antwort1_richtig, $antwort2, $antwort3, $antwort4) {
@@ -137,22 +126,18 @@ class Question extends Dbh {
 
     public function deleteQuestion($id) {
         $this->id = $id;
-
         $sql = "DELETE FROM quizfragen WHERE id=:id";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute(['id' => $this->id]);
-
-        
     }
 
     public function getQuestionsForQuiz() {
-
         $statement = $this->connect()->prepare("SELECT * FROM quizfragen WHERE modul=? AND lektion=?");
         $statement->execute(array("Modul TEST", "Lektion TEST"));
         // $statement->execute(array($_SESSION['modul'], $_SESSION['lesson']));
         $questions = $statement->fetchAll();   
+        
         return $questions;
     }
-
 }
 

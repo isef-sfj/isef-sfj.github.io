@@ -1,13 +1,8 @@
 <?php
 session_start();
-
 include "essentials/head.php";
 ?>
     <body>
-
-        <!-- ich würde später die index.html als index.php speichern
-        und den Header, den Player und evtl. den Footer in Dateien auslagern.
-        Dann muss man nicht jede Seite bei Änderungen anfassen. JFL -->
         <header id="header">
                 <h1>ISEF-Duell</h1>
         </header>
@@ -25,10 +20,8 @@ include "essentials/head.php";
             <section id="playerField">
                 <div class="playerFieldEntry">
                     <img class="previewHeadline" src="<?php echo($_SESSION['icon']) ?>" alt="">
-                    <!-- Hier muss noch die Klasse previewHeadline rein  -->
                     <div class="previewHeadline"> <?php echo($_SESSION['name']) ?></div>
                     <a class="readyButton" href="quiz-V.php" >play</a>
-                    <!-- <button class="readyButton">ready</button> -->
                 </div>
                 <div class="playerFieldEntry">
                     <img src="../img/playerIcons/affe.svg" alt="">
@@ -44,7 +37,6 @@ include "essentials/head.php";
             <div id="playerId" hidden><?php echo ($_SESSION['id']) ?></div>
             <section id="arrowBox">
             <a href="../classes/nameIconChoice-C.php?goal=nameIconChoice" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
-            <!-- <a href="nameIconChoice-C.php?goal=waiting" >Warteraum</a> -->
             <button class="navigationButton">Platzhalter</button>
         </section>
     </body>

@@ -1,6 +1,4 @@
 <?php
-
-
 include 'question-C.php';
 
 $qContr = new QuestionContr();
