@@ -7,12 +7,14 @@ let richtigeAntwort = [];
 let idOfClickedBtn = null;
 let punkteAusRunde = 0;
 let gesamtpunkte = 0;
+let timeToAct = 20;
 
 // Start des Quiz, wird nur einmal aufgerufen
 function play() {
     document.getElementById("playContainer").style.display="block";
     document.getElementById("halftimeContainer").style.display="none";
     document.getElementById("resultContainer").style.display="none";
+    document.getElementById("finishContainer").style.display="none";
     getQuestionsWithAjax();
     fillResultBoxText();
     rundenZaehler = 0;
@@ -48,6 +50,7 @@ function checkAnswer() {
     if (idOfClickedBtn == "antwort1_richtig") {
         punkteAusRunde = 1;
         document.getElementById("answer"+(rundenZaehler+1)+"1").style.backgroundColor="green";
+        document.getElementById("answer"+(rundenZaehler+1)+"1").disabled="true";
         // Wenn Antwort GEWUSST 2 zusätzliche Punkte addieren
         if (document.getElementById("known").checked) {
             punkteAusRunde += 2;
@@ -93,17 +96,58 @@ function askNextQuestion() {
         document.getElementById("playContainer").style.display="none";
         document.getElementById("halftimeContainer").style.display="block";
         document.getElementById("resultContainer").style.display="none";
+        document.getElementById("finishContainer").style.display="none";
+
+        document.getElementById("seconds1").innerText = timeToAct;
+        let timer = setInterval(sekundenanzeige, 1000);
+        function sekundenanzeige() {
+            document.getElementById("seconds1").innerText = timeToAct;
+            timeToAct--;
+            if ( timeToAct < 0 ) {
+                document.getElementById("playContainer").style.display="block";
+                document.getElementById("halftimeContainer").style.display="none";
+                document.getElementById("resultContainer").style.display="none";
+                document.getElementById("finishContainer").style.display="none";
+
+                timeToAct = 20;
+                clearInterval(timer);
+            }
+        }
+
+        /*
         setTimeout(function(){
             document.getElementById("playContainer").style.display="block";
             document.getElementById("halftimeContainer").style.display="none";
             document.getElementById("resultContainer").style.display="none";
          }, 5000);
+         */
     }
     // Wenn 6 Fragen beantwortet wurden, blende resultContainer ein
     if (rundenZaehler == 6) {
+        fillPoints();
         document.getElementById("playContainer").style.display="none";
         document.getElementById("halftimeContainer").style.display="none";
         document.getElementById("resultContainer").style.display="block";
+        document.getElementById("finishContainer").style.display="none";
+
+        document.getElementById("seconds2").innerText = timeToAct;
+        let timer = setInterval(sekundenanzeige, 1000);
+        function sekundenanzeige() {
+            document.getElementById("seconds2").innerText = timeToAct;
+            timeToAct--;
+            if ( timeToAct < 0 ) {
+
+                document.getElementById("endpoints").innerText = gesamtpunkte;
+
+                document.getElementById("playContainer").style.display="none";
+                document.getElementById("halftimeContainer").style.display="none";
+                document.getElementById("resultContainer").style.display="none";
+                document.getElementById("finishContainer").style.display="block";
+
+                timeToAct = 20;
+                clearInterval(timer);
+            }
+        }
         
     }
     // Wenn noch Fragen übrig sind -> nächste Frage anzeigen
@@ -125,17 +169,17 @@ function askNextQuestion() {
         document.getElementById("antwort2").innerText = questions[rundenZaehler]['antwort2'];
         document.getElementById("antwort3").innerText = questions[rundenZaehler]['antwort3'];
         document.getElementById("antwort4").innerText = questions[rundenZaehler]['antwort4'];
-        // Radiobutton gewusst/geraten wird auf Startzustand gesetzt
+        // Radiobutton gewusst/geraten wird auf Startzustand (= geraten) gesetzt
         document.getElementById("known").checked = false;
         document.getElementById("advised").checked = true;
         // Senden-Button wird deaktiviert
         document.getElementById("sendAnswerBtn").disabled = true;
-    // Wenn alle Fragen gespielt, Ergebnis anzeigen
+    // Wenn alle Fragen gespielt sind, Ergebnis anzeigen
     } else {
         console.log("Fertig! Punktestand ist: " + gesamtpunkte);
         document.getElementById("playContainer").hidden = true;
         document.getElementById("resultContainer").hidden = false;
-        document.getElementById("showPoints").innerText = gesamtpunkte;
+        // document.getElementById("showPoints").innerText = gesamtpunkte;
     }
 
     console.log(punkte);
@@ -148,5 +192,50 @@ function fillResultBoxText() {
         document.getElementById("answer"+(i+1)+"2").innerText = questions[i]['antwort2'];
         document.getElementById("answer"+(i+1)+"3").innerText = questions[i]['antwort3'];
         document.getElementById("answer"+(i+1)+"4").innerText = questions[i]['antwort4'];
+    }
+}
+
+function changeAnswerToRight(klickedButton, frage) {
+    klickedButton.disabled="true";
+    console.log("Punkte vor Änderung: " + punkte);
+    console.log("Gesamtpunkte vor Änderung: " + gesamtpunkte);
+    let questionToChnage = frage - 1;
+    punkte[questionToChnage] = punkte[questionToChnage] + 1;
+    console.log("Punkte nach Änderung: " + punkte);
+    
+    add = function(arr) {
+        return arr.reduce((a, b) => a + b, 0);
+    }; 
+    gesamtpunkte = add(punkte);
+
+    console.log("Gesamtpunkte nach Änderung: " + gesamtpunkte);
+}
+
+function changeAnswerToFalse(klickedButton, frage) {
+    klickedButton.disabled="true";
+    console.log("Punkte vor Änderung: " + punkte);
+    console.log("Gesamtpunkte vor Änderung: " + gesamtpunkte);
+    let questionToChnage = frage - 1;
+    punkte[questionToChnage] = 0;
+    console.log("Punkte nach Änderung: " + punkte);
+
+    add = function(arr) {
+        return arr.reduce((a, b) => a + b, 0);
+    }; 
+    gesamtpunkte = add(punkte);
+
+    console.log("Gesamtpunkte nach Änderung: " + gesamtpunkte);
+}
+
+function fillPoints() {
+    for (let i=0 ; i < 6 ; i++) {
+        let rightAnswers = document.getElementById("nrOfRightAnswers" + (i+1)).innerText;
+        if (punkte[i] == 1 || punkte[i] == 3) {
+            console.log("Frage " + (i+1) + "Richtige Antworten vorher: " + rightAnswers);
+            rightAnswers = parseInt(rightAnswers);
+            rightAnswers+=1;
+            console.log("Frage " + (i+1) + "Richtige Antworten nachher: " + rightAnswers);
+            document.getElementById("nrOfRightAnswers" + (i+1)).innerText = rightAnswers;
+        }
     }
 }

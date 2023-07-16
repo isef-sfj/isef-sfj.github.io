@@ -45,57 +45,58 @@ include "essentials/head.php";
         <div class="halftimeContainer" id="halftimeContainer" >
             <h2><?php echo($_SESSION['lesson']) ?> aus <?php echo($_SESSION['modul']) ?></h1>
             <h3>Zwischenergebnis</h3>
+            <h4>Noch <div id="seconds1"></div> Sekunden!</h4>
             <div id="givenQuestion1">1. Frage:</div> 
             <div id="givenAnswerBox">
-                <div id="answer11">
+                <button id="answer11" onclick="changeAnswerToRight(this, 1)">
                     Antwort 1
-                </div>
-                <div id="answer12">
+                </button>
+                <button id="answer12" onclick="changeAnswerToFalse(this, 1)">
                     Antwort 2
-                </div>
-                <div id="answer13">
+                </button>
+                <button id="answer13" onclick="changeAnswerToFalse(this, 1)">
                     Antwort 3
-                </div>
-                <div id="answer14">
+                </button>
+                <button id="answer14" onclick="changeAnswerToFalse(this, 1)">
                     Antwort 4
-                </div>
-                <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers1"></div></h3>
+                </button>
+                <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers1">1</div></h3>
                 <h4>Wahl der Mitspieler: <div id="otherAnswers1"></div>Ape: Antwort 4 (geraten), kEule: Antwort 1 (geraten)</h3>
             </div>
             <br>
             <div id="givenQuestion2">2. Frage:</div> 
             <div id="givenAnswerBox">
-                <div id="answer21">
+                <button id="answer21" onclick="changeAnswerToRight(this, 2)">
                     Antwort 1
-                </div>
-                <div id="answer22">
+                </button>
+                <button id="answer22" onclick="changeAnswerToFalse(this, 2)">
                     Antwort 2
-                </div>
-                <div id="answer23">
+                </button>
+                <button id="answer23" onclick="changeAnswerToFalse(this, 2)">
                     Antwort 3
-                </div>
-                <div id="answer24">
+                </button>
+                <button id="answer24" onclick="changeAnswerToFalse(this, 2)">
                     Antwort 4
-                </div>
-                <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers2"></div></h3>
+                </button>
+                <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers2">0</div></h3>
                 <h4>Wahl der Mitspieler: <div id="otherAnswers2"></div>Ape: Antwort 2 (geraten), kEule: Antwort 3 (geraten)</h3>
             </div>
             <br>
             <div id="givenQuestion3">3. Frage:</div> 
             <div id="givenAnswerBox">
-                <div id="answer31">
+                <button id="answer31" onclick="changeAnswerToRight(this, 3)">
                     Antwort 1
-                </div>
-                <div id="answer32">
+                </button>
+                <button id="answer32" onclick="changeAnswerToFalse(this, 3)">
                     Antwort 2
-                </div>
-                <div id="answer33">
+                </button>
+                <button id="answer33" onclick="changeAnswerToFalse(this, 3)">
                     Antwort 3
-                </div>
-                <div id="answer34">
+                </button>
+                <button id="answer34" onclick="changeAnswerToFalse(this, 3)">
                     Antwort 4
-                </div>
-                <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers3"></div></h3>
+                </button>
+                <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers3">2</div></h3>
                 <h4>Wahl der Mitspieler: <div id="otherAnswers3">Ape: Antwort 1 (geraten), kEule: Antwort 1 (gewusst)</div></h3>
             </div>
         </div>
@@ -103,66 +104,74 @@ include "essentials/head.php";
         <!-- Container, in dem das Endergebnis angezeigt wird -->
         <div id="resultContainer" class="resultContainer" >
             <div id="resultBox" class="resultBox" >
-                <h2>Ergebnis:</h2>    
-                Du hast <div id="showPoints">eine unbekannte Zahl</div> Punkte gesammelt.
+                <h2>Ergebnis:</h2>
+                <h4>Noch <div id="seconds2"></div> Sekunden!</h4>    
+                <!-- Du hast <div id="showPoints">eine unbekannte Zahl</div> Punkte gesammelt. -->
                 <br>
                 <div id="givenQuestion4">4. Frage:</div> 
             <div id="givenAnswerBox">
-                <div id="answer41">
+                <button id="answer41" onclick="changeAnswerToRight(this, 4)">
                     Antwort 1
-                </div>
-                <div id="answer42">
+                </button>
+                <button id="answer42" onclick="changeAnswerToFalse(this, 4)">
                     Antwort 2
-                </div>
-                <div id="answer43">
+                </button>
+                <button id="answer43" onclick="changeAnswerToFalse(this, 4)">
                     Antwort 3
-                </div>
-                <div id="answer44">
+                </button>
+                <button id="answer44" onclick="changeAnswerToFalse(this, 4)">
                     Antwort 4
-                </div>
-                <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers4"></div></h3>
+                </button>
+                <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers4">1</div></h3>
                 <h4>Wahl der Mitspieler: <div id="otherAnswers4"></div>Ape: Antwort 4 (geraten), kEule: Antwort 1 (geraten)</h3>
             </div>
             <br>
             <div id="givenQuestion5">5. Frage:</div> 
             <div id="givenAnswerBox">
-                <div id="answer51">
+                <button id="answer51" onclick="changeAnswerToRight(this, 5)">
                     Antwort 1
-                </div>
-                <div id="answer52">
+                </button>
+                <button id="answer52" onclick="changeAnswerToFalse(this, 5)">
                     Antwort 2
-                </div>
-                <div id="answer53">
+                </button>
+                <button id="answer53" onclick="changeAnswerToFalse(this, 5)">
                     Antwort 3
-                </div>
-                <div id="answer54">
+                </button>
+                <button id="answer54" onclick="changeAnswerToFalse(this, 5)">
                     Antwort 4
-                </div>
-                <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers5"></div></h3>
+                </button>
+                <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers5"></div>0</h3>
                 <h4>Wahl der Mitspieler: <div id="otherAnswers5"></div>Ape: Antwort 2 (geraten), kEule: Antwort 3 (geraten)</h3>
             </div>
             <br>
             <div id="givenQuestion6">6. Frage:</div> 
             <div id="givenAnswerBox">
-                <div id="answer61">
+                <button id="answer61" onclick="changeAnswerToRight(this, 6)">
                     Antwort 1
-                </div>
-                <div id="answer62">
+                </button>
+                <button id="answer62" onclick="changeAnswerToFalse(this, 6)">
                     Antwort 2
-                </div>
-                <div id="answer63">
+                </button>
+                <button id="answer63" onclick="changeAnswerToFalse(this, 6)">
                     Antwort 3
-                </div>
-                <div id="answer64">
+                </button>
+                <button id="answer64" onclick="changeAnswerToFalse(this, 6)">
                     Antwort 4
-                </div>
-                <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers6"></div></h3>
+                </button>
+                <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers6">2</div></h3>
                 <h4>Wahl der Mitspieler: <div id="otherAnswers6">Ape: Antwort 1 (geraten), kEule: Antwort 1 (gewusst)</div></h3>
             </div>
+            
+            </div>
+        </div>
+
+        <div id="finishContainer">
+
+            <h1>Du hast <div id="endpoints">eine unbekannte Zahl</div> Punkte erreicht!</h1>
+
             <a href="javascript:location.reload()">Diese Lektion nochmal spielen</a>
             <br>
             <a href="../index.php">Zurück zur Startseite</a>
-            </div>
         </div>
     
     <script>play();</script>
