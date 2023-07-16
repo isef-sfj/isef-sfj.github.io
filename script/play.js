@@ -4,10 +4,14 @@ const punkte = [0,0,0,0,0,0];
 let frage = [];
 let gegebeneAntwort = [];
 let richtigeAntwort = [];
-let idOfClickedBtn = null;
+let idOfClickedBtn = "antwort5";
 let punkteAusRunde = 0;
 let gesamtpunkte = 0;
 let timeToAct = 20;
+let timeToAnswer = 10;
+let qTimer = null;
+let hTimer = null;
+let eTimer = null;
 
 // Start des Quiz, wird nur einmal aufgerufen
 function play() {
@@ -18,6 +22,8 @@ function play() {
     getQuestionsWithAjax();
     fillResultBoxText();
     rundenZaehler = 0;
+    timeToAnswer = 10;
+    qTimer = setInterval(questionTimer, 1000);
     askNextQuestion();
 }
 
@@ -46,6 +52,8 @@ function storeSelectedAnswer(btn) {
 
 // Prüft ob die gegebene Antwort richtig ist und speichert entsprechend die Punkte
 function checkAnswer() {
+    clearInterval(qTimer);
+
     // Wenn Antwort richtig 1 Punkt addieren
     if (idOfClickedBtn == "antwort1_richtig") {
         punkteAusRunde = 1;
@@ -84,35 +92,28 @@ function checkAnswer() {
 
     rundenZaehler++;
 
-     setTimeout(function(){
-        askNextQuestion()
-     }, 20);
+    timeToAnswer = 10;
+    qTimer = setInterval(questionTimer, 1000);
+    askNextQuestion();
+    /*
+    setTimeout(function(){
+       askNextQuestion()
+    }, 20);
+    */
 
 }
 // Zeigt die nächste Frage incl. Antworten an
 function askNextQuestion() {
     // Wenn 3 Fragen beantwortet sind, blende HalftimeContainer ein, und Fragen aus
     if (rundenZaehler == 3) {
+        clearInterval(qTimer);
         document.getElementById("playContainer").style.display="none";
         document.getElementById("halftimeContainer").style.display="block";
         document.getElementById("resultContainer").style.display="none";
         document.getElementById("finishContainer").style.display="none";
 
         document.getElementById("seconds1").innerText = timeToAct;
-        let timer = setInterval(sekundenanzeige, 1000);
-        function sekundenanzeige() {
-            document.getElementById("seconds1").innerText = timeToAct;
-            timeToAct--;
-            if ( timeToAct < 0 ) {
-                document.getElementById("playContainer").style.display="block";
-                document.getElementById("halftimeContainer").style.display="none";
-                document.getElementById("resultContainer").style.display="none";
-                document.getElementById("finishContainer").style.display="none";
-
-                timeToAct = 20;
-                clearInterval(timer);
-            }
-        }
+        hTimer = setInterval(halftimeTimer, 1000);
 
         /*
         setTimeout(function(){
@@ -124,6 +125,7 @@ function askNextQuestion() {
     }
     // Wenn 6 Fragen beantwortet wurden, blende resultContainer ein
     if (rundenZaehler == 6) {
+        clearInterval(qTimer);
         fillPoints();
         document.getElementById("playContainer").style.display="none";
         document.getElementById("halftimeContainer").style.display="none";
@@ -131,25 +133,9 @@ function askNextQuestion() {
         document.getElementById("finishContainer").style.display="none";
 
         document.getElementById("seconds2").innerText = timeToAct;
-        let timer = setInterval(sekundenanzeige, 1000);
-        function sekundenanzeige() {
-            document.getElementById("seconds2").innerText = timeToAct;
-            timeToAct--;
-            if ( timeToAct < 0 ) {
-
-                document.getElementById("endpoints").innerText = gesamtpunkte;
-
-                document.getElementById("playContainer").style.display="none";
-                document.getElementById("halftimeContainer").style.display="none";
-                document.getElementById("resultContainer").style.display="none";
-                document.getElementById("finishContainer").style.display="block";
-
-                timeToAct = 20;
-                clearInterval(timer);
-            }
-        }
-        
+        eTimer = setInterval(endTimer, 1000);
     }
+
     // Wenn noch Fragen übrig sind -> nächste Frage anzeigen
     if (rundenZaehler < questions.length) {
         // Alle Antworten werden anklickbar gemacht
@@ -175,12 +161,13 @@ function askNextQuestion() {
         // Senden-Button wird deaktiviert
         document.getElementById("sendAnswerBtn").disabled = true;
     // Wenn alle Fragen gespielt sind, Ergebnis anzeigen
-    } else {
+    } /* else {
+        clearInterval(qTimer);
         console.log("Fertig! Punktestand ist: " + gesamtpunkte);
         document.getElementById("playContainer").hidden = true;
         document.getElementById("resultContainer").hidden = false;
         // document.getElementById("showPoints").innerText = gesamtpunkte;
-    }
+    } */
 
     console.log(punkte);
 }
@@ -230,12 +217,55 @@ function changeAnswerToFalse(klickedButton, frage) {
 function fillPoints() {
     for (let i=0 ; i < 6 ; i++) {
         let rightAnswers = document.getElementById("nrOfRightAnswers" + (i+1)).innerText;
+        rightAnswers = parseInt(rightAnswers);
         if (punkte[i] == 1 || punkte[i] == 3) {
             console.log("Frage " + (i+1) + "Richtige Antworten vorher: " + rightAnswers);
-            rightAnswers = parseInt(rightAnswers);
             rightAnswers+=1;
             console.log("Frage " + (i+1) + "Richtige Antworten nachher: " + rightAnswers);
             document.getElementById("nrOfRightAnswers" + (i+1)).innerText = rightAnswers;
         }
+    }
+}
+
+function questionTimer() {
+    document.getElementById("seconds").innerText = timeToAnswer;
+    timeToAnswer--;
+    if ( timeToAnswer < 0 ) {
+        clearInterval(qTimer);
+        checkAnswer();
+    }
+}
+
+function halftimeTimer() {
+    clearInterval(qTimer);
+    document.getElementById("seconds1").innerText = timeToAct;
+    timeToAct--;
+    if ( timeToAct < 0 ) {
+        document.getElementById("playContainer").style.display="block";
+        document.getElementById("halftimeContainer").style.display="none";
+        document.getElementById("resultContainer").style.display="none";
+        document.getElementById("finishContainer").style.display="none";
+
+        timeToAct = 20;
+        clearInterval(hTimer);
+        timeToAnswer = 10;
+        questionTimer = setInterval(questionTimer, 1000);
+    }
+}
+
+function endTimer() {
+    clearInterval(qTimer);
+    document.getElementById("seconds2").innerText = timeToAct;
+    timeToAct--;
+    if ( timeToAct < 0 ) {
+
+        document.getElementById("endpoints").innerText = gesamtpunkte;
+
+        document.getElementById("playContainer").style.display="none";
+        document.getElementById("halftimeContainer").style.display="none";
+        document.getElementById("resultContainer").style.display="none";
+        document.getElementById("finishContainer").style.display="block";
+
+        clearInterval(eTimer);
     }
 }

@@ -15,12 +15,15 @@ include "essentials/head.php";
             <div id="frage">
                 Fragentext
             </div>
+
+            <h4>Noch <div id="seconds"></div> Sekunden!</h4>
             
             <div id="answerBox" class="answerBox">
                 <button name="a1" id="antwort1_richtig" onclick="storeSelectedAnswer(this)">Antwort 1</button>
                 <button name="a2" id="antwort2" onclick="storeSelectedAnswer(this)">Antwort 2</button>
                 <button name="a3" id="antwort3" onclick="storeSelectedAnswer(this)">Antwort 3</button>
                 <button name="a4" id="antwort4" onclick="storeSelectedAnswer(this)">Antwort 4</button>
+                <button name="a4" id="antwort5" onclick="storeSelectedAnswer(this)" hidden="true">Antwort 5</button>
                 
             </div>
             
