@@ -51,16 +51,16 @@ include "essentials/head.php";
             <h4>Noch <div id="seconds1"></div> Sekunden!</h4>
             <div id="givenQuestion1">1. Frage:</div> 
             <div id="givenAnswerBox">
-                <button id="answer11" onclick="changeAnswerToRight(this, 1)">
+                <button class="previewFieldEntry" id="answer11" onclick="changeAnswerToRight(this, 1)">
                     Antwort 1
                 </button>
-                <button id="answer12" onclick="changeAnswerToFalse(this, 1)">
+                <button class="previewFieldEntry" id="answer12" onclick="changeAnswerToFalse(this, 1)">
                     Antwort 2
                 </button>
-                <button id="answer13" onclick="changeAnswerToFalse(this, 1)">
+                <button class="previewFieldEntry" id="answer13" onclick="changeAnswerToFalse(this, 1)">
                     Antwort 3
                 </button>
-                <button id="answer14" onclick="changeAnswerToFalse(this, 1)">
+                <button class="previewFieldEntry" id="answer14" onclick="changeAnswerToFalse(this, 1)">
                     Antwort 4
                 </button>
                 <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers1">1</div></h3>
@@ -69,16 +69,16 @@ include "essentials/head.php";
             <br>
             <div id="givenQuestion2">2. Frage:</div> 
             <div id="givenAnswerBox">
-                <button id="answer21" onclick="changeAnswerToRight(this, 2)">
+                <button class="previewFieldEntry" id="answer21" onclick="changeAnswerToRight(this, 2)">
                     Antwort 1
                 </button>
-                <button id="answer22" onclick="changeAnswerToFalse(this, 2)">
+                <button class="previewFieldEntry" id="answer22" onclick="changeAnswerToFalse(this, 2)">
                     Antwort 2
                 </button>
-                <button id="answer23" onclick="changeAnswerToFalse(this, 2)">
+                <button class="previewFieldEntry" id="answer23" onclick="changeAnswerToFalse(this, 2)">
                     Antwort 3
                 </button>
-                <button id="answer24" onclick="changeAnswerToFalse(this, 2)">
+                <button class="previewFieldEntry" id="answer24" onclick="changeAnswerToFalse(this, 2)">
                     Antwort 4
                 </button>
                 <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers2">0</div></h3>
@@ -87,16 +87,16 @@ include "essentials/head.php";
             <br>
             <div id="givenQuestion3">3. Frage:</div> 
             <div id="givenAnswerBox">
-                <button id="answer31" onclick="changeAnswerToRight(this, 3)">
+                <button class="previewFieldEntry" id="answer31" onclick="changeAnswerToRight(this, 3)">
                     Antwort 1
                 </button>
-                <button id="answer32" onclick="changeAnswerToFalse(this, 3)">
+                <button class="previewFieldEntry" id="answer32" onclick="changeAnswerToFalse(this, 3)">
                     Antwort 2
                 </button>
-                <button id="answer33" onclick="changeAnswerToFalse(this, 3)">
+                <button class="previewFieldEntry" id="answer33" onclick="changeAnswerToFalse(this, 3)">
                     Antwort 3
                 </button>
-                <button id="answer34" onclick="changeAnswerToFalse(this, 3)">
+                <button class="previewFieldEntry" id="answer34" onclick="changeAnswerToFalse(this, 3)">
                     Antwort 4
                 </button>
                 <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers3">2</div></h3>
@@ -113,16 +113,16 @@ include "essentials/head.php";
                 <br>
                 <div id="givenQuestion4">4. Frage:</div> 
             <div id="givenAnswerBox">
-                <button id="answer41" onclick="changeAnswerToRight(this, 4)">
+                <button class="previewFieldEntry" id="answer41" onclick="changeAnswerToRight(this, 4)">
                     Antwort 1
                 </button>
-                <button id="answer42" onclick="changeAnswerToFalse(this, 4)">
+                <button class="previewFieldEntry" id="answer42" onclick="changeAnswerToFalse(this, 4)">
                     Antwort 2
                 </button>
-                <button id="answer43" onclick="changeAnswerToFalse(this, 4)">
+                <button class="previewFieldEntry" id="answer43" onclick="changeAnswerToFalse(this, 4)">
                     Antwort 3
                 </button>
-                <button id="answer44" onclick="changeAnswerToFalse(this, 4)">
+                <button class="previewFieldEntry" id="answer44" onclick="changeAnswerToFalse(this, 4)">
                     Antwort 4
                 </button>
                 <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers4">1</div></h3>
@@ -131,16 +131,16 @@ include "essentials/head.php";
             <br>
             <div id="givenQuestion5">5. Frage:</div> 
             <div id="givenAnswerBox">
-                <button id="answer51" onclick="changeAnswerToRight(this, 5)">
+                <button class="previewFieldEntry" id="answer51" onclick="changeAnswerToRight(this, 5)">
                     Antwort 1
                 </button>
-                <button id="answer52" onclick="changeAnswerToFalse(this, 5)">
+                <button class="previewFieldEntry" id="answer52" onclick="changeAnswerToFalse(this, 5)">
                     Antwort 2
                 </button>
-                <button id="answer53" onclick="changeAnswerToFalse(this, 5)">
+                <button class="previewFieldEntry" id="answer53" onclick="changeAnswerToFalse(this, 5)">
                     Antwort 3
                 </button>
-                <button id="answer54" onclick="changeAnswerToFalse(this, 5)">
+                <button class="previewFieldEntry" id="answer54" onclick="changeAnswerToFalse(this, 5)">
                     Antwort 4
                 </button>
                 <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers5"></div>0</h3>
@@ -149,16 +149,16 @@ include "essentials/head.php";
             <br>
             <div id="givenQuestion6">6. Frage:</div> 
             <div id="givenAnswerBox">
-                <button id="answer61" onclick="changeAnswerToRight(this, 6)">
+                <button class="previewFieldEntry" id="answer61" onclick="changeAnswerToRight(this, 6)">
                     Antwort 1
                 </button>
-                <button id="answer62" onclick="changeAnswerToFalse(this, 6)">
+                <button class="previewFieldEntry" id="answer62" onclick="changeAnswerToFalse(this, 6)">
                     Antwort 2
                 </button>
-                <button id="answer63" onclick="changeAnswerToFalse(this, 6)">
+                <button class="previewFieldEntry" id="answer63" onclick="changeAnswerToFalse(this, 6)">
                     Antwort 3
                 </button>
-                <button id="answer64" onclick="changeAnswerToFalse(this, 6)">
+                <button class="previewFieldEntry" id="answer64" onclick="changeAnswerToFalse(this, 6)">
                     Antwort 4
                 </button>
                 <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers6">2</div></h3>
