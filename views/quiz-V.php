@@ -51,7 +51,7 @@ include "essentials/head.php";
         <!-- Container, in dem das Ergebnis nach 3 Fragen angezeigt wird -->
         <div class="halftimeContainer" id="halftimeContainer" >
             <h2><?php echo($_SESSION['lesson']) ?> aus <?php echo($_SESSION['modul']) ?></h1>
-            <h3>Zwischenergebnis</h3>
+            <a class="previewHeadline">Zwischenergebnis</a>
             <h4>Noch <div id="seconds1"></div> Sekunden!</h4>
             <div id="givenQuestion1">1. Frage:</div> 
             <div id="givenAnswerBox">
@@ -67,8 +67,8 @@ include "essentials/head.php";
                 <button class="questionButton" id="answer14" onclick="changeAnswerToFalse(this, 1)">
                     Antwort 4
                 </button>
-                <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers1">1</div></h3>
-                <h4>Wahl der Mitspieler: <div id="otherAnswers1"></div>Ape: Antwort 4 (geraten), kEule: Antwort 1 (geraten)</h3>
+                <a class="previewHeadline">Anzahl der richtigen Antworten: <div id="nrOfRightAnswers1">1</div></a>
+                <a class="previewHeadline">Wahl der Mitspieler: <div id="otherAnswers1"></div>Ape: Antwort 4 (geraten), kEule: Antwort 1 (geraten)</a>
             </div>
             <br>
             <div id="givenQuestion2">2. Frage:</div> 
