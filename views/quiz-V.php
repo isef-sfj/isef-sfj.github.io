@@ -18,7 +18,7 @@ include "essentials/head.php";
             <h4>Noch <div id="seconds"></div> Sekunden!</h4>
             <div class="previewHeadline" id="frage">
                 <a>Frage: </a>
-                Fragentext
+                Frage: Fragentext
             </div>
 
             
