@@ -33,10 +33,10 @@ include "essentials/head.php";
             </div>
             
             <div class="radioButttons">
-                <input class="previewHeadline" type= "radio" id= "advised" name= "sure" value= "advised" checked="true">
-                <label for="contact">Geraten</label>
-                <input class="previewHeadline" type= "radio" id= "known" name= "sure" value= "known">
-                <label for="contact">Gewusst</label>
+                <input type= "radio" id= "advised" name= "sure" value= "advised" checked="true">
+                <label class="previewHeadline" for="contact">Geraten</label>
+                <input type= "radio" id= "known" name= "sure" value= "known">
+                <label class="previewHeadline" for="contact">Gewusst</label>
             </div>
 
             <div id="sendAnswer">
