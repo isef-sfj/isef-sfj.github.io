@@ -14,11 +14,11 @@ include "essentials/head.php";
             <div class="playerFieldEntry">
                 <img class="previewHeadline" src="<?php echo($_SESSION['icon']) ?>" alt="">
                 <div class="previewHeadline"> <?php echo($_SESSION['name']) ?></div>
+                <h4>Noch <div id="seconds"></div> Sekunden!</h4>
             </div>
             <h4>Noch <div id="seconds"></div> Sekunden!</h4>
             <div class="previewHeadline" id="frage">
-                <a>Frage: </a>
-                Frage: Fragentext
+                Fragentext
             </div>
 
             
