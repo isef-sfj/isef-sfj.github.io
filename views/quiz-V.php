@@ -35,7 +35,7 @@ include "essentials/head.php";
             </div>
 
             <div id="sendAnswer">
-                <button id="sendAnswerBtn" onclick="checkAnswer()">Antwort abgeben</button>
+                <button class="submButton" id="sendAnswerBtn" onclick="checkAnswer()">Antwort abgeben</button>
             </div>
 
             <br>
