@@ -17,6 +17,7 @@ include "essentials/head.php";
             </div>
             <h4>Noch <div id="seconds"></div> Sekunden!</h4>
             <div class="previewHeadline" id="frage">
+                <a>Frage: </a>
                 Fragentext
             </div>
 
@@ -32,9 +33,9 @@ include "essentials/head.php";
             </div>
             
             <div class="radioButttons">
-                <input type= "radio" id= "advised" name= "sure" value= "advised" checked="true">
+                <input class="previewHeadline" type= "radio" id= "advised" name= "sure" value= "advised" checked="true">
                 <label for="contact">Geraten</label>
-                <input type= "radio" id= "known" name= "sure" value= "known">
+                <input class="previewHeadline" type= "radio" id= "known" name= "sure" value= "known">
                 <label for="contact">Gewusst</label>
             </div>
 
