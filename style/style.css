@@ -503,4 +503,29 @@ body {
     .mainButton:hover{
     color: #4c964e;
     }
+
+    .questionButton{
+    
+      font-size: 1.7em;
+      font-family: var(--mainButtonFont);
+      color: var(--fontColor);
+      background: linear-gradient(0deg, rgb(255, 103, 16), rgb(255, 129, 50));
+      width: var(--mainButtonWidth);
+      height: var(--mainButtonHeight);
+      margin: 0.2em;
+      border-radius: 5em;
+      transition : 300ms;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      list-style-type: none;
+      text-decoration: none;
+      border:  var(--testBorder) solid rgb(233, 16, 186);
+      }
+  
+    .questionButton:hover{
+    color: #4c964e;
+    }
   
