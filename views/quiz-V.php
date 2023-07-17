@@ -7,16 +7,20 @@ include "essentials/head.php";
         <h1>ISEF-Duell</h1>
     </header>
 
-    <h2>Let's play</h2>
+    <!-- <h2>Let's play</h2> -->
 
         <!-- Container, in dem das Beantworten der Fragen läuft -->
         <div id="playContainer" class="playContainer">
-
-            <div id="frage">
+            <div class="playerFieldEntry">
+                <img class="previewHeadline" src="<?php echo($_SESSION['icon']) ?>" alt="">
+                <div class="previewHeadline"> <?php echo($_SESSION['name']) ?></div>
+            </div>
+            <h4>Noch <div id="seconds"></div> Sekunden!</h4>
+            <div class="previewHeadline" id="frage">
                 Fragentext
             </div>
 
-            <h4>Noch <div id="seconds"></div> Sekunden!</h4>
+            
             
             <div id="answerBox" class="answerBox">
                 <button class="questionButton" name="a1" id="antwort1_richtig" onclick="storeSelectedAnswer(this)">Antwort 1</button>
