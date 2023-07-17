@@ -46,21 +46,21 @@ if ($goal == "nameIconChoice") {
 }
 
 if ($goal == "lessonChoice") {
-    if (!isset($_SESSION['id'])) {
+    //if (!isset($_SESSION['id'])) {
         $_SESSION['id'] = $id;
-    }
+    //}
 
-    if (!isset($_SESSION['name'])) {
+    //if (!isset($_SESSION['name'])) {
         $_SESSION['name'] = $name;
-    }
+    //}
 
-    if (!isset($_SESSION['icon'])) {
+    //if (!isset($_SESSION['icon'])) {
         $_SESSION['icon'] = $icon;
-    }
+    //}
 
-    if (!isset($_SESSION['modul'])) {
+    //if (!isset($_SESSION['modul'])) {
         $_SESSION['modul'] = $modul;
-    }
+    //}
     
     $pc = new QuestionContr();
     $lessons = $pc->getLessons($_SESSION['modul']);

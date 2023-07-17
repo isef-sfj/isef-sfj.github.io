@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 include_once "dbh-M.php";
 
@@ -144,4 +145,13 @@ class Question extends Dbh {
         
     }
 
+    public function getQuestionsForQuiz() {
+
+        $statement = $this->connect()->prepare("SELECT * FROM quizfragen WHERE modul=? AND lektion=?");
+        $statement->execute(array($_SESSION['modul'], $_SESSION['lesson']));
+        $questions = $statement->fetchAll();   
+        return $questions;
+    }
+
 }
+

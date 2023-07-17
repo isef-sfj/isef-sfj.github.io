@@ -33,9 +33,12 @@ include "essentials/head.php";
         </div>
     </div>
         <section id="arrowBox">
-            <a href="nameIconChoice-C.php?goal=nameIconChoice" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
+            <a href="../classes/nameIconChoice-C.php?&goal=setPlayer" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
             <!-- <a href="nameIconChoice-C.php?goal=waiting" >Warteraum</a> -->
             <button class="navigationButton" onclick="goWaitingroom()">Ab in den Warteraum</button>
         </section>
 </body>
-</html>
+
+<?php
+    include "essentials/footer.php";
+?>

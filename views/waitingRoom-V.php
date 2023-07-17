@@ -22,36 +22,34 @@ include "essentials/head.php";
         <div class="previewHeadline">
             Deine <strong>Mitspieler</strong>:
         </div>
-        
-            
             <section id="playerField">
                 <div class="playerFieldEntry">
                     <img class="previewHeadline" src="<?php echo($_SESSION['icon']) ?>" alt="">
                     <!-- Hier muss noch die Klasse previewHeadline rein  -->
-                    <?php echo($_SESSION['name']) ?>
+                    <div class="previewHeadline"> <?php echo($_SESSION['name']) ?></div>
+                    <a class="readyButton" href="quiz-V.php" >play</a>
+                    <!-- <button class="readyButton">ready</button> -->
+                </div>
+                <div class="playerFieldEntry">
+                    <img src="../img/playerIcons/affe.svg" alt="">
+                    <a class="previewHeadline">Ape</a>
                     <button class="readyButton">ready</button>
                 </div>
                 <div class="playerFieldEntry">
-                    <img src="../img/playerFace.png" alt="">
-                    <a class="previewHeadline">Spieler 2</a>
-                    <button class="readyButton">ready</button>
-                </div>
-                <div class="playerFieldEntry">
-                    <img src="../img/playerFace.png" alt="">
-                    <a class="previewHeadline">Spieler 3</a>
-                    <button class="readyButton">ready</button>
-                </div>
-                <div class="playerFieldEntry">
-                    <img src="../img/playerFace.png" alt="">
-                    <a class="previewHeadline">Spieler 4</a>
+                    <img src="../img/playerIcons/eule.svg" alt="">
+                    <a class="previewHeadline">kEule</a>
                     <button class="readyButton">ready</button>
                 </div>
             </section>
+            <div id="playerId" hidden><?php echo ($_SESSION['id']) ?></div>
             <section id="arrowBox">
             <a href="../classes/nameIconChoice-C.php?goal=nameIconChoice" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
             <!-- <a href="nameIconChoice-C.php?goal=waiting" >Warteraum</a> -->
             <button class="navigationButton">Platzhalter</button>
         </section>
     </body>
-</html>
+
+<?php
+    include "essentials/footer.php";
+?>
 

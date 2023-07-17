@@ -10,7 +10,7 @@ include "essentials/head.php";
             Die neuesten Fragen
         </section> -->
         <h2>Die neuesten Fragen</h2>
-        Testvariable <?php echo $_SESSION['variable']; ?>
+        
         <section>
             <div id="previewField">
                 <?php foreach($questions as $data) { ?>
@@ -34,4 +34,7 @@ include "essentials/head.php";
         </section>
         
 </body>
-</html>
+
+<?php
+    include "essentials/footer.php";
+?>

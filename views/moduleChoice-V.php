@@ -55,4 +55,7 @@ include "essentials/head.php";
          
 
 </body>
-</html>
+
+<?php
+    include "essentials/footer.php";
+?>
