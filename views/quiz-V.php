@@ -53,7 +53,7 @@ include "essentials/head.php";
             <h2><?php echo($_SESSION['lesson']) ?> aus <?php echo($_SESSION['modul']) ?></h1>
             <a class="previewHeadline">Zwischenergebnis</a>
             <h4>Noch <div id="seconds1"></div> Sekunden!</h4>
-            <div id="givenQuestion1">1. Frage:</div> 
+            <div class="previewHeadline" id="givenQuestion1">1. Frage:</div> 
             <div id="givenAnswerBox">
                 <button class="questionButton" id="answer11" onclick="changeAnswerToRight(this, 1)">
                     Antwort 1
@@ -71,7 +71,7 @@ include "essentials/head.php";
                 <a class="previewHeadline">Wahl der Mitspieler: <div id="otherAnswers1"></div>Ape: Antwort 4 (geraten), kEule: Antwort 1 (geraten)</a>
             </div>
             <br>
-            <div id="givenQuestion2">2. Frage:</div> 
+            <div class="previewHeadline" id="givenQuestion2">2. Frage:</div> 
             <div id="givenAnswerBox">
                 <button class="questionButton" id="answer21" onclick="changeAnswerToRight(this, 2)">
                     Antwort 1
@@ -85,11 +85,11 @@ include "essentials/head.php";
                 <button class="questionButton" id="answer24" onclick="changeAnswerToFalse(this, 2)">
                     Antwort 4
                 </button>
-                <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers2">0</div></h3>
-                <h4>Wahl der Mitspieler: <div id="otherAnswers2"></div>Ape: Antwort 2 (geraten), kEule: Antwort 3 (geraten)</h3>
+                <a class="previewHeadline">Anzahl der richtigen Antworten: <div id="nrOfRightAnswers2">0</div></a>
+                <a class="previewHeadline">Wahl der Mitspieler: <div id="otherAnswers2"></div>Ape: Antwort 2 (geraten), kEule: Antwort 3 (geraten)</a>
             </div>
             <br>
-            <div id="givenQuestion3">3. Frage:</div> 
+            <div class="previewHeadline" id="givenQuestion3">3. Frage:</div> 
             <div id="givenAnswerBox">
                 <button class="questionButton" id="answer31" onclick="changeAnswerToRight(this, 3)">
                     Antwort 1
@@ -103,15 +103,15 @@ include "essentials/head.php";
                 <button class="questionButton" id="answer34" onclick="changeAnswerToFalse(this, 3)">
                     Antwort 4
                 </button>
-                <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers3">2</div></h3>
-                <h4>Wahl der Mitspieler: <div id="otherAnswers3">Ape: Antwort 1 (geraten), kEule: Antwort 1 (gewusst)</div></h3>
+                <a class="previewHeadline">Anzahl der richtigen Antworten: <div id="nrOfRightAnswers3">2</div></a>
+                <a class="previewHeadline">Wahl der Mitspieler: <div id="otherAnswers3">Ape: Antwort 1 (geraten), kEule: Antwort 1 (gewusst)</div></a>
             </div>
         </div>
 
         <!-- Container, in dem das Endergebnis angezeigt wird -->
         <div id="resultContainer" class="resultContainer" >
             <div id="resultBox" class="resultBox" >
-                <h2>Zwischenergebnis:</h2>
+                <a class="previewHeadline">Zwischenergebnis:</a>
                 <h4>Noch <div id="seconds2"></div> Sekunden!</h4>    
                 <!-- Du hast <div id="showPoints">eine unbekannte Zahl</div> Punkte gesammelt. -->
                 <br>
@@ -129,8 +129,8 @@ include "essentials/head.php";
                 <button class="questionButton" id="answer44" onclick="changeAnswerToFalse(this, 4)">
                     Antwort 4
                 </button>
-                <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers4">1</div></h3>
-                <h4>Wahl der Mitspieler: <div id="otherAnswers4"></div>Ape: Antwort 4 (geraten), kEule: Antwort 1 (geraten)</h3>
+                <a class="previewHeadline">Anzahl der richtigen Antworten: <div id="nrOfRightAnswers4">1</div></a>
+                <a class="previewHeadline">Wahl der Mitspieler: <div id="otherAnswers4"></div>Ape: Antwort 4 (geraten), kEule: Antwort 1 (geraten)</a>
             </div>
             <br>
             <div id="givenQuestion5">5. Frage:</div> 
@@ -147,8 +147,8 @@ include "essentials/head.php";
                 <button class="questionButton" id="answer54" onclick="changeAnswerToFalse(this, 5)">
                     Antwort 4
                 </button>
-                <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers5"></div>0</h3>
-                <h4>Wahl der Mitspieler: <div id="otherAnswers5"></div>Ape: Antwort 2 (geraten), kEule: Antwort 3 (geraten)</h3>
+                <a class="previewHeadline">Anzahl der richtigen Antworten: <div id="nrOfRightAnswers5"></div>0</a>
+                <a class="previewHeadline" >Wahl der Mitspieler: <div id="otherAnswers5"></div>Ape: Antwort 2 (geraten), kEule: Antwort 3 (geraten)</a>
             </div>
             <br>
             <div id="givenQuestion6">6. Frage:</div> 
@@ -165,8 +165,8 @@ include "essentials/head.php";
                 <button class="questionButton" id="answer64" onclick="changeAnswerToFalse(this, 6)">
                     Antwort 4
                 </button>
-                <h4>Anzahl der richtigen Antworten: <div id="nrOfRightAnswers6">2</div></h3>
-                <h4>Wahl der Mitspieler: <div id="otherAnswers6">Ape: Antwort 1 (geraten), kEule: Antwort 1 (gewusst)</div></h3>
+                <a class="previewHeadline">Anzahl der richtigen Antworten: <div id="nrOfRightAnswers6">2</div></a>
+                <a class="previewHeadline">Wahl der Mitspieler: <div id="otherAnswers6">Ape: Antwort 1 (geraten), kEule: Antwort 1 (gewusst)</div></a>
             </div>
             
             </div>
