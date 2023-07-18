@@ -594,4 +594,18 @@ body {
     margin-right: 50px;
 }
 
+  .halftimeContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .givenAnswerBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
   

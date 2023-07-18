@@ -26,13 +26,13 @@ include "essentials/head.php";
             </div>
 
             
-            
+            <!-- Hinzugefügt class="lessonContainerItem" & class="lessonContainerItem ausgesucht"  -->
             <div id="answerBox" class="answerBox">
-                <button class="questionButton" name="a1" id="antwort1_richtig" onclick="storeSelectedAnswer(this)">Antwort 1</button>
-                <button class="questionButton" name="a2" id="antwort2" onclick="storeSelectedAnswer(this)">Antwort 2</button>
-                <button class="questionButton" name="a3" id="antwort3" onclick="storeSelectedAnswer(this)">Antwort 3</button>
-                <button class="questionButton" name="a4" id="antwort4" onclick="storeSelectedAnswer(this)">Antwort 4</button>
-                <button name="a4" id="antwort5" onclick="storeSelectedAnswer(this)" hidden="true">Antwort 5</button>
+                <button class="lessonContainerItem" name="a1" id="antwort1_richtig" onclick="storeSelectedAnswer(this)">Antwort 1</button>
+                <button class="lessonContainerItem" name="a2" id="antwort2" onclick="storeSelectedAnswer(this)">Antwort 2</button>
+                <button class="lessonContainerItem" name="a3" id="antwort3" onclick="storeSelectedAnswer(this)">Antwort 3</button>
+                <button class="lessonContainerItem" name="a4" id="antwort4" onclick="storeSelectedAnswer(this)">Antwort 4</button>
+                <button class="lessonContainerItem" name="a4" id="antwort5" onclick="storeSelectedAnswer(this)" hidden="true">Antwort 5</button>
                 
             </div>
             
@@ -60,7 +60,7 @@ include "essentials/head.php";
             <h3 class="questionH3">Nutze die Ergebnisse deiner Mitspieler!</h3>
             <h4>Noch <div id="seconds1"></div> Sekunden!</h4>
             <div class="question" id="givenQuestion1">1. Frage:</div> 
-            <div id="givenAnswerBox">
+            <div id="givenAnswerBox" class="givenAnswerBox">
                 <button class="questionButton" id="answer11" onclick="changeAnswerToRight(this, 1)">
                     Antwort 1
                 </button>
@@ -73,8 +73,8 @@ include "essentials/head.php";
                 <button class="questionButton" id="answer14" onclick="changeAnswerToFalse(this, 1)">
                     Antwort 4
                 </button>
-                <a class="previewHeadline">Anzahl der richtigen Antworten: <div id="nrOfRightAnswers1">1</div></a>
-                <a class="previewHeadline">Wahl der Mitspieler: <div id="otherAnswers1"></div>Ape: Antwort 4 (geraten), Eule: Antwort 1 (geraten)</a>
+                <a id="nrOfRightAnswers1">1</a>
+                <a class="previewHeadline">Wahl der Mitspieler: Ape: Antwort 4 (geraten), Eule: Antwort 1 (geraten)</a>
             </div>
             <br>
             <div class="question" id="givenQuestion2">2. Frage:</div> 

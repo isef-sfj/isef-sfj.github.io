@@ -107,10 +107,10 @@ function askNextQuestion() {
     // Wenn 3 Fragen beantwortet sind, blende HalftimeContainer ein, und Fragen aus
     if (rundenZaehler == 3) {
         clearInterval(qTimer);
-        document.getElementById("playContainer").style.display="none";
+        document.getElementById("playContainer").style.display="block";
         document.getElementById("halftimeContainer").style.display="block";
-        document.getElementById("resultContainer").style.display="none";
-        document.getElementById("finishContainer").style.display="none";
+        document.getElementById("resultContainer").style.display="block";
+        document.getElementById("finishContainer").style.display="block";
 
         document.getElementById("seconds1").innerText = timeToAct;
         hTimer = setInterval(halftimeTimer, 1000);
@@ -127,10 +127,10 @@ function askNextQuestion() {
     if (rundenZaehler == 6) {
         clearInterval(qTimer);
         fillPoints();
-        document.getElementById("playContainer").style.display="none";
-        document.getElementById("halftimeContainer").style.display="none";
+        document.getElementById("playContainer").style.display="block";
+        document.getElementById("halftimeContainer").style.display="block";
         document.getElementById("resultContainer").style.display="block";
-        document.getElementById("finishContainer").style.display="none";
+        document.getElementById("finishContainer").style.display="block";
 
         document.getElementById("seconds2").innerText = timeToAct;
         eTimer = setInterval(endTimer, 1000);
@@ -242,9 +242,9 @@ function halftimeTimer() {
     timeToAct--;
     if ( timeToAct < 0 ) {
         document.getElementById("playContainer").style.display="block";
-        document.getElementById("halftimeContainer").style.display="none";
-        document.getElementById("resultContainer").style.display="none";
-        document.getElementById("finishContainer").style.display="none";
+        document.getElementById("halftimeContainer").style.display="block";
+        document.getElementById("resultContainer").style.display="block";
+        document.getElementById("finishContainer").style.display="block";
 
         timeToAct = 20;
         clearInterval(hTimer);
@@ -261,9 +261,9 @@ function endTimer() {
 
         document.getElementById("endpoints").innerText = gesamtpunkte;
 
-        document.getElementById("playContainer").style.display="none";
-        document.getElementById("halftimeContainer").style.display="none";
-        document.getElementById("resultContainer").style.display="none";
+        document.getElementById("playContainer").style.display="block";
+        document.getElementById("halftimeContainer").style.display="block";
+        document.getElementById("resultContainer").style.display="block";
         document.getElementById("finishContainer").style.display="block";
 
         clearInterval(eTimer);
