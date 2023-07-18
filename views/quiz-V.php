@@ -57,7 +57,7 @@ include "essentials/head.php";
         <div class="halftimeContainer" id="halftimeContainer" >
             <h2><?php echo($_SESSION['lesson']) ?> aus <?php echo($_SESSION['modul']) ?></h1>
             <h2 class="question">Zwischenergebnis: Passe ggf. falsche Antworten an!</h2>
-            <h3 class="question">Nutze die Ergebnisse deiner Mitspieler!</h3>
+            <h3 class="questionH3">Nutze die Ergebnisse deiner Mitspieler!</h3>
             <h4>Noch <div id="seconds1"></div> Sekunden!</h4>
             <div class="question" id="givenQuestion1">1. Frage:</div> 
             <div id="givenAnswerBox">
@@ -118,7 +118,7 @@ include "essentials/head.php";
         <div id="resultContainer" class="resultContainer" >
             <div id="resultBox" class="resultBox" >
                 <h2 class="question">Zwischenergebnis: Passe ggf. falsche Antworten an!</h2>
-                <h3 class="question">Nutze die Ergebnisse deiner Mitspieler!</h3>
+                <h3 class="questionH3">Nutze die Ergebnisse deiner Mitspieler!</h3>
                 <h4>Noch <div id="seconds2"></div> Sekunden!</h4>    
                 <!-- Du hast <div id="showPoints">eine unbekannte Zahl</div> Punkte gesammelt. -->
                 <br>

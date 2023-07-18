@@ -585,11 +585,13 @@ body {
       margin-right: 50px;
   }
 
-    /* .answerBox{
-      display: grid;
-      grid-auto-flow: row;
-      grid-template-columns: 14em 14em;
-      grid-template-rows: 4em 4em 0.5em;
-      gap: 2em;
+  .questionH3{
+    /* color: rgb(255, 255, 255); */
+    color: white;
+    font-family: var(--mainFont);
+    font-size: 1em;
+    margin-left: 50px;
+    margin-right: 50px;
+}
 
-    } */
+  
