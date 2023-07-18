@@ -7,15 +7,20 @@ include "essentials/head.php";
         <h1>BrainBattle</h1>
     </header>
 
-    <!-- <h2>Let's play</h2> -->
 
         <!-- Container, in dem das Beantworten der Fragen läuft -->
         <div id="playContainer" class="playContainer">
-            <div class="playerFieldEntry">
-                <img class="previewHeadline" src="<?php echo($_SESSION['icon']) ?>" alt="">
-                <div class="previewHeadline"> <?php echo($_SESSION['name']) ?></div>
+
+        <!-- Test -->
+            <div class="iconTimerContainer">
+                <div class="playerFieldEntry">
+                    <img class="previewHeadline" src="<?php echo($_SESSION['icon']) ?>" alt="">
+                    <div class="previewHeadline"> <?php echo($_SESSION['name']) ?></div>
+                </div>
+                <a class="timer">Noch <div id="seconds"></div> Sekunden!</a>
             </div>
-            <h4>Noch <div id="seconds"></div> Sekunden!</h4>
+
+        <!-- test ende -->
             <div class="previewHeadline" id="frage">
                 Fragentext
             </div>
