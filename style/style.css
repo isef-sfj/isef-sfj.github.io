@@ -390,6 +390,7 @@ body {
     grid-template-columns: 6em 6em 6em 6em;
     grid-template-rows: 6em 3em;
     gap: 2em;
+
   }
 
   #nameIconChoice {
@@ -549,6 +550,8 @@ body {
       flex-wrap: wrap;
       align-content: center;
       justify-content: center;
+      margin-left: 50px;
+      margin-right: 50px;
       /* width: 26em; */
     }
 
@@ -558,6 +561,8 @@ body {
       grid-template-columns: 12em 12em;
       grid-template-rows: 8em 1em;
       gap: 2em;
+      align-items: center;
+      justify-content: center;
     }
 
     .timer{
@@ -571,11 +576,20 @@ body {
       width: 6em;
     }
 
-    .answerBox{
+    .question{
+      /* color: rgb(255, 255, 255); */
+      color: white;
+      font-family: var(--mainFont);
+      font-size: 1.5em;
+      margin-left: 50px;
+      margin-right: 50px;
+  }
+
+    /* .answerBox{
       display: grid;
       grid-auto-flow: row;
       grid-template-columns: 14em 14em;
       grid-template-rows: 4em 4em 0.5em;
       gap: 2em;
 
-    }
+    } */
