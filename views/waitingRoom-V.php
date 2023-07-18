@@ -19,18 +19,18 @@ include "essentials/head.php";
         </div>
             <section id="playerField">
                 <div class="playerFieldEntry">
-                    <img class="previewHeadline" src="<?php echo($_SESSION['icon']) ?>" alt="">
+                    <img class="playerIcon" src="<?php echo($_SESSION['icon']) ?>" alt="">
                     <div class="previewHeadline"> <?php echo($_SESSION['name']) ?></div>
                     <button class="readyButton">ready</button>
                     <!-- <a class="readyButton" href="quiz-V.php" >play</a> -->
                 </div>
                 <div class="playerFieldEntry">
-                    <img src="../img/playerIcons/affe.svg" alt="">
+                    <img class="playerIcon" src="../img/playerIcons/affe.svg" alt="">
                     <a class="previewHeadline">Ape</a>
                     <button class="readyButton">ready</button>
                 </div>
                 <div class="playerFieldEntry">
-                    <img src="../img/playerIcons/eule.svg" alt="">
+                    <img class="playerIcon" src="../img/playerIcons/eule.svg" alt="">
                     <a class="previewHeadline">kEule</a>
                     <button class="readyButton">ready</button>
                 </div>
