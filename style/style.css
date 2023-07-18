@@ -165,6 +165,14 @@ body {
     color: rgb(165, 226, 245);
 }
 
+.previewHeadlineWaitingRoom {
+  font-family: var(--mainFont);
+  color: rgb(165, 226, 245);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #previewField {
     display: flex;
     flex-direction: row;
@@ -368,6 +376,12 @@ body {
     justify-items: center;
     height: 6em;
     width: 6em;
+  }
+
+  .playerIconWaitingRoom {
+    display: flex;
+    justify-items: center;
+    height: 6em;
   }
 
   .playerIconContainer {
