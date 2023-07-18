@@ -21,6 +21,7 @@ include "essentials/head.php";
                 <div class="playerFieldEntry">
                     <img class="previewHeadline" src="<?php echo($_SESSION['icon']) ?>" alt="">
                     <div class="previewHeadline"> <?php echo($_SESSION['name']) ?></div>
+                    <button class="readyButton">ready</button>
                     <!-- <a class="readyButton" href="quiz-V.php" >play</a> -->
                 </div>
                 <div class="playerFieldEntry">
@@ -38,7 +39,7 @@ include "essentials/head.php";
             <section id="arrowBox">
             <a href="../classes/nameIconChoice-C.php?goal=nameIconChoice" ><img src="/img/arrowLeft.png" alt="" class="arrow"></a>
             <!-- <button class="navigationButton">Platzhalter</button> -->
-            <a class="readyButton" href="quiz-V.php" >play</a>
+            <a class="navigationButton" href="quiz-V.php" >play</a>
         </section>
     </body>
 
