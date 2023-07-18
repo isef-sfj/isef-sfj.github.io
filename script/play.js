@@ -16,9 +16,9 @@ let eTimer = null;
 // Start des Quiz, wird nur einmal aufgerufen
 function play() {
     document.getElementById("playContainer").style.display="block";
-    document.getElementById("halftimeContainer").style.display="none";
-    document.getElementById("resultContainer").style.display="none";
-    document.getElementById("finishContainer").style.display="none";
+    document.getElementById("halftimeContainer").style.display="block";
+    document.getElementById("resultContainer").style.display="block";
+    document.getElementById("finishContainer").style.display="block";
     getQuestionsWithAjax();
     fillResultBoxText();
     rundenZaehler = 0;
@@ -53,6 +53,7 @@ function storeSelectedAnswer(btn) {
 // Prüft ob die gegebene Antwort richtig ist und speichert entsprechend die Punkte
 function checkAnswer() {
     clearInterval(qTimer);
+    console.log("ID of clicked bitton: " + idOfClickedBtn);
 
     // Wenn Antwort richtig 1 Punkt addieren
     if (idOfClickedBtn == "antwort1_richtig") {
@@ -95,12 +96,7 @@ function checkAnswer() {
     timeToAnswer = 10;
     qTimer = setInterval(questionTimer, 1000);
     askNextQuestion();
-    /*
-    setTimeout(function(){
-       askNextQuestion()
-    }, 20);
-    */
-
+    
 }
 // Zeigt die nächste Frage incl. Antworten an
 function askNextQuestion() {
