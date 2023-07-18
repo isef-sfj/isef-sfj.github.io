@@ -3,7 +3,7 @@ include "essentials/head.php";
 ?>
 <body>
         <header>
-                <h1>ISEF-Duell</h1>
+                <h1>BrainBattle</h1>
         </header>
         <h2>Fragen erstellen</h2>
         <form action="../classes/addQuestion-C.php?" method="post">

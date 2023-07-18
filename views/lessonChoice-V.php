@@ -4,7 +4,7 @@ include "essentials/head.php";
 ?>
 <body>
     <header id="header">
-        <h1>ISEF-Duell</h1>
+        <h1>BrainBattle</h1>
     </header>
     <div id="headerMC">
         <section class="player">
