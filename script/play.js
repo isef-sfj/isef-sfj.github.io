@@ -60,7 +60,7 @@ function checkAnswer() {
     console.log("ID of clicked bitton: " + idOfClickedBtn);
 
     // Wenn Antwort richtig 1 Punkt addieren
-    if (idOfClickedBtn == "antwort1_richtig") {
+    if (idOfClickedBtn == "antwort1_richtig" | "answer11" | "answer21" | "answer31") {
         punkteAusRunde = 1;
         document.getElementById("answer"+(rundenZaehler+1)+"1").classList.add("rightAnswer");
         document.getElementById("answer"+(rundenZaehler+4)+"1").classList.add("rightAnswer");
@@ -74,15 +74,15 @@ function checkAnswer() {
         rightAnswer = document.getElementById("antwort1_richtig");
         punkteAusRunde = 0;
         // Antworten in ResultBoxen entsprechend einfärben
-        if (idOfClickedBtn == "antwort2") {
+        if (idOfClickedBtn == "antwort2" | "answer12" | "answer22" | "answer32") {
             document.getElementById("answer"+(rundenZaehler+1)+"2").classList.add("falseAnswer");
             document.getElementById("answer"+(rundenZaehler+4)+"2").classList.add("falseAnswer");
         }
-        if (idOfClickedBtn == "antwort3") {
+        if (idOfClickedBtn == "antwort3" | "answer13" | "answer23" | "answer33") {
             document.getElementById("answer"+(rundenZaehler+1)+"3").classList.add("falseAnswer");
             document.getElementById("answer"+(rundenZaehler+4)+"3").classList.add("falseAnswer");
         }
-        if (idOfClickedBtn == "antwort4") {
+        if (idOfClickedBtn == "antwort4" | "answer14" | "answer24" | "answer34") {
             document.getElementById("answer"+(rundenZaehler+1)+"4").classList.add("falseAnswer");
             document.getElementById("answer"+(rundenZaehler+4)+"4").classList.add("falseAnswer");
         }
@@ -206,29 +206,44 @@ function changeAnswerToFalse(klickedButton, frage) {
 }
 
 function fillPoints() {
-    for (let i=0 ; i < 6 ; i++) {
-        let rightAnswers = document.getElementById("nrOfRightAnswers" + (i+1)).innerText;
-        rightAnswers = parseInt(rightAnswers);
-        if (punkte[i] == 1 || punkte[i] == 3) {
-            console.log("Frage " + (i+1) + "Richtige Antworten vorher: " + rightAnswers);
-            rightAnswers+=1;
-            console.log("Frage " + (i+1) + "Richtige Antworten nachher: " + rightAnswers);
-            document.getElementById("nrOfRightAnswers" + (i+1)).innerText = rightAnswers;
+        for (let i=0 ; i < 6 ; i++) {
+            let rightAnswers = document.getElementById("nrOfRightAnswers" + (i+1)).innerText;
+            rightAnswers = parseInt(rightAnswers);
+            if (punkte[i] == 1 || punkte[i] == 3) {
+                console.log("Frage " + (i+1) + "Richtige Antworten vorher: " + rightAnswers);
+                rightAnswers+=1;
+                console.log("Frage " + (i+1) + "Richtige Antworten nachher: " + rightAnswers);
+                document.getElementById("nrOfRightAnswers" + (i+1)).innerText = rightAnswers;
+            }
+        }
+}
+
+function changeColorOfResult() {
+    for (let i=0 ; i<4 ; i++) {
+        for (let j=4 ; j<7 ; j++) {
+            let k=i+1;
+            console.log("falseAnswer"+j+""+k+": "+ document.getElementById("answer"+j+""+k+"").innerText);
+            console.log("Gegebene Antwort " + k + ": " + gegebeneAntwort[i]);
+            if (gegebeneAntwort[i].toString() == document.getElementById("answer"+j+""+k+"").innerText.toString()) {
+                document.getElementById("answer"+j+""+k+"").classList.add("falseAnswer");
+                console.log("answer"+j+""+k+" wurde Klasse falseAnswer hinzugefügt");
+            }       
+        }
+    }
+
+    for (let i=0 ; i<4 ; i++) {
+        for (let j=4 ; j<7 ; j++) {
+            let k=i+1;
+            console.log("rightAnswer"+j+""+k+": "+ document.getElementById("answer"+j+""+k+"").innerText);
+            console.log("Gegebene Antwort " + k + ": " + richtigeAntwort[i]);
+            if (richtigeAntwort[i].toString() == document.getElementById("answer"+j+""+k+"").innerText.toString()) {
+                document.getElementById("answer"+j+""+k+"").classList.add("rightAnswer");
+                console.log("answer"+j+""+k+" wurde Klasse rightAnswer hinzugefügt");
+            }       
         }
     }
 }
 
-/*
-function changeColorOfResult() {
-    for (let i=0 ; i < numberOfQuestions ; i++) {
-        if (punkte[i] == 1 || punkte[i] == 3) {
-            document.getElementById("answer"+(i+4)+1).className="";
-            document.getElementById("answer"+(i+4)+1).classList.add("rightAnswer");
-            
-        }
-    }
-}
-*/
 
 function questionTimer() {
     document.getElementById("seconds").innerText = timeToAnswer;
@@ -245,6 +260,7 @@ function halftimeTimer() {
     document.getElementById("seconds1").innerText = timeToAct;
     timeToAct--;
     if ( timeToAct < 0 ) {
+        changeColorOfResult();
         document.getElementById("playContainer").style.display="none";
         document.getElementById("halftimeContainer").style.display="none";
         document.getElementById("resultContainer").style.display="block";

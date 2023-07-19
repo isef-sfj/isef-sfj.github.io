@@ -59,12 +59,19 @@ include "essentials/head.php";
 
     </form>
 
-    <form action="../classes/editQuestion-C.php" method="post">
+    <div id="deleteQuestion">
+        <button class="deleteButton" onclick="realyDeleteQuestion()" >Frage löschen</button>
+    </div>
+
+    <form id="realyDeleteQuestion" action="../classes/editQuestion-C.php" method="post" style="display: none;">
         <input value="delete" name="goal" type="hidden" >
         <input value=<?php echo "$id" ?> name="id" type="hidden" >
-        <button class="deleteButton">Frage löschen</button>
-
+        <div class="rightAnswer"> <br> Frage wirklich löschen? <br> </div>
+        <button class="deleteButton">JA</button>
     </form>
+        <button class="submButton" id="dontDeleteButton" onclick="dontDelete()" style="display: none;">NEIN</button>
+
+    
 </body>
 
 <?php

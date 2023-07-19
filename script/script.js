@@ -92,3 +92,17 @@ function modulChanged() {
     goal.value = modul;
 }
 
+function realyDeleteQuestion() {
+    document.getElementById("deleteQuestion").style.display="none";
+    document.getElementById("realyDeleteQuestion").style.display="block";
+    document.getElementById("dontDeleteButton").style.display="block";
+    
+
+}
+
+function dontDelete() {
+    document.getElementById("deleteQuestion").style.display="block";
+    document.getElementById("realyDeleteQuestion").style.display="none";
+    document.getElementById("dontDeleteButton").style.display="none";
+}
+
