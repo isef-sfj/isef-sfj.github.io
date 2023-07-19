@@ -7,8 +7,9 @@ let richtigeAntwort = [];
 let idOfClickedBtn = "antwort5";
 let punkteAusRunde = 0;
 let gesamtpunkte = 0;
-let timeToAct = 20;
-let timeToAnswer = 10;
+let timeToAct = 5;
+let timeToAnswer = 5;
+let numberOfQuestions = 3;
 let qTimer = null;
 let hTimer = null;
 let eTimer = null;
@@ -16,13 +17,12 @@ let eTimer = null;
 // Start des Quiz, wird nur einmal aufgerufen
 function play() {
     document.getElementById("playContainer").style.display="block";
-    document.getElementById("halftimeContainer").style.display="block";
-    document.getElementById("resultContainer").style.display="block";
-    document.getElementById("finishContainer").style.display="block";
+    document.getElementById("halftimeContainer").style.display="none";
+    document.getElementById("resultContainer").style.display="none";
     getQuestionsWithAjax();
     fillResultBoxText();
     rundenZaehler = 0;
-    timeToAnswer = 10;
+    timeToAnswer = 5;
     qTimer = setInterval(questionTimer, 1000);
     askNextQuestion();
 }
@@ -43,10 +43,14 @@ function getQuestionsWithAjax() {
 
 // Speichert die ausgewählte Antwort in der Variable
 function storeSelectedAnswer(btn) {
+    document.getElementById(idOfClickedBtn).classList.remove("quizAnswerKlickedButton");
+    document.getElementById(idOfClickedBtn).classList.add("quizAnswerButton");
     idOfClickedBtn = btn.id;
+    console.log(idOfClickedBtn);
     gegebeneAntwort[rundenZaehler] = btn.innerText;
     richtigeAntwort[rundenZaehler] = document.getElementById('antwort1_richtig').innerText;
-    document.getElementById(idOfClickedBtn).style.backgroundColor = "yellow";
+    document.getElementById(idOfClickedBtn).classList.remove("quizAnswerButton");
+    document.getElementById(idOfClickedBtn).classList.add("quizAnswerKlickedButton");
     document.getElementById("sendAnswerBtn").disabled = false;
 }
 
@@ -58,7 +62,8 @@ function checkAnswer() {
     // Wenn Antwort richtig 1 Punkt addieren
     if (idOfClickedBtn == "antwort1_richtig") {
         punkteAusRunde = 1;
-        document.getElementById("answer"+(rundenZaehler+1)+"1").style.backgroundColor="green";
+        document.getElementById("answer"+(rundenZaehler+1)+"1").classList.add("rightAnswer");
+        document.getElementById("answer"+(rundenZaehler+4)+"1").classList.add("rightAnswer");
         document.getElementById("answer"+(rundenZaehler+1)+"1").disabled="true";
         // Wenn Antwort GEWUSST 2 zusätzliche Punkte addieren
         if (document.getElementById("known").checked) {
@@ -70,20 +75,25 @@ function checkAnswer() {
         punkteAusRunde = 0;
         // Antworten in ResultBoxen entsprechend einfärben
         if (idOfClickedBtn == "antwort2") {
-            document.getElementById("answer"+(rundenZaehler+1)+"2").style.backgroundColor="red";
+            document.getElementById("answer"+(rundenZaehler+1)+"2").classList.add("falseAnswer");
+            document.getElementById("answer"+(rundenZaehler+4)+"2").classList.add("falseAnswer");
         }
         if (idOfClickedBtn == "antwort3") {
-            document.getElementById("answer"+(rundenZaehler+1)+"3").style.backgroundColor="red";
+            document.getElementById("answer"+(rundenZaehler+1)+"3").classList.add("falseAnswer");
+            document.getElementById("answer"+(rundenZaehler+4)+"3").classList.add("falseAnswer");
         }
         if (idOfClickedBtn == "antwort4") {
-            document.getElementById("answer"+(rundenZaehler+1)+"4").style.backgroundColor="red";
+            document.getElementById("answer"+(rundenZaehler+1)+"4").classList.add("falseAnswer");
+            document.getElementById("answer"+(rundenZaehler+4)+"4").classList.add("falseAnswer");
         }
     }
     // Antworten sind nicht mehr anklickbar
+    /*
     document.getElementById("antwort1_richtig").disabled = true;
     document.getElementById("antwort2").disabled = true;
     document.getElementById("antwort3").disabled = true;
     document.getElementById("antwort4").disabled = true;
+    */
     // Punkte aus Runde werden in Array gespeichert
     punkte[rundenZaehler] = punkteAusRunde;
     // Gesamtpunkte werden berechnet
@@ -93,57 +103,37 @@ function checkAnswer() {
 
     rundenZaehler++;
 
-    timeToAnswer = 10;
+    timeToAnswer = 5;
     qTimer = setInterval(questionTimer, 1000);
     askNextQuestion();
     
 }
 // Zeigt die nächste Frage incl. Antworten an
 function askNextQuestion() {
-    // Wenn 3 Fragen beantwortet sind, blende HalftimeContainer ein, und Fragen aus
-    if (rundenZaehler == 3) {
+    // Wenn gewünschte Anzahl Fragen beantwortet sind, blende HalftimeContainer ein, und Fragen aus
+    document.getElementById(idOfClickedBtn).classList.remove("quizAnswerKlickedButton");
+    document.getElementById(idOfClickedBtn).classList.add("quizAnswerButton");
+    
+    if (rundenZaehler == numberOfQuestions) {
         clearInterval(qTimer);
-        document.getElementById("playContainer").style.display="block";
+        document.getElementById("playContainer").style.display="none";
         document.getElementById("halftimeContainer").style.display="block";
-        document.getElementById("resultContainer").style.display="block";
-        document.getElementById("finishContainer").style.display="block";
+        document.getElementById("resultContainer").style.display="none";
 
         document.getElementById("seconds1").innerText = timeToAct;
         hTimer = setInterval(halftimeTimer, 1000);
 
-        /*
-        setTimeout(function(){
-            document.getElementById("playContainer").style.display="block";
-            document.getElementById("halftimeContainer").style.display="none";
-            document.getElementById("resultContainer").style.display="none";
-         }, 5000);
-         */
     }
-    // Wenn 6 Fragen beantwortet wurden, blende resultContainer ein
-    if (rundenZaehler == 6) {
-        clearInterval(qTimer);
-        fillPoints();
-        document.getElementById("playContainer").style.display="block";
-        document.getElementById("halftimeContainer").style.display="block";
-        document.getElementById("resultContainer").style.display="block";
-        document.getElementById("finishContainer").style.display="block";
-
-        document.getElementById("seconds2").innerText = timeToAct;
-        eTimer = setInterval(endTimer, 1000);
-    }
+   
 
     // Wenn noch Fragen übrig sind -> nächste Frage anzeigen
-    if (rundenZaehler < questions.length) {
+    if (rundenZaehler < numberOfQuestions) {
         // Alle Antworten werden anklickbar gemacht
         document.getElementById("antwort1_richtig").disabled = false;
         document.getElementById("antwort2").disabled = false;
         document.getElementById("antwort3").disabled = false;
         document.getElementById("antwort4").disabled = false;
-        // Bei allen Antworten wird die Hintergrundfarbe enfernt
-        document.getElementById("antwort1_richtig").style.backgroundColor = "";
-        document.getElementById("antwort2").style.backgroundColor = "";
-        document.getElementById("antwort3").style.backgroundColor = "";
-        document.getElementById("antwort4").style.backgroundColor = "";
+        
         // Text von Frage und Antworten wird in die HTML-Elemente geschrieben
         document.getElementById("frage").innerText = questions[rundenZaehler]['frage'];
         frage[rundenZaehler] = questions[rundenZaehler]['frage'];
@@ -157,24 +147,29 @@ function askNextQuestion() {
         // Senden-Button wird deaktiviert
         document.getElementById("sendAnswerBtn").disabled = true;
     // Wenn alle Fragen gespielt sind, Ergebnis anzeigen
-    } /* else {
+    } else {
         clearInterval(qTimer);
         console.log("Fertig! Punktestand ist: " + gesamtpunkte);
         document.getElementById("playContainer").hidden = true;
         document.getElementById("resultContainer").hidden = false;
-        // document.getElementById("showPoints").innerText = gesamtpunkte;
-    } */
+        document.getElementById("endpoints").innerText = gesamtpunkte;
+    } 
 
     console.log(punkte);
 }
 
 function fillResultBoxText() {
-    for (let i = 0 ; i < questions.length ; i++) {
+    for (let i = 0 ; i < 3 ; i++) {
         document.getElementById("givenQuestion"+(i+1)).innerText = questions[i]['frage'];
+        document.getElementById("givenQuestion"+(i+4)).innerText = questions[i]['frage'];
         document.getElementById("answer"+(i+1)+"1").innerText = questions[i]['antwort1_richtig'];
+        document.getElementById("answer"+(i+4)+"1").innerText = questions[i]['antwort1_richtig'];
         document.getElementById("answer"+(i+1)+"2").innerText = questions[i]['antwort2'];
+        document.getElementById("answer"+(i+4)+"2").innerText = questions[i]['antwort2'];
         document.getElementById("answer"+(i+1)+"3").innerText = questions[i]['antwort3'];
+        document.getElementById("answer"+(i+4)+"3").innerText = questions[i]['antwort3'];
         document.getElementById("answer"+(i+1)+"4").innerText = questions[i]['antwort4'];
+        document.getElementById("answer"+(i+4)+"4").innerText = questions[i]['antwort4'];
     }
 }
 
@@ -223,11 +218,24 @@ function fillPoints() {
     }
 }
 
+/*
+function changeColorOfResult() {
+    for (let i=0 ; i < numberOfQuestions ; i++) {
+        if (punkte[i] == 1 || punkte[i] == 3) {
+            document.getElementById("answer"+(i+4)+1).className="";
+            document.getElementById("answer"+(i+4)+1).classList.add("rightAnswer");
+            
+        }
+    }
+}
+*/
+
 function questionTimer() {
     document.getElementById("seconds").innerText = timeToAnswer;
     timeToAnswer--;
     if ( timeToAnswer < 0 ) {
         clearInterval(qTimer);
+        timeToAnswer = 5;
         checkAnswer();
     }
 }
@@ -237,18 +245,18 @@ function halftimeTimer() {
     document.getElementById("seconds1").innerText = timeToAct;
     timeToAct--;
     if ( timeToAct < 0 ) {
-        document.getElementById("playContainer").style.display="block";
-        document.getElementById("halftimeContainer").style.display="block";
+        document.getElementById("playContainer").style.display="none";
+        document.getElementById("halftimeContainer").style.display="none";
         document.getElementById("resultContainer").style.display="block";
-        document.getElementById("finishContainer").style.display="block";
 
-        timeToAct = 20;
+        document.getElementById("endpoints").innerText = gesamtpunkte+5;
+
+        clearInterval(qTimer);
         clearInterval(hTimer);
-        timeToAnswer = 10;
-        questionTimer = setInterval(questionTimer, 1000);
     }
 }
 
+/* Nur bei anderem Spielprinzip nötig
 function endTimer() {
     clearInterval(qTimer);
     document.getElementById("seconds2").innerText = timeToAct;
@@ -265,3 +273,4 @@ function endTimer() {
         clearInterval(eTimer);
     }
 }
+*/

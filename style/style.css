@@ -286,7 +286,7 @@ body {
     background: linear-gradient(0deg, #f7c931, #ead42c );
     width: var(--mainButtonWidth);
     height: var(--mainButtonHeight);
-    margin: 0em;
+    margin-left: 0.1em;
     border-radius: 5em;
     transition : 300ms;
     display: flex;
@@ -653,4 +653,69 @@ body {
 
 .sendAnswer{
   display: flex;
+}
+
+.quizAnswerButton {
+    font-family: var(--mainFont);
+    width: 200px;
+    max-height: 400px;
+    margin: 20px;
+    padding: 20px;
+    background: linear-gradient(0deg, rgb(255, 103, 16), rgb(255, 129, 50));
+    border-radius: 50px;
+    list-style-type: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.quizAnswerKlickedButton {
+  font-family: var(--mainFont);
+    width: 200px;
+    max-height: 400px;
+    margin: 20px;
+    padding: 20px;
+    background: rgb(22, 143, 6);
+    border-radius: 50px;
+    list-style-type: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.rightAnswer {
+  font-family: var(--mainFont);
+    width: 200px;
+    max-height: 400px;
+    margin: 20px;
+    padding: 20px;
+    background: rgb(22, 143, 6);
+    border-radius: 50px;
+    list-style-type: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.falseAnswer {
+  font-family: var(--mainFont);
+    width: 200px;
+    max-height: 400px;
+    margin: 20px;
+    padding: 20px;
+    background: rgb(228, 31, 31);
+    border-radius: 50px;
+    list-style-type: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.answerResult {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.playerPoints {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
