@@ -60,7 +60,7 @@ function checkAnswer() {
     console.log("ID of clicked bitton: " + idOfClickedBtn);
 
     // Wenn Antwort richtig 1 Punkt addieren
-    if (idOfClickedBtn == "antwort1_richtig") {
+    if (idOfClickedBtn == "antwort1_richtig" | "answer11" | "answer21" | "answer31") {
         punkteAusRunde = 1;
         document.getElementById("answer"+(rundenZaehler+1)+"1").classList.add("rightAnswer");
         document.getElementById("answer"+(rundenZaehler+4)+"1").classList.add("rightAnswer");
@@ -74,15 +74,15 @@ function checkAnswer() {
         rightAnswer = document.getElementById("antwort1_richtig");
         punkteAusRunde = 0;
         // Antworten in ResultBoxen entsprechend einfärben
-        if (idOfClickedBtn == "antwort2") {
+        if (idOfClickedBtn == "antwort2" | "answer12" | "answer22" | "answer32") {
             document.getElementById("answer"+(rundenZaehler+1)+"2").classList.add("falseAnswer");
             document.getElementById("answer"+(rundenZaehler+4)+"2").classList.add("falseAnswer");
         }
-        if (idOfClickedBtn == "antwort3") {
+        if (idOfClickedBtn == "antwort3" | "answer13" | "answer23" | "answer33") {
             document.getElementById("answer"+(rundenZaehler+1)+"3").classList.add("falseAnswer");
             document.getElementById("answer"+(rundenZaehler+4)+"3").classList.add("falseAnswer");
         }
-        if (idOfClickedBtn == "antwort4") {
+        if (idOfClickedBtn == "antwort4" | "answer14" | "answer24" | "answer34") {
             document.getElementById("answer"+(rundenZaehler+1)+"4").classList.add("falseAnswer");
             document.getElementById("answer"+(rundenZaehler+4)+"4").classList.add("falseAnswer");
         }
