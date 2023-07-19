@@ -133,7 +133,7 @@ class Question extends Dbh {
 
     public function getQuestionsForQuiz() {
         $statement = $this->connect()->prepare("SELECT * FROM quizfragen WHERE modul=? AND lektion=?");
-        $statement->execute(array("Modul TEST", "Lektion TEST"));
+        $statement->execute(array("ISPE01", "Lektion 1"));
         // $statement->execute(array($_SESSION['modul'], $_SESSION['lesson']));
         $questions = $statement->fetchAll();   
         
