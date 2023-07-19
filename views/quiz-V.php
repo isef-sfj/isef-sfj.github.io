@@ -112,6 +112,7 @@ include "essentials/head.php";
             </div>
         </div>
 
+        
         <!-- Container, in dem das Endergebnis angezeigt wird -->
         <div id="resultContainer" class="resultContainer" >
             <div id="resultBox" class="resultBox" >
