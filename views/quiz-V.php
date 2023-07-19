@@ -10,17 +10,13 @@ include "essentials/head.php";
 
         <!-- Container, in dem das Beantworten der Fragen läuft -->
         <div id="playContainer" class="playContainer">
-
-        <!-- Test -->
             <div class="iconTimerContainer">
                 <div class="playerFieldEntryNew">
                     <img class="previewHeadline" src="<?php echo($_SESSION['icon']) ?>" alt="">
-                    <div class="previewHeadline"> <?php echo($_SESSION['name']) ?></div>
+                    <div class="previewHeadlineWaitingRoom"> <?php echo($_SESSION['name']) ?></div>
                 </div>
                 <a class="timer">Noch <div id="seconds"></div> Sekunden!</a>
             </div>
-
-        <!-- test ende -->
             <div class="question" id="frage">
                 Fragentext
             </div>
@@ -35,18 +31,20 @@ include "essentials/head.php";
                 <button class="lessonContainerItem" name="a4" id="antwort5" onclick="storeSelectedAnswer(this)" hidden="true">Antwort 5</button>
                 
             </div>
-            
-            <div class="radioButttons">
-                <input type= "radio" id= "advised" name= "sure" value= "advised" checked="true">
-                <label class="previewHeadline" for="contact">Geraten</label>
-                <input type= "radio" id= "known" name= "sure" value= "known">
-                <label class="previewHeadline" for="contact">Gewusst</label>
-            </div>
+            <!-- test -->
+            <div class="radioAnwser">
+                <div class="radioButtons">
+                    <input type= "radio" id= "advised" name= "sure" value= "advised" checked="true">
+                    <label class="previewHeadline" for="contact">Geraten</label>
+                    <input type= "radio" id= "known" name= "sure" value= "known">
+                    <label class="previewHeadline" for="contact">Gewusst</label>
+                </div>
 
-            <div id="sendAnswer">
-                <button class="submButton" id="sendAnswerBtn" onclick="checkAnswer()">Antwort abgeben</button>
+                <div id="sendAnswer" class="sendAnswer">
+                    <button class="submButton" id="sendAnswerBtn" onclick="checkAnswer()">Antwort abgeben</button>
+                </div>
             </div>
-
+<!-- test ende -->
             <br>
 
             <p id="demo"></p>
