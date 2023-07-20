@@ -22,7 +22,7 @@ function play() {
     getQuestionsWithAjax();
     fillResultBoxText();
     rundenZaehler = 0;
-    timeToAnswer = 5;
+    timeToAnswer = 20;
     qTimer = setInterval(questionTimer, 1000);
     askNextQuestion();
 }
@@ -97,7 +97,7 @@ function checkAnswer() {
 
     rundenZaehler++;
 
-    timeToAnswer = 5;
+    timeToAnswer = 20;
     qTimer = setInterval(questionTimer, 1000);
     askNextQuestion();
     
@@ -218,7 +218,7 @@ function questionTimer() {
     timeToAnswer--;
     if ( timeToAnswer < 0 ) {
         clearInterval(qTimer);
-        timeToAnswer = 5;
+        timeToAnswer = 20;
         checkAnswer();
     }
 }
