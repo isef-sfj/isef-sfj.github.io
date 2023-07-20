@@ -76,7 +76,7 @@ include "essentials/head.php";
             </div>
             <br>
             <div class="question" id="givenQuestion2">2. Frage:</div> 
-            <div id="givenAnswerBox" class="AnswerBox">
+            <div id="givenAnswerBox" class="answerBox">
                 <button class="quizAnswerButton" id="answer21" onclick="changeAnswerToRight(this, 2)">
                     Antwort 1
                 </button>
@@ -96,7 +96,7 @@ include "essentials/head.php";
             </div>
             <br>
             <div class="question" id="givenQuestion3">3. Frage:</div> 
-            <div id="givenAnswerBox" class="AnswerBox">
+            <div id="givenAnswerBox" class="answerBox">
                 
                 <button class="quizAnswerButton" id="answer31" onclick="changeAnswerToRight(this, 3)">
                     Antwort 1
