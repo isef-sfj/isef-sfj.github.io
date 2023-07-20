@@ -477,7 +477,7 @@ body {
   font-size: 1.7em;
   font-family: var(--mainButtonFont);
   color: var(--fontColor);
-  background: purple;
+  background: rgb(205, 14, 14);
   width: var(--mainButtonWidth);
   height: var(--mainButtonHeight);
   margin: 0em;
@@ -765,7 +765,7 @@ body {
   font-size: 1.7em;
   font-family: var(--mainButtonFont);
   color: var(--fontColor);
-  background: rgb(144, 26, 144);
+  background: rgb(142, 24, 185);
   width: var(--mainButtonWidth);
   height: var(--mainButtonHeight);
   margin: 0em;
