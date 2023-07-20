@@ -685,7 +685,7 @@ body {
 .rightAnswer {
     font-family: var(--mainFont);
     font-size: 1.7rem;
-    /* width: var(--mainButtonWidth); */
+    /* width: var(--mainButtonWidth); */ 
     /* height: var(--mainButtonHeight); */
     margin-bottom: 20px;
     margin-top: 30px;
@@ -729,4 +729,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.greenBorder {
+  border: green 5px solid;
 }
