@@ -601,7 +601,14 @@ body {
     font-size: 1em;
     margin-left: 50px;
     margin-right: 50px;
+    display: flex;
+    justify-content: center;
 }
+
+  .moduleLectionDisplay{
+    display: flex;
+    justify-content: center;
+  }
 
   .halftimeContainer{
     display: flex;
@@ -667,6 +674,7 @@ body {
     list-style-type: none;
     overflow: hidden;
     text-overflow: ellipsis;
+    border:  var(--testBorder) solid rgb(233, 16, 186);
 }
 
 .quizAnswerKlickedButton {
@@ -680,6 +688,7 @@ body {
     list-style-type: none;
     overflow: hidden;
     text-overflow: ellipsis;
+    border:  var(--testBorder) solid rgb(233, 16, 186);
 }
 
 .rightAnswer {
@@ -716,6 +725,7 @@ body {
     list-style-type: none;
     overflow: hidden;
     text-overflow: ellipsis;
+    border:  var(--testBorder) solid rgb(233, 16, 186);
 }
 
 .answerResult {
