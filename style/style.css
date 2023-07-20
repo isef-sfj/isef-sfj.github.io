@@ -699,7 +699,7 @@ body {
     /* height: var(--mainButtonHeight); */
     margin-bottom: 20px;
     margin-top: 30px;
-    padding: 15px;
+    padding: 20px;
     background: rgb(33, 178, 55);
     border-radius: 50px;
     /* list-style-type: none; */
@@ -740,4 +740,30 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.realyDeleteQuestion{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteQuestionButton{
+  font-size: 1.7em;
+  font-family: var(--mainButtonFont);
+  color: var(--fontColor);
+  background: rgb(144, 26, 144);
+  width: var(--mainButtonWidth);
+  height: var(--mainButtonHeight);
+  margin: 0em;
+  border-radius: 5em;
+  transition : 300ms;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  list-style-type: none;
+  text-decoration: none;
+  border:  var(--testBorder) solid rgb(233, 16, 186);
 }
