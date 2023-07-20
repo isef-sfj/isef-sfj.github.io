@@ -125,7 +125,7 @@ include "essentials/head.php";
                 <!-- Du hast <div id="showPoints">eine unbekannte Zahl</div> Punkte gesammelt. -->
                 <br>
                 <div class="question" id="givenQuestion4">1. Frage:</div> 
-            <div id="givenAnswerBox" class="AnswerBox">
+            <div id="givenAnswerBox" class="answerBox">
                 <button class="quizAnswerButton" id="answer41">
                     Antwort 1
                 </button>
@@ -144,7 +144,7 @@ include "essentials/head.php";
             </div>
             <br>
             <div class="question" id="givenQuestion5">2. Frage:</div> 
-            <div id="givenAnswerBox" class="AnswerBox">
+            <div id="givenAnswerBox" class="answerBox">
                 <button class="quizAnswerButton" id="answer51" >
                     Antwort 1
                 </button>
@@ -163,7 +163,7 @@ include "essentials/head.php";
             </div>
             <br>
             <div class="question" id="givenQuestion6">3. Frage:</div> 
-            <div id="givenAnswerBox" class="AnswerBox">
+            <div id="givenAnswerBox" class="answerBox">
                 <button class="quizAnswerButton" id="answer61" >
                     Antwort 1
                 </button>

@@ -675,6 +675,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     border:  var(--testBorder) solid rgb(233, 16, 186);
+    color:white;
 }
 
 .quizAnswerKlickedButton {
@@ -693,18 +694,18 @@ body {
 
 .rightAnswer {
     font-family: var(--mainFont);
-    font-size: 1.7rem;
+    /* font-size: 1.7rem; */
     /* width: var(--mainButtonWidth); */
     /* height: var(--mainButtonHeight); */
     margin-bottom: 20px;
     margin-top: 30px;
     padding: 15px;
-    background: rgb(128, 76, 224);
+    background: rgb(33, 178, 55);
     border-radius: 50px;
     /* list-style-type: none; */
     overflow: hidden;
     text-overflow: ellipsis;
-    display: flex;
+    /* display: flex; */
     /* flex-direction: row; */
     align-items: center;
     justify-content: center;
