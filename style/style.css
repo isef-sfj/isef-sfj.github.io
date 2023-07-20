@@ -215,7 +215,6 @@ body {
 }
 
 .mainButton{
-    
     font-size: 1.7em;
     font-family: var(--mainButtonFont);
     color: var(--fontColor);
@@ -730,6 +729,20 @@ body {
     border:  var(--testBorder) solid rgb(233, 16, 186);
 }
 
+.falseAnswer2 {
+  font-family: var(--mainFont);
+    width: 200px;
+    max-height: 400px;
+    margin: 20px;
+    padding: 20px;
+    background: rgb(148, 18, 18);
+    border-radius: 50px;
+    list-style-type: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border:  var(--testBorder) solid rgb(233, 16, 186);
+}
+
 .answerResult {
   display: flex;
   flex-direction: column;
@@ -745,4 +758,41 @@ body {
 
 .greenBorder {
   border: green 5px solid;
+}
+
+.faq {
+  font-size: 1.3em;
+  font-family: var(--mainButtonFont);
+  color: var(--fontColor);
+  background: rgb(151, 149, 149);
+  width: 253px;
+  height: 60px;
+  margin: 1em;
+  border-radius: 5em;
+  transition : 300ms;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  list-style-type: none;
+  text-decoration: none;
+  border:  var(--testBorder) solid rgb(233, 16, 186);
+    /* font-size: 1.7em;
+    font-family: var(--mainButtonFont);
+    color: var(--fontColor);
+    background: rgb(151, 149, 149);
+    width: var(--mainButtonWidth);
+    height: var(--mainButtonHeight);
+    margin-left: 0.1em;
+    border-radius: 5em;
+    transition : 300ms;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    list-style-type: none;
+    text-decoration: none;
+    border:  var(--testBorder) solid rgb(233, 16, 186); */
 }
