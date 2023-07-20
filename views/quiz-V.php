@@ -31,7 +31,6 @@ include "essentials/head.php";
                 <button class="quizAnswerButton" name="a4" id="antwort5" onclick="storeSelectedAnswer(this)" hidden="true">Antwort 5</button>
                 
             </div>
-            <!-- test -->
             <div class="radioAnwser">
                 <div class="radioButtons">
                     <input type= "radio" id= "advised" name= "sure" value= "advised" checked="true">
@@ -44,7 +43,6 @@ include "essentials/head.php";
                     <button class="submButton" id="sendAnswerBtn" disabled="true" onclick="checkAnswer()">Antwort abgeben</button>
                 </div>
             </div>
-<!-- test ende -->
             <br>
 
             <p id="demo"></p>
@@ -53,7 +51,7 @@ include "essentials/head.php";
 
         <!-- Container, in dem das Ergebnis nach 3 Fragen angezeigt wird -->
         <div class="halftimeContainer" id="halftimeContainer" >
-            <h2><?php echo($_SESSION['lesson']) ?> aus <?php echo($_SESSION['modul']) ?></h2>
+            <h2 class="moduleLectionDisplay"><?php echo($_SESSION['lesson']) ?> aus <?php echo($_SESSION['modul']) ?></h2>
             <h2 class="question">Zwischenergebnis: Passe ggf. falsche Antworten an!</h2>
             <h3 class="questionH3">Nutze die Ergebnisse deiner Mitspieler!</h3>
             <h4 class="timeToAnswer" >Noch <br> <div id="seconds1"></div> <br> Sekunden!</h4>
@@ -78,7 +76,8 @@ include "essentials/head.php";
             </div>
             <br>
             <div class="question" id="givenQuestion2">2. Frage:</div> 
-            <div id="givenAnswerBox" class="AnswerBox">
+
+            <div id="givenAnswerBox" class="answerBox">
                 <button class="quizAnswerButton" id="answer21" onclick="changeAnswerToRight(this, 2, 1)">
                     Antwort 1
                 </button>
@@ -98,7 +97,7 @@ include "essentials/head.php";
             </div>
             <br>
             <div class="question" id="givenQuestion3">3. Frage:</div> 
-            <div id="givenAnswerBox" class="AnswerBox">
+            <div id="givenAnswerBox" class="answerBox">
                 
                 <button class="quizAnswerButton" id="answer31" onclick="changeAnswerToRight(this, 3, 1)">
                     Antwort 1
@@ -127,7 +126,7 @@ include "essentials/head.php";
                 <!-- Du hast <div id="showPoints">eine unbekannte Zahl</div> Punkte gesammelt. -->
                 <br>
                 <div class="question" id="givenQuestion4">1. Frage:</div> 
-            <div id="givenAnswerBox" class="AnswerBox">
+            <div id="givenAnswerBox" class="answerBox">
                 <button class="quizAnswerButton greenBorder" id="answer41">
                     Antwort 1
                 </button>
@@ -146,7 +145,7 @@ include "essentials/head.php";
             </div>
             <br>
             <div class="question" id="givenQuestion5">2. Frage:</div> 
-            <div id="givenAnswerBox" class="AnswerBox">
+            <div id="givenAnswerBox" class="answerBox">
                 <button class="quizAnswerButton greenBorder" id="answer51" >
                     Antwort 1
                 </button>
@@ -165,7 +164,7 @@ include "essentials/head.php";
             </div>
             <br>
             <div class="question" id="givenQuestion6">3. Frage:</div> 
-            <div id="givenAnswerBox" class="AnswerBox">
+            <div id="givenAnswerBox" class="answerBox">
                 <button class="quizAnswerButton greenBorder" id="answer61" >
                     Antwort 1
                 </button>

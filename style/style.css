@@ -601,7 +601,14 @@ body {
     font-size: 1em;
     margin-left: 50px;
     margin-right: 50px;
+    display: flex;
+    justify-content: center;
 }
+
+  .moduleLectionDisplay{
+    display: flex;
+    justify-content: center;
+  }
 
   .halftimeContainer{
     display: flex;
@@ -667,6 +674,8 @@ body {
     list-style-type: none;
     overflow: hidden;
     text-overflow: ellipsis;
+    border:  var(--testBorder) solid rgb(233, 16, 186);
+    color:white;
 }
 
 .quizAnswerKlickedButton {
@@ -680,22 +689,24 @@ body {
     list-style-type: none;
     overflow: hidden;
     text-overflow: ellipsis;
+    border:  var(--testBorder) solid rgb(233, 16, 186);
 }
 
 .rightAnswer {
     font-family: var(--mainFont);
-    font-size: 1.7rem;
-    /* width: var(--mainButtonWidth); */ 
+    /* font-size: 1.7rem; */
+    /* font-size: 1.7rem; */
+    /* width: var(--mainButtonWidth); */
     /* height: var(--mainButtonHeight); */
     margin-bottom: 20px;
     margin-top: 30px;
     padding: 15px;
-    background: rgb(128, 76, 224);
+    background: rgb(33, 178, 55);
     border-radius: 50px;
     /* list-style-type: none; */
     overflow: hidden;
     text-overflow: ellipsis;
-    display: flex;
+    /* display: flex; */
     /* flex-direction: row; */
     align-items: center;
     justify-content: center;
@@ -716,6 +727,7 @@ body {
     list-style-type: none;
     overflow: hidden;
     text-overflow: ellipsis;
+    border:  var(--testBorder) solid rgb(233, 16, 186);
 }
 
 .answerResult {
