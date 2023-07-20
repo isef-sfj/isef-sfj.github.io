@@ -57,16 +57,16 @@ include "essentials/head.php";
             <h4 class="timeToAnswer" >Noch <br> <div id="seconds1"></div> <br> Sekunden!</h4>
             <div class="question" id="givenQuestion1">1. Frage:</div> 
             <div id="givenAnswerBox" class="answerBox">
-                <button class="quizAnswerButton" id="answer11" onclick="changeAnswerToRight(this, 1)">
+                <button class="quizAnswerButton" id="answer11" onclick="changeAnswerToRight(this, 1, 1)">
                     Antwort 1
                 </button>
-                <button class="quizAnswerButton" id="answer12" onclick="changeAnswerToFalse(this, 1)">
+                <button class="quizAnswerButton" id="answer12" onclick="changeAnswerToFalse(this, 1, 2)">
                     Antwort 2
                 </button>
-                <button class="quizAnswerButton" id="answer13" onclick="changeAnswerToFalse(this, 1)">
+                <button class="quizAnswerButton" id="answer13" onclick="changeAnswerToFalse(this, 1, 3)">
                     Antwort 3
                 </button>
-                <button class="quizAnswerButton" id="answer14" onclick="changeAnswerToFalse(this, 1)">
+                <button class="quizAnswerButton" id="answer14" onclick="changeAnswerToFalse(this, 1, 4)">
                     Antwort 4
                 </button>
             </div>
@@ -76,17 +76,18 @@ include "essentials/head.php";
             </div>
             <br>
             <div class="question" id="givenQuestion2">2. Frage:</div> 
+
             <div id="givenAnswerBox" class="answerBox">
-                <button class="quizAnswerButton" id="answer21" onclick="changeAnswerToRight(this, 2)">
+                <button class="quizAnswerButton" id="answer21" onclick="changeAnswerToRight(this, 2, 1)">
                     Antwort 1
                 </button>
-                <button class="quizAnswerButton" id="answer22" onclick="changeAnswerToFalse(this, 2)">
+                <button class="quizAnswerButton" id="answer22" onclick="changeAnswerToFalse(this, 2, 2)">
                     Antwort 2
                 </button>
-                <button class="quizAnswerButton" id="answer23" onclick="changeAnswerToFalse(this, 2)">
+                <button class="quizAnswerButton" id="answer23" onclick="changeAnswerToFalse(this, 2, 3)">
                     Antwort 3
                 </button>
-                <button class="quizAnswerButton" id="answer24" onclick="changeAnswerToFalse(this, 2)">
+                <button class="quizAnswerButton" id="answer24" onclick="changeAnswerToFalse(this, 2, 4)">
                     Antwort 4
                 </button>
             </div>
@@ -98,16 +99,16 @@ include "essentials/head.php";
             <div class="question" id="givenQuestion3">3. Frage:</div> 
             <div id="givenAnswerBox" class="answerBox">
                 
-                <button class="quizAnswerButton" id="answer31" onclick="changeAnswerToRight(this, 3)">
+                <button class="quizAnswerButton" id="answer31" onclick="changeAnswerToRight(this, 3, 1)">
                     Antwort 1
                 </button>
-                <button class="quizAnswerButton" id="answer32" onclick="changeAnswerToFalse(this, 3)">
+                <button class="quizAnswerButton" id="answer32" onclick="changeAnswerToFalse(this, 3, 2)">
                     Antwort 2
                 </button>
-                <button class="quizAnswerButton" id="answer33" onclick="changeAnswerToFalse(this, 3)">
+                <button class="quizAnswerButton" id="answer33" onclick="changeAnswerToFalse(this, 3, 3)">
                     Antwort 3
                 </button>
-                <button class="quizAnswerButton" id="answer34" onclick="changeAnswerToFalse(this, 3)">
+                <button class="quizAnswerButton" id="answer34" onclick="changeAnswerToFalse(this, 3, 4)">
                     Antwort 4
                 </button>
                 </div>
@@ -126,7 +127,7 @@ include "essentials/head.php";
                 <br>
                 <div class="question" id="givenQuestion4">1. Frage:</div> 
             <div id="givenAnswerBox" class="answerBox">
-                <button class="quizAnswerButton" id="answer41">
+                <button class="quizAnswerButton greenBorder" id="answer41">
                     Antwort 1
                 </button>
                 <button class="quizAnswerButton" id="answer42" >
@@ -145,7 +146,7 @@ include "essentials/head.php";
             <br>
             <div class="question" id="givenQuestion5">2. Frage:</div> 
             <div id="givenAnswerBox" class="answerBox">
-                <button class="quizAnswerButton" id="answer51" >
+                <button class="quizAnswerButton greenBorder" id="answer51" >
                     Antwort 1
                 </button>
                 <button class="quizAnswerButton" id="answer52" >
@@ -164,7 +165,7 @@ include "essentials/head.php";
             <br>
             <div class="question" id="givenQuestion6">3. Frage:</div> 
             <div id="givenAnswerBox" class="answerBox">
-                <button class="quizAnswerButton" id="answer61" >
+                <button class="quizAnswerButton greenBorder" id="answer61" >
                     Antwort 1
                 </button>
                 <button class="quizAnswerButton" id="answer62" >

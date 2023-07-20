@@ -7,7 +7,7 @@ let richtigeAntwort = [];
 let idOfClickedBtn = "antwort5";
 let punkteAusRunde = 0;
 let gesamtpunkte = 0;
-let timeToAct = 5;
+let timeToAct = 20;
 let timeToAnswer = 5;
 let numberOfQuestions = 3;
 let qTimer = null;
@@ -60,7 +60,7 @@ function checkAnswer() {
     console.log("ID of clicked bitton: " + idOfClickedBtn);
 
     // Wenn Antwort richtig 1 Punkt addieren
-    if (idOfClickedBtn == "antwort1_richtig" | "answer11" | "answer21" | "answer31") {
+    if (idOfClickedBtn == "antwort1_richtig") {
         punkteAusRunde = 1;
         document.getElementById("answer"+(rundenZaehler+1)+"1").classList.add("rightAnswer");
         document.getElementById("answer"+(rundenZaehler+4)+"1").classList.add("rightAnswer");
@@ -87,13 +87,7 @@ function checkAnswer() {
             document.getElementById("answer"+(rundenZaehler+4)+"4").classList.add("falseAnswer");
         }
     }
-    // Antworten sind nicht mehr anklickbar
-    /*
-    document.getElementById("antwort1_richtig").disabled = true;
-    document.getElementById("antwort2").disabled = true;
-    document.getElementById("antwort3").disabled = true;
-    document.getElementById("antwort4").disabled = true;
-    */
+    
     // Punkte aus Runde werden in Array gespeichert
     punkte[rundenZaehler] = punkteAusRunde;
     // Gesamtpunkte werden berechnet
@@ -124,7 +118,6 @@ function askNextQuestion() {
         hTimer = setInterval(halftimeTimer, 1000);
 
     }
-   
 
     // Wenn noch Fragen übrig sind -> nächste Frage anzeigen
     if (rundenZaehler < numberOfQuestions) {
@@ -173,12 +166,13 @@ function fillResultBoxText() {
     }
 }
 
-function changeAnswerToRight(klickedButton, frage) {
+function changeAnswerToRight(klickedButton, frage, antwort) {
     klickedButton.disabled="true";
+    klickedButton.classList.add("quizAnswerKlickedButton");
+    document.getElementById("answer"+(frage+3)+antwort).classList.add("rightAnswer");
     console.log("Punkte vor Änderung: " + punkte);
     console.log("Gesamtpunkte vor Änderung: " + gesamtpunkte);
-    let questionToChnage = frage - 1;
-    punkte[questionToChnage] = punkte[questionToChnage] + 1;
+    punkte[(frage-1)] = punkte[(frage-1)] + 1;
     console.log("Punkte nach Änderung: " + punkte);
     
     add = function(arr) {
@@ -189,12 +183,13 @@ function changeAnswerToRight(klickedButton, frage) {
     console.log("Gesamtpunkte nach Änderung: " + gesamtpunkte);
 }
 
-function changeAnswerToFalse(klickedButton, frage) {
+function changeAnswerToFalse(klickedButton, frage, antwort) {
     klickedButton.disabled="true";
+    klickedButton.classList.add("quizAnswerKlickedButton");
+    document.getElementById("answer"+(frage+3)+antwort).classList.add("falseAnswer");
     console.log("Punkte vor Änderung: " + punkte);
     console.log("Gesamtpunkte vor Änderung: " + gesamtpunkte);
-    let questionToChnage = frage - 1;
-    punkte[questionToChnage] = 0;
+    punkte[(frage-1)] = 0;
     console.log("Punkte nach Änderung: " + punkte);
 
     add = function(arr) {
@@ -218,33 +213,6 @@ function fillPoints() {
         }
 }
 
-function changeColorOfResult() {
-    for (let i=0 ; i<4 ; i++) {
-        for (let j=4 ; j<7 ; j++) {
-            let k=i+1;
-            console.log("falseAnswer"+j+""+k+": "+ document.getElementById("answer"+j+""+k+"").innerText);
-            console.log("Gegebene Antwort " + k + ": " + gegebeneAntwort[i]);
-            if (gegebeneAntwort[i].toString() == document.getElementById("answer"+j+""+k+"").innerText.toString()) {
-                document.getElementById("answer"+j+""+k+"").classList.add("falseAnswer");
-                console.log("answer"+j+""+k+" wurde Klasse falseAnswer hinzugefügt");
-            }       
-        }
-    }
-
-    for (let i=0 ; i<4 ; i++) {
-        for (let j=4 ; j<7 ; j++) {
-            let k=i+1;
-            console.log("rightAnswer"+j+""+k+": "+ document.getElementById("answer"+j+""+k+"").innerText);
-            console.log("Gegebene Antwort " + k + ": " + richtigeAntwort[i]);
-            if (richtigeAntwort[i].toString() == document.getElementById("answer"+j+""+k+"").innerText.toString()) {
-                document.getElementById("answer"+j+""+k+"").classList.add("rightAnswer");
-                console.log("answer"+j+""+k+" wurde Klasse rightAnswer hinzugefügt");
-            }       
-        }
-    }
-}
-
-
 function questionTimer() {
     document.getElementById("seconds").innerText = timeToAnswer;
     timeToAnswer--;
@@ -260,7 +228,6 @@ function halftimeTimer() {
     document.getElementById("seconds1").innerText = timeToAct;
     timeToAct--;
     if ( timeToAct < 0 ) {
-        changeColorOfResult();
         document.getElementById("playContainer").style.display="none";
         document.getElementById("halftimeContainer").style.display="none";
         document.getElementById("resultContainer").style.display="block";
@@ -271,22 +238,3 @@ function halftimeTimer() {
         clearInterval(hTimer);
     }
 }
-
-/* Nur bei anderem Spielprinzip nötig
-function endTimer() {
-    clearInterval(qTimer);
-    document.getElementById("seconds2").innerText = timeToAct;
-    timeToAct--;
-    if ( timeToAct < 0 ) {
-
-        document.getElementById("endpoints").innerText = gesamtpunkte;
-
-        document.getElementById("playContainer").style.display="block";
-        document.getElementById("halftimeContainer").style.display="block";
-        document.getElementById("resultContainer").style.display="block";
-        document.getElementById("finishContainer").style.display="block";
-
-        clearInterval(eTimer);
-    }
-}
-*/
