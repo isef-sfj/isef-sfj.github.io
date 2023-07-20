@@ -7,6 +7,6 @@
     <link rel="stylesheet" href="../style/style.css">
     <script language="javascript" type="text/javascript" src="../script/play.js"></script>
     <script language="javascript" type="text/javascript" src="../script/script.js"></script>
-    <title>ISEF-Quiz</title>
+    <title>BrainBattle</title>
     <link rel="icon" type="image/x-icon" href="../img/favicon.png">
 </head>
