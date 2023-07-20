@@ -768,7 +768,7 @@ body {
   background: rgb(142, 24, 185);
   width: var(--mainButtonWidth);
   height: var(--mainButtonHeight);
-  margin: 0em;
+  margin-bottom: 1em;
   border-radius: 5em;
   transition : 300ms;
   display: flex;
